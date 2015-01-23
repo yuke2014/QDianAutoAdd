@@ -53,25 +53,44 @@
 - (void)updateUI:(id)message
 {
     QUIMessage *sMessage = (QUIMessage *)message;
-    int messageCount = sMessage.mLen;
+    NSInteger messageCount = sMessage.mLen;
     
     
     float beginPos = 110;
     beginPos = beginPos + (messageCount - 1) * 80;
     
+    int flagIndex = (arc4random() % 6) + 1;
     
-    UIImage *buttonImage = [UIImage imageNamed:@"彩条01.png"];
+    
+    UIImage *buttonImage = [UIImage imageNamed:[NSString stringWithFormat:@"彩条%d",flagIndex]];
     
     CommandButton *cButton = [CommandButton buttonWithType:UIButtonTypeCustom];
-    cButton.frame = CGRectMake(60, beginPos, 580.0, 54.0);
+    cButton.frame = CGRectMake(60, beginPos, 580.0, 56.0);
     cButton.commandName = sMessage.mName;
     cButton.cIndex      = messageCount - 1;
     [cButton setImage:buttonImage forState:UIControlStateNormal];
+    [cButton addTarget:middleModal action:@selector(commandSelected:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UILongPressGestureRecognizer *lPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(editPress:)];
+    [cButton addGestureRecognizer:lPress];
     
     cButton.animationType = @"BounceRight";
     cButton.animationParams[@"springBounciness"] = @16;
     [self addSubview:cButton];
     [cButton startFAAnimation];
+
+}
+
+- (void)editPress:(UILongPressGestureRecognizer *)gesture
+{
+    UIImage *cancelImage     = [UIImage imageNamed:@"彩条取消图标.png"];
+    UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    cancelButton.frame     = CGRectMake(550, 15, 20, 20);
+    [cancelButton setImage:cancelImage forState:UIControlStateNormal];
+    
+    [cancelButton addTarget:middleModal action:@selector(carCodeSelected:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [gesture.view addSubview:cancelButton];
 
 }
 

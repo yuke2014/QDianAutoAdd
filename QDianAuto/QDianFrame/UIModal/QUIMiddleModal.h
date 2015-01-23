@@ -12,5 +12,6 @@
 @interface QUIMiddleModal : NSObject<QUIModal>
 
 - (void)carCodeSelected:(id)sender;
+- (void)commandSelected:(id)sender;
 
 @end

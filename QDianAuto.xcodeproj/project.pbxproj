@@ -21,13 +21,13 @@
 		0C6547381A6DF3EE00E8B8C7 /* 02--左侧--灰白色底.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547121A6DF3EE00E8B8C7 /* 02--左侧--灰白色底.png */; };
 		0C6547391A6DF3EE00E8B8C7 /* 02.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547131A6DF3EE00E8B8C7 /* 02.png */; };
 		0C65473A1A6DF3EE00E8B8C7 /* 背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547141A6DF3EE00E8B8C7 /* 背景.png */; };
-		0C65473B1A6DF3EE00E8B8C7 /* 彩条--取消图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547151A6DF3EE00E8B8C7 /* 彩条--取消图标.png */; };
-		0C65473C1A6DF3EE00E8B8C7 /* 彩条01.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547161A6DF3EE00E8B8C7 /* 彩条01.png */; };
-		0C65473D1A6DF3EE00E8B8C7 /* 彩条02.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547171A6DF3EE00E8B8C7 /* 彩条02.png */; };
-		0C65473E1A6DF3EE00E8B8C7 /* 彩条-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547181A6DF3EE00E8B8C7 /* 彩条-03.png */; };
-		0C65473F1A6DF3EE00E8B8C7 /* 彩条-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547191A6DF3EE00E8B8C7 /* 彩条-04.png */; };
-		0C6547401A6DF3EE00E8B8C7 /* 彩条-05.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65471A1A6DF3EE00E8B8C7 /* 彩条-05.png */; };
-		0C6547411A6DF3EE00E8B8C7 /* 彩条-06.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65471B1A6DF3EE00E8B8C7 /* 彩条-06.png */; };
+		0C65473B1A6DF3EE00E8B8C7 /* 彩条取消图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547151A6DF3EE00E8B8C7 /* 彩条取消图标.png */; };
+		0C65473C1A6DF3EE00E8B8C7 /* 彩条1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547161A6DF3EE00E8B8C7 /* 彩条1.png */; };
+		0C65473D1A6DF3EE00E8B8C7 /* 彩条2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547171A6DF3EE00E8B8C7 /* 彩条2.png */; };
+		0C65473E1A6DF3EE00E8B8C7 /* 彩条3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547181A6DF3EE00E8B8C7 /* 彩条3.png */; };
+		0C65473F1A6DF3EE00E8B8C7 /* 彩条4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547191A6DF3EE00E8B8C7 /* 彩条4.png */; };
+		0C6547401A6DF3EE00E8B8C7 /* 彩条5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65471A1A6DF3EE00E8B8C7 /* 彩条5.png */; };
+		0C6547411A6DF3EE00E8B8C7 /* 彩条6.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65471B1A6DF3EE00E8B8C7 /* 彩条6.png */; };
 		0C6547421A6DF3EE00E8B8C7 /* 01topbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65471C1A6DF3EE00E8B8C7 /* 01topbar.png */; };
 		0C6547431A6DF3EE00E8B8C7 /* 返回.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65471D1A6DF3EE00E8B8C7 /* 返回.png */; };
 		0C6547441A6DF3EE00E8B8C7 /* 功能参数--50按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65471E1A6DF3EE00E8B8C7 /* 功能参数--50按钮.png */; };
@@ -135,13 +135,13 @@
 		0C6547121A6DF3EE00E8B8C7 /* 02--左侧--灰白色底.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "02--左侧--灰白色底.png"; sourceTree = "<group>"; };
 		0C6547131A6DF3EE00E8B8C7 /* 02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02.png; sourceTree = "<group>"; };
 		0C6547141A6DF3EE00E8B8C7 /* 背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "背景.png"; sourceTree = "<group>"; };
-		0C6547151A6DF3EE00E8B8C7 /* 彩条--取消图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条--取消图标.png"; sourceTree = "<group>"; };
-		0C6547161A6DF3EE00E8B8C7 /* 彩条01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条01.png"; sourceTree = "<group>"; };
-		0C6547171A6DF3EE00E8B8C7 /* 彩条02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条02.png"; sourceTree = "<group>"; };
-		0C6547181A6DF3EE00E8B8C7 /* 彩条-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条-03.png"; sourceTree = "<group>"; };
-		0C6547191A6DF3EE00E8B8C7 /* 彩条-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条-04.png"; sourceTree = "<group>"; };
-		0C65471A1A6DF3EE00E8B8C7 /* 彩条-05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条-05.png"; sourceTree = "<group>"; };
-		0C65471B1A6DF3EE00E8B8C7 /* 彩条-06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条-06.png"; sourceTree = "<group>"; };
+		0C6547151A6DF3EE00E8B8C7 /* 彩条取消图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条取消图标.png"; sourceTree = "<group>"; };
+		0C6547161A6DF3EE00E8B8C7 /* 彩条1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条1.png"; sourceTree = "<group>"; };
+		0C6547171A6DF3EE00E8B8C7 /* 彩条2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条2.png"; sourceTree = "<group>"; };
+		0C6547181A6DF3EE00E8B8C7 /* 彩条3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条3.png"; sourceTree = "<group>"; };
+		0C6547191A6DF3EE00E8B8C7 /* 彩条4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条4.png"; sourceTree = "<group>"; };
+		0C65471A1A6DF3EE00E8B8C7 /* 彩条5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条5.png"; sourceTree = "<group>"; };
+		0C65471B1A6DF3EE00E8B8C7 /* 彩条6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条6.png"; sourceTree = "<group>"; };
 		0C65471C1A6DF3EE00E8B8C7 /* 01topbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01topbar.png; sourceTree = "<group>"; };
 		0C65471D1A6DF3EE00E8B8C7 /* 返回.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回.png"; sourceTree = "<group>"; };
 		0C65471E1A6DF3EE00E8B8C7 /* 功能参数--50按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "功能参数--50按钮.png"; sourceTree = "<group>"; };
@@ -382,13 +382,13 @@
 				0C6547121A6DF3EE00E8B8C7 /* 02--左侧--灰白色底.png */,
 				0C6547131A6DF3EE00E8B8C7 /* 02.png */,
 				0C6547141A6DF3EE00E8B8C7 /* 背景.png */,
-				0C6547151A6DF3EE00E8B8C7 /* 彩条--取消图标.png */,
-				0C6547161A6DF3EE00E8B8C7 /* 彩条01.png */,
-				0C6547171A6DF3EE00E8B8C7 /* 彩条02.png */,
-				0C6547181A6DF3EE00E8B8C7 /* 彩条-03.png */,
-				0C6547191A6DF3EE00E8B8C7 /* 彩条-04.png */,
-				0C65471A1A6DF3EE00E8B8C7 /* 彩条-05.png */,
-				0C65471B1A6DF3EE00E8B8C7 /* 彩条-06.png */,
+				0C6547151A6DF3EE00E8B8C7 /* 彩条取消图标.png */,
+				0C6547161A6DF3EE00E8B8C7 /* 彩条1.png */,
+				0C6547171A6DF3EE00E8B8C7 /* 彩条2.png */,
+				0C6547181A6DF3EE00E8B8C7 /* 彩条3.png */,
+				0C6547191A6DF3EE00E8B8C7 /* 彩条4.png */,
+				0C65471A1A6DF3EE00E8B8C7 /* 彩条5.png */,
+				0C65471B1A6DF3EE00E8B8C7 /* 彩条6.png */,
 				0C65471C1A6DF3EE00E8B8C7 /* 01topbar.png */,
 				0C65471D1A6DF3EE00E8B8C7 /* 返回.png */,
 				0C65471E1A6DF3EE00E8B8C7 /* 功能参数--50按钮.png */,
@@ -666,22 +666,22 @@
 				0C65474F1A6DF3EE00E8B8C7 /* 太空车选中按下.png in Resources */,
 				0C6547371A6DF3EE00E8B8C7 /* 01.png in Resources */,
 				0C2D042F1A621FDD00379BF4 /* UIConfig.plist in Resources */,
-				0C65473B1A6DF3EE00E8B8C7 /* 彩条--取消图标.png in Resources */,
+				0C65473B1A6DF3EE00E8B8C7 /* 彩条取消图标.png in Resources */,
 				0C6547541A6DF3EE00E8B8C7 /* 添加后--.png in Resources */,
 				0C65474A1A6DF3EE00E8B8C7 /* 开始.png in Resources */,
 				0C6547551A6DF3EE00E8B8C7 /* 透明黑色底.png in Resources */,
 				0C6547381A6DF3EE00E8B8C7 /* 02--左侧--灰白色底.png in Resources */,
-				0C6547411A6DF3EE00E8B8C7 /* 彩条-06.png in Resources */,
+				0C6547411A6DF3EE00E8B8C7 /* 彩条6.png in Resources */,
 				0C6547521A6DF3EE00E8B8C7 /* 太空球.png in Resources */,
-				0C65473C1A6DF3EE00E8B8C7 /* 彩条01.png in Resources */,
+				0C65473C1A6DF3EE00E8B8C7 /* 彩条1.png in Resources */,
 				0C6547571A6DF3EE00E8B8C7 /* 五星--空.png in Resources */,
 				0C6547561A6DF3EE00E8B8C7 /* 五星--发光.png in Resources */,
 				0C6547451A6DF3EE00E8B8C7 /* 功能参数--数值调节-白色圆.png in Resources */,
 				0C6547581A6DF3EE00E8B8C7 /* 暂停按下.png in Resources */,
-				0C65473F1A6DF3EE00E8B8C7 /* 彩条-04.png in Resources */,
+				0C65473F1A6DF3EE00E8B8C7 /* 彩条4.png in Resources */,
 				0C6547491A6DF3EE00E8B8C7 /* 开始按下.png in Resources */,
 				0C6547471A6DF3EE00E8B8C7 /* 功能参数--数值调节-深黑色部分.png in Resources */,
-				0C6547401A6DF3EE00E8B8C7 /* 彩条-05.png in Resources */,
+				0C6547401A6DF3EE00E8B8C7 /* 彩条5.png in Resources */,
 				0C65474E1A6DF3EE00E8B8C7 /* 锁定.png in Resources */,
 				0C6547431A6DF3EE00E8B8C7 /* 返回.png in Resources */,
 				0CDBCFB31A6F451100E600F9 /* BallAction.plist in Resources */,
@@ -702,9 +702,9 @@
 				0C6547531A6DF3EE00E8B8C7 /* 添加.png in Resources */,
 				0C6547501A6DF3EE00E8B8C7 /* 太空车.png in Resources */,
 				0C6547481A6DF3EE00E8B8C7 /* 功能参数.png in Resources */,
-				0C65473D1A6DF3EE00E8B8C7 /* 彩条02.png in Resources */,
+				0C65473D1A6DF3EE00E8B8C7 /* 彩条2.png in Resources */,
 				0C6547461A6DF3EE00E8B8C7 /* 功能参数--数值调节-蓝色部分.png in Resources */,
-				0C65473E1A6DF3EE00E8B8C7 /* 彩条-03.png in Resources */,
+				0C65473E1A6DF3EE00E8B8C7 /* 彩条3.png in Resources */,
 				0C2DAAF51A617C3A008EA1EA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,15 +10,15 @@
 	<key>动作</key>
 	<array>
 		<string>还原</string>
-		<string>旋转</string>
-		<string>旋转率</string>
-		<string>稳定</string>
-		<string>马达</string>
+		<string>旋转&amp;QBallRotate</string>
+		<string>旋转率&amp;QBallRotateRate</string>
+		<string>稳定&amp;QBallStabilization</string>
+		<string>马达&amp;QBallMotor</string>
 	</array>
 	<key>时间</key>
 	<array>
-		<string>延时</string>
-		<string>到时停</string>
+		<string>延时&amp;QBallDelay</string>
+		<string>到时停&amp;QBallWaitStop</string>
 	</array>
 	<key>光</key>
 	<array>
