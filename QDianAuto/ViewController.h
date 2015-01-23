@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QUIConfig.h"
 
 @interface ViewController : UIViewController
 

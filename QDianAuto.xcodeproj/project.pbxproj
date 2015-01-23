@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C243ADB1A713DBA00679CC1 /* QUIRightModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C243ADA1A713DBA00679CC1 /* QUIRightModal.m */; };
+		0C2D042F1A621FDD00379BF4 /* UIConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C2D042E1A621FDD00379BF4 /* UIConfig.plist */; };
 		0C2DAAEA1A617C3A008EA1EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DAAE91A617C3A008EA1EA /* main.m */; };
 		0C2DAAED1A617C3A008EA1EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DAAEC1A617C3A008EA1EA /* AppDelegate.m */; };
 		0C2DAAF01A617C3A008EA1EA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DAAEF1A617C3A008EA1EA /* ViewController.m */; };
@@ -14,6 +16,90 @@
 		0C2DAAF51A617C3A008EA1EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C2DAAF41A617C3A008EA1EA /* Images.xcassets */; };
 		0C2DAAF81A617C3A008EA1EA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2DAAF61A617C3A008EA1EA /* LaunchScreen.xib */; };
 		0C2DAB041A617C3A008EA1EA /* QDianAutoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DAB031A617C3A008EA1EA /* QDianAutoTests.m */; };
+		0C4F3CEA1A69165C001D6859 /* QUIModalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4F3CE91A69165C001D6859 /* QUIModalManager.m */; };
+		0C6547371A6DF3EE00E8B8C7 /* 01.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547111A6DF3EE00E8B8C7 /* 01.png */; };
+		0C6547381A6DF3EE00E8B8C7 /* 02--左侧--灰白色底.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547121A6DF3EE00E8B8C7 /* 02--左侧--灰白色底.png */; };
+		0C6547391A6DF3EE00E8B8C7 /* 02.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547131A6DF3EE00E8B8C7 /* 02.png */; };
+		0C65473A1A6DF3EE00E8B8C7 /* 背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547141A6DF3EE00E8B8C7 /* 背景.png */; };
+		0C65473B1A6DF3EE00E8B8C7 /* 彩条--取消图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547151A6DF3EE00E8B8C7 /* 彩条--取消图标.png */; };
+		0C65473C1A6DF3EE00E8B8C7 /* 彩条01.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547161A6DF3EE00E8B8C7 /* 彩条01.png */; };
+		0C65473D1A6DF3EE00E8B8C7 /* 彩条02.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547171A6DF3EE00E8B8C7 /* 彩条02.png */; };
+		0C65473E1A6DF3EE00E8B8C7 /* 彩条-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547181A6DF3EE00E8B8C7 /* 彩条-03.png */; };
+		0C65473F1A6DF3EE00E8B8C7 /* 彩条-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547191A6DF3EE00E8B8C7 /* 彩条-04.png */; };
+		0C6547401A6DF3EE00E8B8C7 /* 彩条-05.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65471A1A6DF3EE00E8B8C7 /* 彩条-05.png */; };
+		0C6547411A6DF3EE00E8B8C7 /* 彩条-06.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65471B1A6DF3EE00E8B8C7 /* 彩条-06.png */; };
+		0C6547421A6DF3EE00E8B8C7 /* 01topbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65471C1A6DF3EE00E8B8C7 /* 01topbar.png */; };
+		0C6547431A6DF3EE00E8B8C7 /* 返回.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65471D1A6DF3EE00E8B8C7 /* 返回.png */; };
+		0C6547441A6DF3EE00E8B8C7 /* 功能参数--50按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65471E1A6DF3EE00E8B8C7 /* 功能参数--50按钮.png */; };
+		0C6547451A6DF3EE00E8B8C7 /* 功能参数--数值调节-白色圆.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65471F1A6DF3EE00E8B8C7 /* 功能参数--数值调节-白色圆.png */; };
+		0C6547461A6DF3EE00E8B8C7 /* 功能参数--数值调节-蓝色部分.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547201A6DF3EE00E8B8C7 /* 功能参数--数值调节-蓝色部分.png */; };
+		0C6547471A6DF3EE00E8B8C7 /* 功能参数--数值调节-深黑色部分.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547211A6DF3EE00E8B8C7 /* 功能参数--数值调节-深黑色部分.png */; };
+		0C6547481A6DF3EE00E8B8C7 /* 功能参数.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547221A6DF3EE00E8B8C7 /* 功能参数.png */; };
+		0C6547491A6DF3EE00E8B8C7 /* 开始按下.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547231A6DF3EE00E8B8C7 /* 开始按下.png */; };
+		0C65474A1A6DF3EE00E8B8C7 /* 开始.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547241A6DF3EE00E8B8C7 /* 开始.png */; };
+		0C65474B1A6DF3EE00E8B8C7 /* 设置按下.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547251A6DF3EE00E8B8C7 /* 设置按下.png */; };
+		0C65474C1A6DF3EE00E8B8C7 /* 设置.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547261A6DF3EE00E8B8C7 /* 设置.png */; };
+		0C65474D1A6DF3EE00E8B8C7 /* 锁定按下.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547271A6DF3EE00E8B8C7 /* 锁定按下.png */; };
+		0C65474E1A6DF3EE00E8B8C7 /* 锁定.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547281A6DF3EE00E8B8C7 /* 锁定.png */; };
+		0C65474F1A6DF3EE00E8B8C7 /* 太空车选中按下.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547291A6DF3EE00E8B8C7 /* 太空车选中按下.png */; };
+		0C6547501A6DF3EE00E8B8C7 /* 太空车.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65472A1A6DF3EE00E8B8C7 /* 太空车.png */; };
+		0C6547511A6DF3EE00E8B8C7 /* 太空球选中按下.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65472B1A6DF3EE00E8B8C7 /* 太空球选中按下.png */; };
+		0C6547521A6DF3EE00E8B8C7 /* 太空球.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65472C1A6DF3EE00E8B8C7 /* 太空球.png */; };
+		0C6547531A6DF3EE00E8B8C7 /* 添加.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65472D1A6DF3EE00E8B8C7 /* 添加.png */; };
+		0C6547541A6DF3EE00E8B8C7 /* 添加后--.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65472E1A6DF3EE00E8B8C7 /* 添加后--.png */; };
+		0C6547551A6DF3EE00E8B8C7 /* 透明黑色底.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65472F1A6DF3EE00E8B8C7 /* 透明黑色底.png */; };
+		0C6547561A6DF3EE00E8B8C7 /* 五星--发光.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547301A6DF3EE00E8B8C7 /* 五星--发光.png */; };
+		0C6547571A6DF3EE00E8B8C7 /* 五星--空.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547311A6DF3EE00E8B8C7 /* 五星--空.png */; };
+		0C6547581A6DF3EE00E8B8C7 /* 暂停按下.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547321A6DF3EE00E8B8C7 /* 暂停按下.png */; };
+		0C6547591A6DF3EE00E8B8C7 /* 暂停.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547331A6DF3EE00E8B8C7 /* 暂停.png */; };
+		0C65475A1A6DF3EE00E8B8C7 /* 指令区--选中指令--圆角底.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547341A6DF3EE00E8B8C7 /* 指令区--选中指令--圆角底.png */; };
+		0C65475B1A6DF3EE00E8B8C7 /* 指令区圆角黑色透明底.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547351A6DF3EE00E8B8C7 /* 指令区圆角黑色透明底.png */; };
+		0C65475C1A6DF3EE00E8B8C7 /* 中间指令分割线.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547361A6DF3EE00E8B8C7 /* 中间指令分割线.png */; };
+		0C65475F1A6E306900E8B8C7 /* QUITopBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C65475E1A6E306900E8B8C7 /* QUITopBar.m */; };
+		0C6547621A6E326000E8B8C7 /* QUITopBarState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6547611A6E326000E8B8C7 /* QUITopBarState.m */; };
+		0C6547661A6E35B000E8B8C7 /* ControlTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6547651A6E35B000E8B8C7 /* ControlTools.m */; };
+		0C6547691A6E618500E8B8C7 /* QUIRightStateNormal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6547681A6E618500E8B8C7 /* QUIRightStateNormal.m */; };
+		0C65476C1A6E61A100E8B8C7 /* QUIBallRightStateProgramme.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C65476B1A6E61A100E8B8C7 /* QUIBallRightStateProgramme.m */; };
+		0C81B22E1A6BF8980018F6AB /* QUICommonTableModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C81B22D1A6BF8980018F6AB /* QUICommonTableModal.m */; };
+		0C83F0ED1A67659400EC9A57 /* QUIConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C83F0E41A67659400EC9A57 /* QUIConfig.m */; };
+		0C83F0EF1A67659400EC9A57 /* QUILeft.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C83F0E81A67659400EC9A57 /* QUILeft.m */; };
+		0C83F0F01A67659400EC9A57 /* QUIMiddle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C83F0EA1A67659400EC9A57 /* QUIMiddle.m */; };
+		0C83F0F11A67659400EC9A57 /* QUIRight.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C83F0EC1A67659400EC9A57 /* QUIRight.m */; };
+		0C83F0FA1A67AC7500EC9A57 /* QUIBallLeftStateNormal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C83F0F91A67AC7500EC9A57 /* QUIBallLeftStateNormal.m */; };
+		0C83F0FD1A67B5D300EC9A57 /* QUIBallLeftStateProgramme.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C83F0FC1A67B5D300EC9A57 /* QUIBallLeftStateProgramme.m */; };
+		0C83F1001A67B62B00EC9A57 /* QUIBallMiddleStateNormal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C83F0FF1A67B62B00EC9A57 /* QUIBallMiddleStateNormal.m */; };
+		0C83F1031A67BF3F00EC9A57 /* QUILeftModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C83F1021A67BF3F00EC9A57 /* QUILeftModal.m */; };
+		0C86E62B1A6A756F00543456 /* QUIMiddleModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C86E62A1A6A756F00543456 /* QUIMiddleModal.m */; };
+		0C94117C1A6CB1D6003723EE /* QUIMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C94117B1A6CB1D6003723EE /* QUIMessageManager.m */; };
+		0C9F2B951A6FF2D800C223E6 /* QUITopBarStateSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9F2B941A6FF2D800C223E6 /* QUITopBarStateSetting.m */; };
+		0CA0771B1A70911C00632993 /* 驾驶舱.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CA077191A70911C00632993 /* 驾驶舱.png */; };
+		0CA0771C1A70911C00632993 /* bb.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CA0771A1A70911C00632993 /* bb.png */; };
+		0CA077221A709A3000632993 /* QUIMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA077211A709A3000632993 /* QUIMessage.m */; };
+		0CA077261A709EE400632993 /* CommandButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA077251A709EE400632993 /* CommandButton.m */; };
+		0CCE1FED1A68B154008B5A66 /* QUIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCE1FEC1A68B154008B5A66 /* QUIManager.m */; };
+		0CCE1FF01A68E48C008B5A66 /* QUIStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCE1FEF1A68E48C008B5A66 /* QUIStateManager.m */; };
+		0CDBCFB31A6F451100E600F9 /* BallAction.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0CDBCFB21A6F451100E600F9 /* BallAction.plist */; };
+		0CDBCFB81A6F55C200E600F9 /* CommandParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBCFB71A6F55C200E600F9 /* CommandParam.m */; };
+		0CDBCFBD1A6F56FC00E600F9 /* QBallRoll.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBCFBC1A6F56FC00E600F9 /* QBallRoll.m */; };
+		0CDBCFC01A6F7B7200E600F9 /* QBallBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBCFBF1A6F7B7200E600F9 /* QBallBase.m */; };
+		0CDBCFC31A6F7C4100E600F9 /* QBallStop.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBCFC21A6F7C4100E600F9 /* QBallStop.m */; };
+		0CDBCFC61A6F7C9700E600F9 /* QCommandManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBCFC51A6F7C9700E600F9 /* QCommandManager.m */; };
+		0CDBCFC91A6F841E00E600F9 /* QBallCommandManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBCFC81A6F841E00E600F9 /* QBallCommandManager.m */; };
+		0CDBCFCF1A6FB34F00E600F9 /* BallCommandDes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0CDBCFCE1A6FB34F00E600F9 /* BallCommandDes.plist */; };
+		0CE733541A70FFCE002BEF10 /* QBallColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE733531A70FFCE002BEF10 /* QBallColor.m */; };
+		0CE733571A710021002BEF10 /* QBallFade.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE733561A710021002BEF10 /* QBallFade.m */; };
+		0CE7335A1A710056002BEF10 /* QBallDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE733591A710056002BEF10 /* QBallDelay.m */; };
+		0CE7335D1A710086002BEF10 /* QBallWaitStop.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7335C1A710086002BEF10 /* QBallWaitStop.m */; };
+		0CE733601A7100AE002BEF10 /* QBallRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7335F1A7100AE002BEF10 /* QBallRotate.m */; };
+		0CE733631A7100DC002BEF10 /* QBallOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE733621A7100DC002BEF10 /* QBallOrientation.m */; };
+		0CE733661A71010C002BEF10 /* QBallRotateRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE733651A71010C002BEF10 /* QBallRotateRate.m */; };
+		0CE733691A710149002BEF10 /* QBallStabilization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE733681A710149002BEF10 /* QBallStabilization.m */; };
+		0CE7336C1A710163002BEF10 /* QBallMotor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7336B1A710163002BEF10 /* QBallMotor.m */; };
+		0CE7336F1A71019C002BEF10 /* QBallEmit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7336E1A71019C002BEF10 /* QBallEmit.m */; };
+		0CE733721A7101C1002BEF10 /* QBallLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE733711A7101C1002BEF10 /* QBallLoop.m */; };
+		0CE733751A7101E9002BEF10 /* QBallLoopEnd.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE733741A7101E9002BEF10 /* QBallLoopEnd.m */; };
+		0CF1B1F71A6CED87004937D5 /* QUIBallMiddleStateProgramme.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF1B1F61A6CED87004937D5 /* QUIBallMiddleStateProgramme.m */; };
+		82953D440FF1927B71B9DA4D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2C4CA21FFD73928BF3F69D /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +113,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C243AD91A713DBA00679CC1 /* QUIRightModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIRightModal.h; sourceTree = "<group>"; };
+		0C243ADA1A713DBA00679CC1 /* QUIRightModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIRightModal.m; sourceTree = "<group>"; };
+		0C2D042E1A621FDD00379BF4 /* UIConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UIConfig.plist; sourceTree = "<group>"; };
 		0C2DAAE41A617C3A008EA1EA /* QDianAuto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QDianAuto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C2DAAE81A617C3A008EA1EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C2DAAE91A617C3A008EA1EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +129,137 @@
 		0C2DAAFD1A617C3A008EA1EA /* QDianAutoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QDianAutoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C2DAB021A617C3A008EA1EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C2DAB031A617C3A008EA1EA /* QDianAutoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QDianAutoTests.m; sourceTree = "<group>"; };
+		0C4F3CE81A69165C001D6859 /* QUIModalManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIModalManager.h; sourceTree = "<group>"; };
+		0C4F3CE91A69165C001D6859 /* QUIModalManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIModalManager.m; sourceTree = "<group>"; };
+		0C6547111A6DF3EE00E8B8C7 /* 01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01.png; sourceTree = "<group>"; };
+		0C6547121A6DF3EE00E8B8C7 /* 02--左侧--灰白色底.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "02--左侧--灰白色底.png"; sourceTree = "<group>"; };
+		0C6547131A6DF3EE00E8B8C7 /* 02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02.png; sourceTree = "<group>"; };
+		0C6547141A6DF3EE00E8B8C7 /* 背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "背景.png"; sourceTree = "<group>"; };
+		0C6547151A6DF3EE00E8B8C7 /* 彩条--取消图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条--取消图标.png"; sourceTree = "<group>"; };
+		0C6547161A6DF3EE00E8B8C7 /* 彩条01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条01.png"; sourceTree = "<group>"; };
+		0C6547171A6DF3EE00E8B8C7 /* 彩条02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条02.png"; sourceTree = "<group>"; };
+		0C6547181A6DF3EE00E8B8C7 /* 彩条-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条-03.png"; sourceTree = "<group>"; };
+		0C6547191A6DF3EE00E8B8C7 /* 彩条-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条-04.png"; sourceTree = "<group>"; };
+		0C65471A1A6DF3EE00E8B8C7 /* 彩条-05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条-05.png"; sourceTree = "<group>"; };
+		0C65471B1A6DF3EE00E8B8C7 /* 彩条-06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条-06.png"; sourceTree = "<group>"; };
+		0C65471C1A6DF3EE00E8B8C7 /* 01topbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01topbar.png; sourceTree = "<group>"; };
+		0C65471D1A6DF3EE00E8B8C7 /* 返回.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回.png"; sourceTree = "<group>"; };
+		0C65471E1A6DF3EE00E8B8C7 /* 功能参数--50按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "功能参数--50按钮.png"; sourceTree = "<group>"; };
+		0C65471F1A6DF3EE00E8B8C7 /* 功能参数--数值调节-白色圆.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "功能参数--数值调节-白色圆.png"; sourceTree = "<group>"; };
+		0C6547201A6DF3EE00E8B8C7 /* 功能参数--数值调节-蓝色部分.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "功能参数--数值调节-蓝色部分.png"; sourceTree = "<group>"; };
+		0C6547211A6DF3EE00E8B8C7 /* 功能参数--数值调节-深黑色部分.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "功能参数--数值调节-深黑色部分.png"; sourceTree = "<group>"; };
+		0C6547221A6DF3EE00E8B8C7 /* 功能参数.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "功能参数.png"; sourceTree = "<group>"; };
+		0C6547231A6DF3EE00E8B8C7 /* 开始按下.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "开始按下.png"; sourceTree = "<group>"; };
+		0C6547241A6DF3EE00E8B8C7 /* 开始.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "开始.png"; sourceTree = "<group>"; };
+		0C6547251A6DF3EE00E8B8C7 /* 设置按下.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "设置按下.png"; sourceTree = "<group>"; };
+		0C6547261A6DF3EE00E8B8C7 /* 设置.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "设置.png"; sourceTree = "<group>"; };
+		0C6547271A6DF3EE00E8B8C7 /* 锁定按下.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "锁定按下.png"; sourceTree = "<group>"; };
+		0C6547281A6DF3EE00E8B8C7 /* 锁定.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "锁定.png"; sourceTree = "<group>"; };
+		0C6547291A6DF3EE00E8B8C7 /* 太空车选中按下.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "太空车选中按下.png"; sourceTree = "<group>"; };
+		0C65472A1A6DF3EE00E8B8C7 /* 太空车.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "太空车.png"; sourceTree = "<group>"; };
+		0C65472B1A6DF3EE00E8B8C7 /* 太空球选中按下.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "太空球选中按下.png"; sourceTree = "<group>"; };
+		0C65472C1A6DF3EE00E8B8C7 /* 太空球.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "太空球.png"; sourceTree = "<group>"; };
+		0C65472D1A6DF3EE00E8B8C7 /* 添加.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "添加.png"; sourceTree = "<group>"; };
+		0C65472E1A6DF3EE00E8B8C7 /* 添加后--.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "添加后--.png"; sourceTree = "<group>"; };
+		0C65472F1A6DF3EE00E8B8C7 /* 透明黑色底.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "透明黑色底.png"; sourceTree = "<group>"; };
+		0C6547301A6DF3EE00E8B8C7 /* 五星--发光.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "五星--发光.png"; sourceTree = "<group>"; };
+		0C6547311A6DF3EE00E8B8C7 /* 五星--空.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "五星--空.png"; sourceTree = "<group>"; };
+		0C6547321A6DF3EE00E8B8C7 /* 暂停按下.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "暂停按下.png"; sourceTree = "<group>"; };
+		0C6547331A6DF3EE00E8B8C7 /* 暂停.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "暂停.png"; sourceTree = "<group>"; };
+		0C6547341A6DF3EE00E8B8C7 /* 指令区--选中指令--圆角底.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "指令区--选中指令--圆角底.png"; sourceTree = "<group>"; };
+		0C6547351A6DF3EE00E8B8C7 /* 指令区圆角黑色透明底.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "指令区圆角黑色透明底.png"; sourceTree = "<group>"; };
+		0C6547361A6DF3EE00E8B8C7 /* 中间指令分割线.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中间指令分割线.png"; sourceTree = "<group>"; };
+		0C65475D1A6E306900E8B8C7 /* QUITopBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUITopBar.h; sourceTree = "<group>"; };
+		0C65475E1A6E306900E8B8C7 /* QUITopBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUITopBar.m; sourceTree = "<group>"; };
+		0C6547601A6E326000E8B8C7 /* QUITopBarState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUITopBarState.h; sourceTree = "<group>"; };
+		0C6547611A6E326000E8B8C7 /* QUITopBarState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUITopBarState.m; sourceTree = "<group>"; };
+		0C6547641A6E35B000E8B8C7 /* ControlTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlTools.h; sourceTree = "<group>"; };
+		0C6547651A6E35B000E8B8C7 /* ControlTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlTools.m; sourceTree = "<group>"; };
+		0C6547671A6E618500E8B8C7 /* QUIRightStateNormal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIRightStateNormal.h; sourceTree = "<group>"; };
+		0C6547681A6E618500E8B8C7 /* QUIRightStateNormal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIRightStateNormal.m; sourceTree = "<group>"; };
+		0C65476A1A6E61A100E8B8C7 /* QUIBallRightStateProgramme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIBallRightStateProgramme.h; sourceTree = "<group>"; };
+		0C65476B1A6E61A100E8B8C7 /* QUIBallRightStateProgramme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIBallRightStateProgramme.m; sourceTree = "<group>"; };
+		0C81B22C1A6BF8980018F6AB /* QUICommonTableModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUICommonTableModal.h; sourceTree = "<group>"; };
+		0C81B22D1A6BF8980018F6AB /* QUICommonTableModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUICommonTableModal.m; sourceTree = "<group>"; };
+		0C83F0E21A67659400EC9A57 /* QUi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUi.h; sourceTree = "<group>"; };
+		0C83F0E31A67659400EC9A57 /* QUIConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIConfig.h; sourceTree = "<group>"; };
+		0C83F0E41A67659400EC9A57 /* QUIConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIConfig.m; sourceTree = "<group>"; };
+		0C83F0E71A67659400EC9A57 /* QUILeft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUILeft.h; sourceTree = "<group>"; };
+		0C83F0E81A67659400EC9A57 /* QUILeft.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUILeft.m; sourceTree = "<group>"; };
+		0C83F0E91A67659400EC9A57 /* QUIMiddle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIMiddle.h; sourceTree = "<group>"; };
+		0C83F0EA1A67659400EC9A57 /* QUIMiddle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIMiddle.m; sourceTree = "<group>"; };
+		0C83F0EB1A67659400EC9A57 /* QUIRight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIRight.h; sourceTree = "<group>"; };
+		0C83F0EC1A67659400EC9A57 /* QUIRight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIRight.m; sourceTree = "<group>"; };
+		0C83F0F61A67A99D00EC9A57 /* QUIState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIState.h; sourceTree = "<group>"; };
+		0C83F0F81A67AC7500EC9A57 /* QUIBallLeftStateNormal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIBallLeftStateNormal.h; sourceTree = "<group>"; };
+		0C83F0F91A67AC7500EC9A57 /* QUIBallLeftStateNormal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIBallLeftStateNormal.m; sourceTree = "<group>"; };
+		0C83F0FB1A67B5D300EC9A57 /* QUIBallLeftStateProgramme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIBallLeftStateProgramme.h; sourceTree = "<group>"; };
+		0C83F0FC1A67B5D300EC9A57 /* QUIBallLeftStateProgramme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIBallLeftStateProgramme.m; sourceTree = "<group>"; };
+		0C83F0FE1A67B62B00EC9A57 /* QUIBallMiddleStateNormal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIBallMiddleStateNormal.h; sourceTree = "<group>"; };
+		0C83F0FF1A67B62B00EC9A57 /* QUIBallMiddleStateNormal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIBallMiddleStateNormal.m; sourceTree = "<group>"; };
+		0C83F1011A67BF3F00EC9A57 /* QUILeftModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUILeftModal.h; sourceTree = "<group>"; };
+		0C83F1021A67BF3F00EC9A57 /* QUILeftModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUILeftModal.m; sourceTree = "<group>"; };
+		0C86E6281A6A658900543456 /* QUIModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIModal.h; sourceTree = "<group>"; };
+		0C86E6291A6A756F00543456 /* QUIMiddleModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIMiddleModal.h; sourceTree = "<group>"; };
+		0C86E62A1A6A756F00543456 /* QUIMiddleModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIMiddleModal.m; sourceTree = "<group>"; };
+		0C94117A1A6CB1D6003723EE /* QUIMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIMessageManager.h; sourceTree = "<group>"; };
+		0C94117B1A6CB1D6003723EE /* QUIMessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIMessageManager.m; sourceTree = "<group>"; };
+		0C9F2B931A6FF2D800C223E6 /* QUITopBarStateSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUITopBarStateSetting.h; sourceTree = "<group>"; };
+		0C9F2B941A6FF2D800C223E6 /* QUITopBarStateSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUITopBarStateSetting.m; sourceTree = "<group>"; };
+		0CA077191A70911C00632993 /* 驾驶舱.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "驾驶舱.png"; sourceTree = "<group>"; };
+		0CA0771A1A70911C00632993 /* bb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bb.png; sourceTree = "<group>"; };
+		0CA077201A709A3000632993 /* QUIMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIMessage.h; sourceTree = "<group>"; };
+		0CA077211A709A3000632993 /* QUIMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIMessage.m; sourceTree = "<group>"; };
+		0CA077241A709EE400632993 /* CommandButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandButton.h; sourceTree = "<group>"; };
+		0CA077251A709EE400632993 /* CommandButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandButton.m; sourceTree = "<group>"; };
+		0CCE1FEB1A68B154008B5A66 /* QUIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIManager.h; sourceTree = "<group>"; };
+		0CCE1FEC1A68B154008B5A66 /* QUIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIManager.m; sourceTree = "<group>"; };
+		0CCE1FEE1A68E48C008B5A66 /* QUIStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIStateManager.h; sourceTree = "<group>"; };
+		0CCE1FEF1A68E48C008B5A66 /* QUIStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIStateManager.m; sourceTree = "<group>"; };
+		0CDBCFB21A6F451100E600F9 /* BallAction.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BallAction.plist; sourceTree = "<group>"; };
+		0CDBCFB51A6F554000E600F9 /* QCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCommand.h; sourceTree = "<group>"; };
+		0CDBCFB61A6F55C200E600F9 /* CommandParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandParam.h; sourceTree = "<group>"; };
+		0CDBCFB71A6F55C200E600F9 /* CommandParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandParam.m; sourceTree = "<group>"; };
+		0CDBCFBB1A6F56FC00E600F9 /* QBallRoll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBallRoll.h; sourceTree = "<group>"; };
+		0CDBCFBC1A6F56FC00E600F9 /* QBallRoll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBallRoll.m; sourceTree = "<group>"; };
+		0CDBCFBE1A6F7B7200E600F9 /* QBallBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBallBase.h; sourceTree = "<group>"; };
+		0CDBCFBF1A6F7B7200E600F9 /* QBallBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBallBase.m; sourceTree = "<group>"; };
+		0CDBCFC11A6F7C4100E600F9 /* QBallStop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBallStop.h; sourceTree = "<group>"; };
+		0CDBCFC21A6F7C4100E600F9 /* QBallStop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBallStop.m; sourceTree = "<group>"; };
+		0CDBCFC41A6F7C9700E600F9 /* QCommandManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCommandManager.h; sourceTree = "<group>"; };
+		0CDBCFC51A6F7C9700E600F9 /* QCommandManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCommandManager.m; sourceTree = "<group>"; };
+		0CDBCFC71A6F841E00E600F9 /* QBallCommandManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBallCommandManager.h; sourceTree = "<group>"; };
+		0CDBCFC81A6F841E00E600F9 /* QBallCommandManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBallCommandManager.m; sourceTree = "<group>"; };
+		0CDBCFCE1A6FB34F00E600F9 /* BallCommandDes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BallCommandDes.plist; sourceTree = "<group>"; };
+		0CE733521A70FFCE002BEF10 /* QBallColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBallColor.h; sourceTree = "<group>"; };
+		0CE733531A70FFCE002BEF10 /* QBallColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBallColor.m; sourceTree = "<group>"; };
+		0CE733551A710021002BEF10 /* QBallFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBallFade.h; sourceTree = "<group>"; };
+		0CE733561A710021002BEF10 /* QBallFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBallFade.m; sourceTree = "<group>"; };
+		0CE733581A710056002BEF10 /* QBallDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBallDelay.h; sourceTree = "<group>"; };
+		0CE733591A710056002BEF10 /* QBallDelay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBallDelay.m; sourceTree = "<group>"; };
+		0CE7335B1A710086002BEF10 /* QBallWaitStop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBallWaitStop.h; sourceTree = "<group>"; };
+		0CE7335C1A710086002BEF10 /* QBallWaitStop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBallWaitStop.m; sourceTree = "<group>"; };
+		0CE7335E1A7100AE002BEF10 /* QBallRotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBallRotate.h; sourceTree = "<group>"; };
+		0CE7335F1A7100AE002BEF10 /* QBallRotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBallRotate.m; sourceTree = "<group>"; };
+		0CE733611A7100DC002BEF10 /* QBallOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBallOrientation.h; sourceTree = "<group>"; };
+		0CE733621A7100DC002BEF10 /* QBallOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBallOrientation.m; sourceTree = "<group>"; };
+		0CE733641A71010C002BEF10 /* QBallRotateRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBallRotateRate.h; sourceTree = "<group>"; };
+		0CE733651A71010C002BEF10 /* QBallRotateRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBallRotateRate.m; sourceTree = "<group>"; };
+		0CE733671A710149002BEF10 /* QBallStabilization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBallStabilization.h; sourceTree = "<group>"; };
+		0CE733681A710149002BEF10 /* QBallStabilization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBallStabilization.m; sourceTree = "<group>"; };
+		0CE7336A1A710163002BEF10 /* QBallMotor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBallMotor.h; sourceTree = "<group>"; };
+		0CE7336B1A710163002BEF10 /* QBallMotor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBallMotor.m; sourceTree = "<group>"; };
+		0CE7336D1A71019C002BEF10 /* QBallEmit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBallEmit.h; sourceTree = "<group>"; };
+		0CE7336E1A71019C002BEF10 /* QBallEmit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBallEmit.m; sourceTree = "<group>"; };
+		0CE733701A7101C1002BEF10 /* QBallLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBallLoop.h; sourceTree = "<group>"; };
+		0CE733711A7101C1002BEF10 /* QBallLoop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBallLoop.m; sourceTree = "<group>"; };
+		0CE733731A7101E9002BEF10 /* QBallLoopEnd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBallLoopEnd.h; sourceTree = "<group>"; };
+		0CE733741A7101E9002BEF10 /* QBallLoopEnd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBallLoopEnd.m; sourceTree = "<group>"; };
+		0CF1B1F51A6CED87004937D5 /* QUIBallMiddleStateProgramme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIBallMiddleStateProgramme.h; sourceTree = "<group>"; };
+		0CF1B1F61A6CED87004937D5 /* QUIBallMiddleStateProgramme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIBallMiddleStateProgramme.m; sourceTree = "<group>"; };
+		540A23EB8AC0FCFB407A28BE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7D2C4CA21FFD73928BF3F69D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1C2CAB3CEDDC19AF43F6E7E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +267,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82953D440FF1927B71B9DA4D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +287,8 @@
 				0C2DAAE61A617C3A008EA1EA /* QDianAuto */,
 				0C2DAB001A617C3A008EA1EA /* QDianAutoTests */,
 				0C2DAAE51A617C3A008EA1EA /* Products */,
+				A30C1D77CE28B550F0494860 /* Pods */,
+				6EBAEB1202ADEA76151C82D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +304,7 @@
 		0C2DAAE61A617C3A008EA1EA /* QDianAuto */ = {
 			isa = PBXGroup;
 			children = (
+				0C2DAB0D1A617C43008EA1EA /* QDianFrame */,
 				0C2DAAEB1A617C3A008EA1EA /* AppDelegate.h */,
 				0C2DAAEC1A617C3A008EA1EA /* AppDelegate.m */,
 				0C2DAAEE1A617C3A008EA1EA /* ViewController.h */,
@@ -96,8 +320,10 @@
 		0C2DAAE71A617C3A008EA1EA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0C65470F1A6DF27500E8B8C7 /* Resource */,
 				0C2DAAE81A617C3A008EA1EA /* Info.plist */,
 				0C2DAAE91A617C3A008EA1EA /* main.m */,
+				0C2D042E1A621FDD00379BF4 /* UIConfig.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -119,6 +345,239 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0C2DAB0D1A617C43008EA1EA /* QDianFrame */ = {
+			isa = PBXGroup;
+			children = (
+				0CDBCFB41A6F550500E600F9 /* Command */,
+				0C6547631A6E356500E8B8C7 /* Util */,
+				0C83F0F21A67686200EC9A57 /* UIModal */,
+				0C83F0E11A675F9E00EC9A57 /* UI */,
+				0CCE1FEB1A68B154008B5A66 /* QUIManager.h */,
+				0CCE1FEC1A68B154008B5A66 /* QUIManager.m */,
+				0CCE1FEE1A68E48C008B5A66 /* QUIStateManager.h */,
+				0CCE1FEF1A68E48C008B5A66 /* QUIStateManager.m */,
+				0C4F3CE81A69165C001D6859 /* QUIModalManager.h */,
+				0C4F3CE91A69165C001D6859 /* QUIModalManager.m */,
+				0C94117A1A6CB1D6003723EE /* QUIMessageManager.h */,
+				0C94117B1A6CB1D6003723EE /* QUIMessageManager.m */,
+			);
+			path = QDianFrame;
+			sourceTree = "<group>";
+		};
+		0C65470F1A6DF27500E8B8C7 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				0CDBCFB11A6F44C300E600F9 /* Config */,
+				0C6547101A6DF2D400E8B8C7 /* Pic */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		0C6547101A6DF2D400E8B8C7 /* Pic */ = {
+			isa = PBXGroup;
+			children = (
+				0CA077191A70911C00632993 /* 驾驶舱.png */,
+				0CA0771A1A70911C00632993 /* bb.png */,
+				0C6547111A6DF3EE00E8B8C7 /* 01.png */,
+				0C6547121A6DF3EE00E8B8C7 /* 02--左侧--灰白色底.png */,
+				0C6547131A6DF3EE00E8B8C7 /* 02.png */,
+				0C6547141A6DF3EE00E8B8C7 /* 背景.png */,
+				0C6547151A6DF3EE00E8B8C7 /* 彩条--取消图标.png */,
+				0C6547161A6DF3EE00E8B8C7 /* 彩条01.png */,
+				0C6547171A6DF3EE00E8B8C7 /* 彩条02.png */,
+				0C6547181A6DF3EE00E8B8C7 /* 彩条-03.png */,
+				0C6547191A6DF3EE00E8B8C7 /* 彩条-04.png */,
+				0C65471A1A6DF3EE00E8B8C7 /* 彩条-05.png */,
+				0C65471B1A6DF3EE00E8B8C7 /* 彩条-06.png */,
+				0C65471C1A6DF3EE00E8B8C7 /* 01topbar.png */,
+				0C65471D1A6DF3EE00E8B8C7 /* 返回.png */,
+				0C65471E1A6DF3EE00E8B8C7 /* 功能参数--50按钮.png */,
+				0C65471F1A6DF3EE00E8B8C7 /* 功能参数--数值调节-白色圆.png */,
+				0C6547201A6DF3EE00E8B8C7 /* 功能参数--数值调节-蓝色部分.png */,
+				0C6547211A6DF3EE00E8B8C7 /* 功能参数--数值调节-深黑色部分.png */,
+				0C6547221A6DF3EE00E8B8C7 /* 功能参数.png */,
+				0C6547231A6DF3EE00E8B8C7 /* 开始按下.png */,
+				0C6547241A6DF3EE00E8B8C7 /* 开始.png */,
+				0C6547251A6DF3EE00E8B8C7 /* 设置按下.png */,
+				0C6547261A6DF3EE00E8B8C7 /* 设置.png */,
+				0C6547271A6DF3EE00E8B8C7 /* 锁定按下.png */,
+				0C6547281A6DF3EE00E8B8C7 /* 锁定.png */,
+				0C6547291A6DF3EE00E8B8C7 /* 太空车选中按下.png */,
+				0C65472A1A6DF3EE00E8B8C7 /* 太空车.png */,
+				0C65472B1A6DF3EE00E8B8C7 /* 太空球选中按下.png */,
+				0C65472C1A6DF3EE00E8B8C7 /* 太空球.png */,
+				0C65472D1A6DF3EE00E8B8C7 /* 添加.png */,
+				0C65472E1A6DF3EE00E8B8C7 /* 添加后--.png */,
+				0C65472F1A6DF3EE00E8B8C7 /* 透明黑色底.png */,
+				0C6547301A6DF3EE00E8B8C7 /* 五星--发光.png */,
+				0C6547311A6DF3EE00E8B8C7 /* 五星--空.png */,
+				0C6547321A6DF3EE00E8B8C7 /* 暂停按下.png */,
+				0C6547331A6DF3EE00E8B8C7 /* 暂停.png */,
+				0C6547341A6DF3EE00E8B8C7 /* 指令区--选中指令--圆角底.png */,
+				0C6547351A6DF3EE00E8B8C7 /* 指令区圆角黑色透明底.png */,
+				0C6547361A6DF3EE00E8B8C7 /* 中间指令分割线.png */,
+			);
+			path = Pic;
+			sourceTree = "<group>";
+		};
+		0C6547631A6E356500E8B8C7 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				0C6547641A6E35B000E8B8C7 /* ControlTools.h */,
+				0C6547651A6E35B000E8B8C7 /* ControlTools.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		0C83F0E11A675F9E00EC9A57 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0CA077231A709D5B00632993 /* CustomUI */,
+				0C83F0F71A67ABD300EC9A57 /* UIState */,
+				0C83F0E21A67659400EC9A57 /* QUi.h */,
+				0C83F0E31A67659400EC9A57 /* QUIConfig.h */,
+				0C83F0E41A67659400EC9A57 /* QUIConfig.m */,
+				0C83F0E71A67659400EC9A57 /* QUILeft.h */,
+				0C83F0E81A67659400EC9A57 /* QUILeft.m */,
+				0C83F0E91A67659400EC9A57 /* QUIMiddle.h */,
+				0C83F0EA1A67659400EC9A57 /* QUIMiddle.m */,
+				0C83F0EB1A67659400EC9A57 /* QUIRight.h */,
+				0C83F0EC1A67659400EC9A57 /* QUIRight.m */,
+				0C83F0F61A67A99D00EC9A57 /* QUIState.h */,
+				0C65475D1A6E306900E8B8C7 /* QUITopBar.h */,
+				0C65475E1A6E306900E8B8C7 /* QUITopBar.m */,
+				0CA077201A709A3000632993 /* QUIMessage.h */,
+				0CA077211A709A3000632993 /* QUIMessage.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		0C83F0F21A67686200EC9A57 /* UIModal */ = {
+			isa = PBXGroup;
+			children = (
+				0C83F1011A67BF3F00EC9A57 /* QUILeftModal.h */,
+				0C83F1021A67BF3F00EC9A57 /* QUILeftModal.m */,
+				0C86E6281A6A658900543456 /* QUIModal.h */,
+				0C86E6291A6A756F00543456 /* QUIMiddleModal.h */,
+				0C86E62A1A6A756F00543456 /* QUIMiddleModal.m */,
+				0C81B22C1A6BF8980018F6AB /* QUICommonTableModal.h */,
+				0C81B22D1A6BF8980018F6AB /* QUICommonTableModal.m */,
+				0C243AD91A713DBA00679CC1 /* QUIRightModal.h */,
+				0C243ADA1A713DBA00679CC1 /* QUIRightModal.m */,
+			);
+			path = UIModal;
+			sourceTree = "<group>";
+		};
+		0C83F0F71A67ABD300EC9A57 /* UIState */ = {
+			isa = PBXGroup;
+			children = (
+				0C83F0F81A67AC7500EC9A57 /* QUIBallLeftStateNormal.h */,
+				0C83F0F91A67AC7500EC9A57 /* QUIBallLeftStateNormal.m */,
+				0C83F0FB1A67B5D300EC9A57 /* QUIBallLeftStateProgramme.h */,
+				0C83F0FC1A67B5D300EC9A57 /* QUIBallLeftStateProgramme.m */,
+				0C83F0FE1A67B62B00EC9A57 /* QUIBallMiddleStateNormal.h */,
+				0C83F0FF1A67B62B00EC9A57 /* QUIBallMiddleStateNormal.m */,
+				0CF1B1F51A6CED87004937D5 /* QUIBallMiddleStateProgramme.h */,
+				0CF1B1F61A6CED87004937D5 /* QUIBallMiddleStateProgramme.m */,
+				0C6547601A6E326000E8B8C7 /* QUITopBarState.h */,
+				0C6547611A6E326000E8B8C7 /* QUITopBarState.m */,
+				0C6547671A6E618500E8B8C7 /* QUIRightStateNormal.h */,
+				0C6547681A6E618500E8B8C7 /* QUIRightStateNormal.m */,
+				0C65476A1A6E61A100E8B8C7 /* QUIBallRightStateProgramme.h */,
+				0C65476B1A6E61A100E8B8C7 /* QUIBallRightStateProgramme.m */,
+				0C9F2B931A6FF2D800C223E6 /* QUITopBarStateSetting.h */,
+				0C9F2B941A6FF2D800C223E6 /* QUITopBarStateSetting.m */,
+			);
+			path = UIState;
+			sourceTree = "<group>";
+		};
+		0CA077231A709D5B00632993 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				0CA077241A709EE400632993 /* CommandButton.h */,
+				0CA077251A709EE400632993 /* CommandButton.m */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		0CDBCFB11A6F44C300E600F9 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				0CDBCFB21A6F451100E600F9 /* BallAction.plist */,
+				0CDBCFCE1A6FB34F00E600F9 /* BallCommandDes.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		0CDBCFB41A6F550500E600F9 /* Command */ = {
+			isa = PBXGroup;
+			children = (
+				0CDBCFBA1A6F56BA00E600F9 /* Sphero */,
+				0CDBCFB51A6F554000E600F9 /* QCommand.h */,
+				0CDBCFB61A6F55C200E600F9 /* CommandParam.h */,
+				0CDBCFB71A6F55C200E600F9 /* CommandParam.m */,
+				0CDBCFC41A6F7C9700E600F9 /* QCommandManager.h */,
+				0CDBCFC51A6F7C9700E600F9 /* QCommandManager.m */,
+				0CDBCFC71A6F841E00E600F9 /* QBallCommandManager.h */,
+				0CDBCFC81A6F841E00E600F9 /* QBallCommandManager.m */,
+			);
+			path = Command;
+			sourceTree = "<group>";
+		};
+		0CDBCFBA1A6F56BA00E600F9 /* Sphero */ = {
+			isa = PBXGroup;
+			children = (
+				0CDBCFBB1A6F56FC00E600F9 /* QBallRoll.h */,
+				0CDBCFBC1A6F56FC00E600F9 /* QBallRoll.m */,
+				0CDBCFBE1A6F7B7200E600F9 /* QBallBase.h */,
+				0CDBCFBF1A6F7B7200E600F9 /* QBallBase.m */,
+				0CDBCFC11A6F7C4100E600F9 /* QBallStop.h */,
+				0CDBCFC21A6F7C4100E600F9 /* QBallStop.m */,
+				0CE733521A70FFCE002BEF10 /* QBallColor.h */,
+				0CE733531A70FFCE002BEF10 /* QBallColor.m */,
+				0CE733551A710021002BEF10 /* QBallFade.h */,
+				0CE733561A710021002BEF10 /* QBallFade.m */,
+				0CE733581A710056002BEF10 /* QBallDelay.h */,
+				0CE733591A710056002BEF10 /* QBallDelay.m */,
+				0CE7335B1A710086002BEF10 /* QBallWaitStop.h */,
+				0CE7335C1A710086002BEF10 /* QBallWaitStop.m */,
+				0CE7335E1A7100AE002BEF10 /* QBallRotate.h */,
+				0CE7335F1A7100AE002BEF10 /* QBallRotate.m */,
+				0CE733611A7100DC002BEF10 /* QBallOrientation.h */,
+				0CE733621A7100DC002BEF10 /* QBallOrientation.m */,
+				0CE733641A71010C002BEF10 /* QBallRotateRate.h */,
+				0CE733651A71010C002BEF10 /* QBallRotateRate.m */,
+				0CE733671A710149002BEF10 /* QBallStabilization.h */,
+				0CE733681A710149002BEF10 /* QBallStabilization.m */,
+				0CE7336A1A710163002BEF10 /* QBallMotor.h */,
+				0CE7336B1A710163002BEF10 /* QBallMotor.m */,
+				0CE7336D1A71019C002BEF10 /* QBallEmit.h */,
+				0CE7336E1A71019C002BEF10 /* QBallEmit.m */,
+				0CE733701A7101C1002BEF10 /* QBallLoop.h */,
+				0CE733711A7101C1002BEF10 /* QBallLoop.m */,
+				0CE733731A7101E9002BEF10 /* QBallLoopEnd.h */,
+				0CE733741A7101E9002BEF10 /* QBallLoopEnd.m */,
+			);
+			path = Sphero;
+			sourceTree = "<group>";
+		};
+		6EBAEB1202ADEA76151C82D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D2C4CA21FFD73928BF3F69D /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A30C1D77CE28B550F0494860 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1C2CAB3CEDDC19AF43F6E7E /* Pods.debug.xcconfig */,
+				540A23EB8AC0FCFB407A28BE /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +585,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C2DAB071A617C3A008EA1EA /* Build configuration list for PBXNativeTarget "QDianAuto" */;
 			buildPhases = (
+				30AC12F78FA3C38758221A67 /* Check Pods Manifest.lock */,
 				0C2DAAE01A617C3A008EA1EA /* Sources */,
 				0C2DAAE11A617C3A008EA1EA /* Frameworks */,
 				0C2DAAE21A617C3A008EA1EA /* Resources */,
+				7C7ABB1696457820A1A1AEB9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,8 +660,51 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CDBCFCF1A6FB34F00E600F9 /* BallCommandDes.plist in Resources */,
+				0C6547511A6DF3EE00E8B8C7 /* 太空球选中按下.png in Resources */,
+				0C65475C1A6DF3EE00E8B8C7 /* 中间指令分割线.png in Resources */,
+				0C65474F1A6DF3EE00E8B8C7 /* 太空车选中按下.png in Resources */,
+				0C6547371A6DF3EE00E8B8C7 /* 01.png in Resources */,
+				0C2D042F1A621FDD00379BF4 /* UIConfig.plist in Resources */,
+				0C65473B1A6DF3EE00E8B8C7 /* 彩条--取消图标.png in Resources */,
+				0C6547541A6DF3EE00E8B8C7 /* 添加后--.png in Resources */,
+				0C65474A1A6DF3EE00E8B8C7 /* 开始.png in Resources */,
+				0C6547551A6DF3EE00E8B8C7 /* 透明黑色底.png in Resources */,
+				0C6547381A6DF3EE00E8B8C7 /* 02--左侧--灰白色底.png in Resources */,
+				0C6547411A6DF3EE00E8B8C7 /* 彩条-06.png in Resources */,
+				0C6547521A6DF3EE00E8B8C7 /* 太空球.png in Resources */,
+				0C65473C1A6DF3EE00E8B8C7 /* 彩条01.png in Resources */,
+				0C6547571A6DF3EE00E8B8C7 /* 五星--空.png in Resources */,
+				0C6547561A6DF3EE00E8B8C7 /* 五星--发光.png in Resources */,
+				0C6547451A6DF3EE00E8B8C7 /* 功能参数--数值调节-白色圆.png in Resources */,
+				0C6547581A6DF3EE00E8B8C7 /* 暂停按下.png in Resources */,
+				0C65473F1A6DF3EE00E8B8C7 /* 彩条-04.png in Resources */,
+				0C6547491A6DF3EE00E8B8C7 /* 开始按下.png in Resources */,
+				0C6547471A6DF3EE00E8B8C7 /* 功能参数--数值调节-深黑色部分.png in Resources */,
+				0C6547401A6DF3EE00E8B8C7 /* 彩条-05.png in Resources */,
+				0C65474E1A6DF3EE00E8B8C7 /* 锁定.png in Resources */,
+				0C6547431A6DF3EE00E8B8C7 /* 返回.png in Resources */,
+				0CDBCFB31A6F451100E600F9 /* BallAction.plist in Resources */,
+				0C65474C1A6DF3EE00E8B8C7 /* 设置.png in Resources */,
+				0C6547441A6DF3EE00E8B8C7 /* 功能参数--50按钮.png in Resources */,
+				0C6547421A6DF3EE00E8B8C7 /* 01topbar.png in Resources */,
+				0C6547391A6DF3EE00E8B8C7 /* 02.png in Resources */,
+				0C6547591A6DF3EE00E8B8C7 /* 暂停.png in Resources */,
+				0C65474B1A6DF3EE00E8B8C7 /* 设置按下.png in Resources */,
+				0C65475B1A6DF3EE00E8B8C7 /* 指令区圆角黑色透明底.png in Resources */,
+				0C65475A1A6DF3EE00E8B8C7 /* 指令区--选中指令--圆角底.png in Resources */,
+				0C65474D1A6DF3EE00E8B8C7 /* 锁定按下.png in Resources */,
+				0C65473A1A6DF3EE00E8B8C7 /* 背景.png in Resources */,
+				0CA0771C1A70911C00632993 /* bb.png in Resources */,
 				0C2DAAF31A617C3A008EA1EA /* Main.storyboard in Resources */,
+				0CA0771B1A70911C00632993 /* 驾驶舱.png in Resources */,
 				0C2DAAF81A617C3A008EA1EA /* LaunchScreen.xib in Resources */,
+				0C6547531A6DF3EE00E8B8C7 /* 添加.png in Resources */,
+				0C6547501A6DF3EE00E8B8C7 /* 太空车.png in Resources */,
+				0C6547481A6DF3EE00E8B8C7 /* 功能参数.png in Resources */,
+				0C65473D1A6DF3EE00E8B8C7 /* 彩条02.png in Resources */,
+				0C6547461A6DF3EE00E8B8C7 /* 功能参数--数值调节-蓝色部分.png in Resources */,
+				0C65473E1A6DF3EE00E8B8C7 /* 彩条-03.png in Resources */,
 				0C2DAAF51A617C3A008EA1EA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,14 +718,89 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		30AC12F78FA3C38758221A67 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7C7ABB1696457820A1A1AEB9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0C2DAAE01A617C3A008EA1EA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C83F0F11A67659400EC9A57 /* QUIRight.m in Sources */,
+				0C83F0FA1A67AC7500EC9A57 /* QUIBallLeftStateNormal.m in Sources */,
+				0CDBCFC61A6F7C9700E600F9 /* QCommandManager.m in Sources */,
+				0C83F1001A67B62B00EC9A57 /* QUIBallMiddleStateNormal.m in Sources */,
+				0CE733571A710021002BEF10 /* QBallFade.m in Sources */,
+				0C83F0EF1A67659400EC9A57 /* QUILeft.m in Sources */,
+				0CF1B1F71A6CED87004937D5 /* QUIBallMiddleStateProgramme.m in Sources */,
+				0C6547661A6E35B000E8B8C7 /* ControlTools.m in Sources */,
+				0CE7336C1A710163002BEF10 /* QBallMotor.m in Sources */,
+				0CE733541A70FFCE002BEF10 /* QBallColor.m in Sources */,
+				0C4F3CEA1A69165C001D6859 /* QUIModalManager.m in Sources */,
+				0C83F1031A67BF3F00EC9A57 /* QUILeftModal.m in Sources */,
+				0C243ADB1A713DBA00679CC1 /* QUIRightModal.m in Sources */,
+				0CDBCFC31A6F7C4100E600F9 /* QBallStop.m in Sources */,
+				0CE733601A7100AE002BEF10 /* QBallRotate.m in Sources */,
+				0CE733631A7100DC002BEF10 /* QBallOrientation.m in Sources */,
+				0C86E62B1A6A756F00543456 /* QUIMiddleModal.m in Sources */,
+				0C81B22E1A6BF8980018F6AB /* QUICommonTableModal.m in Sources */,
+				0CE733661A71010C002BEF10 /* QBallRotateRate.m in Sources */,
+				0C94117C1A6CB1D6003723EE /* QUIMessageManager.m in Sources */,
+				0C65476C1A6E61A100E8B8C7 /* QUIBallRightStateProgramme.m in Sources */,
+				0CDBCFC91A6F841E00E600F9 /* QBallCommandManager.m in Sources */,
+				0C83F0FD1A67B5D300EC9A57 /* QUIBallLeftStateProgramme.m in Sources */,
+				0CDBCFB81A6F55C200E600F9 /* CommandParam.m in Sources */,
+				0CDBCFC01A6F7B7200E600F9 /* QBallBase.m in Sources */,
+				0CCE1FED1A68B154008B5A66 /* QUIManager.m in Sources */,
+				0CE733691A710149002BEF10 /* QBallStabilization.m in Sources */,
 				0C2DAAF01A617C3A008EA1EA /* ViewController.m in Sources */,
+				0C6547621A6E326000E8B8C7 /* QUITopBarState.m in Sources */,
+				0C9F2B951A6FF2D800C223E6 /* QUITopBarStateSetting.m in Sources */,
+				0CDBCFBD1A6F56FC00E600F9 /* QBallRoll.m in Sources */,
 				0C2DAAED1A617C3A008EA1EA /* AppDelegate.m in Sources */,
+				0C83F0F01A67659400EC9A57 /* QUIMiddle.m in Sources */,
 				0C2DAAEA1A617C3A008EA1EA /* main.m in Sources */,
+				0CE733721A7101C1002BEF10 /* QBallLoop.m in Sources */,
+				0CE7335A1A710056002BEF10 /* QBallDelay.m in Sources */,
+				0CA077221A709A3000632993 /* QUIMessage.m in Sources */,
+				0C83F0ED1A67659400EC9A57 /* QUIConfig.m in Sources */,
+				0CCE1FF01A68E48C008B5A66 /* QUIStateManager.m in Sources */,
+				0CE733751A7101E9002BEF10 /* QBallLoopEnd.m in Sources */,
+				0C6547691A6E618500E8B8C7 /* QUIRightStateNormal.m in Sources */,
+				0CE7335D1A710086002BEF10 /* QBallWaitStop.m in Sources */,
+				0C65475F1A6E306900E8B8C7 /* QUITopBar.m in Sources */,
+				0CA077261A709EE400632993 /* CommandButton.m in Sources */,
+				0CE7336F1A71019C002BEF10 /* QBallEmit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +922,7 @@
 		};
 		0C2DAB081A617C3A008EA1EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1C2CAB3CEDDC19AF43F6E7E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QDianAuto/Info.plist;
@@ -353,6 +933,7 @@
 		};
 		0C2DAB091A617C3A008EA1EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 540A23EB8AC0FCFB407A28BE /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QDianAuto/Info.plist;
@@ -414,6 +995,7 @@
 				0C2DAB091A617C3A008EA1EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C2DAB0A1A617C3A008EA1EA /* Build configuration list for PBXNativeTarget "QDianAutoTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +1004,7 @@
 				0C2DAB0C1A617C3A008EA1EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

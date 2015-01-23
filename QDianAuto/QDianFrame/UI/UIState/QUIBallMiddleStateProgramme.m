@@ -1,0 +1,80 @@
+//
+//  QUIBallMiddleStateProgramme.m
+//  QDianAuto
+//
+//  Created by cuiyk on 15/1/19.
+//  Copyright (c) 2015年 崔宇科. All rights reserved.
+//
+
+#import "QUIBallMiddleStateProgramme.h"
+#import "QUIModalManager.h"
+#import "QUIConfig.h"
+#import "CommandButton.h"
+#import "UIView+FastAnimation.h"
+
+
+@implementation QUIBallMiddleStateProgramme
+@synthesize stateName;
+
+- (id)initWithFrame:(CGRect)frame
+{
+    if ((self = [super initWithFrame:frame]) != nil)
+    {
+        middleModal = [[QUIModalManager shareModalManager] createMiddleModal];
+        middleModal.stateView = self;
+    }
+    
+    return self;
+}
+
+- (void)loadUI:(UIView *)fView
+{
+    float     flagWidth    = 90;
+    float     flagHeight   = 90;
+    float     controlPos   = 0;
+    float     leftMargin   = 34;
+    
+    UILabel *centerLabel = [[UILabel alloc] initWithFrame:CGRectMake(320, 35, 120, 24)];
+    centerLabel.font = [UIFont systemFontOfSize:22];
+    centerLabel.textColor = [UIColor whiteColor];
+    centerLabel.text = @"指令区";
+    [self addSubview:centerLabel];
+    
+    
+    controlPos+=80;
+    
+    UIImageView *sepLine = [[UIImageView alloc] initWithFrame:CGRectMake(leftMargin,controlPos , 648.0, 2.0)];
+    sepLine.image = [UIImage imageNamed:@"中间指令分割线.png"];
+    [self addSubview:sepLine];
+    [fView addSubview:self];
+
+}
+
+- (void)updateUI:(id)message
+{
+    QUIMessage *sMessage = (QUIMessage *)message;
+    int messageCount = sMessage.mLen;
+    
+    
+    float beginPos = 110;
+    beginPos = beginPos + (messageCount - 1) * 80;
+    
+    
+    UIImage *buttonImage = [UIImage imageNamed:@"彩条01.png"];
+    
+    CommandButton *cButton = [CommandButton buttonWithType:UIButtonTypeCustom];
+    cButton.frame = CGRectMake(60, beginPos, 580.0, 54.0);
+    cButton.commandName = sMessage.mName;
+    cButton.cIndex      = messageCount - 1;
+    [cButton setImage:buttonImage forState:UIControlStateNormal];
+    
+    cButton.animationType = @"BounceRight";
+    cButton.animationParams[@"springBounciness"] = @16;
+    [self addSubview:cButton];
+    [cButton startFAAnimation];
+
+}
+
+
+
+@end

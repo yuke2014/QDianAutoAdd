@@ -7,6 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "QUILeft.h"
+#import "QUIMiddle.h"
+#import "QUITopBar.h"
+#import "QUIManager.h"
+#import "QUIRight.h"
 
 @interface ViewController ()
 
@@ -16,12 +21,58 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    UIImageView *background = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024.0, 768.0)];
+    background.image = [UIImage imageNamed:@"背景.png"];
+
+    
+    
+    id<QUi> left = [[QUILeft alloc] initWithFrame:CGRectMake(0.0, 80.0, 80, 680)];
+    [left loadUI];
+    
+    id<QUi> middle = [[QUIMiddle alloc] initWithFrame:CGRectMake(92, 80.0, 715, 680)];
+    [middle loadUI];
+    
+    id<QUi> topBar = [[QUITopBar alloc] initWithFrame:CGRectMake(0.0, 20.0, 1024, 44)];
+    [topBar loadUI];
+    
+    id<QUi> right = [[QUIRight alloc] initWithFrame:CGRectMake(815.0, 80.0, 230.0, 400.0)];
+    [right loadUI];
+    
+    
+    [[QUIManager shareUIManager] registerUI:left withName:@"Left"];
+    [[QUIManager shareUIManager] registerUI:middle withName:@"Middle"];
+    [[QUIManager shareUIManager] registerUI:topBar withName:@"Top"];
+    [[QUIManager shareUIManager] registerUI:right withName:@"Right"];
+    
+    
+    
+    [self.view addSubview:background];
+    [self.view addSubview:(UIView *)left];
+    [self.view addSubview:(UIView *)middle];
+    [self.view addSubview:(UIView *)topBar];
+    [self.view addSubview:(UIView *)right];
+    
+
+}
+
+- (void)add:(id)sender
+{
+    NSLog(@"adsfadsfdsaf");
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation
+{
+    return YES;
+}
+
+-(UIInterfaceOrientation)interfaceOrientation
+{
+    return UIInterfaceOrientationLandscapeLeft;
 }
 
 @end

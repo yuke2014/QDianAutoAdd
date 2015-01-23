@@ -1,0 +1,135 @@
+//
+//  QUICommonTableModal.m
+//  QDianAuto
+//
+//  Created by 崔宇科 on 15/1/18.
+//  Copyright (c) 2015年 崔宇科. All rights reserved.
+//
+
+#import "QUICommonTableModal.h"
+
+@implementation QUICommonTableModal
+@synthesize stateView;
+
+
+- (id)init
+{
+    if ((self = [super init]) != nil)
+    {
+        NSString *pListPath = [[NSBundle mainBundle] pathForResource:@"BallAction" ofType:@"plist"];
+        command    = [[NSMutableDictionary alloc] initWithContentsOfFile:pListPath];
+        
+        keyCommand = [command allKeys];
+    }
+    
+    return self;
+}
+
+- (NSString *)modalName
+{
+    return @"CommonTableName";
+}
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return [keyCommand count];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSString *keyName = [keyCommand objectAtIndex:section];
+    NSArray  *keyArray = [command objectForKey:keyName];
+    return [keyArray count];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return [keyCommand objectAtIndex:section];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CommandCell"];
+    cell.backgroundColor = [UIColor clearColor];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    
+    NSString *keyName = [keyCommand objectAtIndex:indexPath.section];
+    NSArray  *keyArray = [command objectForKey:keyName];
+    cell.textLabel.font = [UIFont systemFontOfSize:14];
+    
+    NSString *contentWithCommand = [keyArray objectAtIndex:indexPath.row];
+    NSArray *cArray = [contentWithCommand componentsSeparatedByString:@"&"];
+    cell.textLabel.text = [cArray objectAtIndex:0];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+   
+    
+    return cell;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 80.0, 40.0)];
+    
+    UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 80.0, 40.0)];
+    backView.backgroundColor = [UIColor grayColor];
+    backView.alpha = 0.5;
+    [headerView addSubview:backView];
+    
+    
+    UILabel *centerLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, 40, 20)];
+    centerLabel.font = [UIFont systemFontOfSize:16];
+    centerLabel.textColor = [UIColor whiteColor];
+    centerLabel.text = [keyCommand objectAtIndex:section];
+    [headerView addSubview:centerLabel];
+    
+    
+    
+    return headerView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 44.0;
+}
+
+
+#pragma mark -
+#pragma mark 表格动作
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //NSLog(@"select row is : %d",indexPath.row);
+    NSString *keyName = [keyCommand objectAtIndex:indexPath.section];
+    NSArray  *keyArray = [command objectForKey:keyName];
+    
+    NSString *contentWithCommand = [keyArray objectAtIndex:indexPath.row];
+    NSArray *cArray = [contentWithCommand componentsSeparatedByString:@"&"];
+    if ([cArray count] <= 1) {
+        return;
+    }
+    NSString *commandClass = [cArray objectAtIndex:1];
+    id<QCommand> commandSelected = [[QBallCommandManager shareCommandManager] createQCommand:commandClass withRobot:nil];
+    
+    QCommandManager *cManager = [QBallCommandManager shareCommandManager];
+    [cManager addCommandToQueue:commandSelected];
+    
+    id<QUi> mUpdateUi =  [[QUIManager shareUIManager] obtainUI:@"Middle"];
+    NSInteger qCount = [cManager queueCount];
+    QUIMessage *message = [[QUIManager shareUIManager] genMessageType:commandClass withIntValue:qCount withType:0];
+    [mUpdateUi updateUI:message];
+    
+    id<QUi> rUpdateUi = [[QUIManager shareUIManager] obtainUI:@"Right"];
+    [rUpdateUi updateUI:message];
+    
+    
+    
+    
+}
+
+
+
+
+
+@end
