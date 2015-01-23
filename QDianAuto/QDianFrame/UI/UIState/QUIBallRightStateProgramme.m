@@ -105,6 +105,7 @@
         [paramView addSubview:fSlider];
         
         controlPos+=12;
+        i++;
     }
     
     
