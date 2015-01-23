@@ -12,6 +12,7 @@
 @synthesize stateName;
 
 
+//测试注释
 - (id)initWithFrame:(CGRect)frame
 {
     if ((self = [super initWithFrame:frame]) != nil)
