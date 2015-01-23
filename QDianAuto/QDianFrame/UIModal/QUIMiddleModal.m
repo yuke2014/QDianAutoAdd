@@ -106,6 +106,19 @@
 
 }
 
+- (void)commandTouched:(id)sender
+{
+    CommandButton *button = (CommandButton *)sender;
+    NSLog(@"selelcted button is : %d",button.tag);
+    [QBallCommandManager shareCommandManager].selectedCommand = button.tag - CBUTTON_BASE;
+    
+    QUIMessage *message = [[QUIManager shareUIManager] genMessageType:button.commandName withIntValue:0 withType:0 withDName:@"NO"];
+    
+    id<QUi> rUpdateUi = [[QUIManager shareUIManager] obtainUI:@"Right"];
+    [rUpdateUi updateUI:message];
+
+}
+
 
 #pragma mark -
 #pragma mark programme area

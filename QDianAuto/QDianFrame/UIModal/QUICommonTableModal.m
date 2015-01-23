@@ -117,6 +117,8 @@
     
     id<QUi> mUpdateUi =  [[QUIManager shareUIManager] obtainUI:@"Middle"];
     NSInteger qCount = [cManager queueCount];
+    cManager.selectedCommand = qCount - 1;
+    
     QUIMessage *message = [[QUIManager shareUIManager] genMessageType:commandClass withIntValue:qCount withType:0 withDName:[cArray objectAtIndex:0]];
     [mUpdateUi updateUI:message];
     

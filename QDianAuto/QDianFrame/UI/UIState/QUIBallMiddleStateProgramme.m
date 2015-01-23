@@ -75,7 +75,7 @@
     [cButton setTitle:sMessage.dName forState:UIControlStateNormal];
     [cButton setImageEdgeInsets:UIEdgeInsetsMake(2.0, 0.0, 0.0, -cButton.titleLabel.bounds.size.width)];
    
-    [cButton addTarget:middleModal action:@selector(commandSelected:) forControlEvents:UIControlEventTouchUpInside];
+    [cButton addTarget:middleModal action:@selector(commandTouched:) forControlEvents:UIControlEventTouchUpInside];
     
     
     

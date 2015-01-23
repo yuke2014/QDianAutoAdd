@@ -52,7 +52,7 @@
 		<key>remark</key>
 		<string></string>
 	</dict>
-	<key>QRotateRate</key>
+	<key>QBallRotateRate</key>
 	<dict>
 		<key>param</key>
 		<array>
@@ -118,7 +118,7 @@
 			<string>红&amp;0&amp;255</string>
 			<string>绿&amp;0&amp;255</string>
 			<string>蓝&amp;0&amp;255</string>
-			<string>延迟0&amp;10000</string>
+			<string>延迟&amp;0&amp;10000</string>
 		</array>
 		<key>remark</key>
 		<string></string>

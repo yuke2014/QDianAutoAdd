@@ -19,6 +19,7 @@
     if ((self = [super init]) != nil)
     {
         iRobot = robot;
+        p = [[NSMutableDictionary alloc] init];
     }
     return self;
 }

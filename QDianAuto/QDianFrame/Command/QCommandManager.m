@@ -75,6 +75,16 @@ static QCommandManager *qCommandManager = nil;
     return [currentQueue count];
 }
 
+- (id<QCommand>)obtainCommandWithIndex:(NSInteger)index
+{
+    return [currentQueue objectAtIndex:index];
+}
+
+- (id<QCommand>)obtainSelectedCommand
+{
+    return [currentQueue objectAtIndex:_selectedCommand];
+}
+
 - (void)printQueueName
 {
     for (int i = 0; i < [currentQueue count]; i++)

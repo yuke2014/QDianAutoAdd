@@ -14,12 +14,16 @@
     NSMutableArray *currentQueue;
 }
 
+@property NSInteger selectedCommand;
+
 + (QCommandManager *)shareCommandManager;
 
 
 - (void)addCommandToQueue:(id<QCommand>)qCommand;
 - (void)removeCommandFromQueue:(id<QCommand>)qCommand;
 - (void)removeCommandWithName:(NSString *)name;
+- (id<QCommand>)obtainCommandWithIndex:(NSInteger)index;
+- (id<QCommand>)obtainSelectedCommand;
 - (NSInteger)queueCount;
 - (void)printQueueName;
 
