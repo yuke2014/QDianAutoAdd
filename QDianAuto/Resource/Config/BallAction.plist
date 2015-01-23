@@ -22,8 +22,8 @@
 	</array>
 	<key>光</key>
 	<array>
-		<string>调色</string>
-		<string>渐隐</string>
+		<string>调色&amp;QBallColor</string>
+		<string>渐隐&amp;QBallFade</string>
 		<string>背光</string>
 	</array>
 </dict>
