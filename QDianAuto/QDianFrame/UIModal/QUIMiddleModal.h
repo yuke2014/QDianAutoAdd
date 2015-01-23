@@ -13,5 +13,6 @@
 
 - (void)carCodeSelected:(id)sender;
 - (void)commandSelected:(id)sender;
+- (void)deleteSelected:(id)sender;
 
 @end

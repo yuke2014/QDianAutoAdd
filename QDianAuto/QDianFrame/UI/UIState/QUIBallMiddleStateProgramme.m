@@ -68,10 +68,11 @@
     cButton.frame = CGRectMake(60, beginPos, 580.0, 56.0);
     cButton.commandName = sMessage.mName;
     cButton.cIndex      = messageCount - 1;
+    cButton.tag         = CBUTTON_BASE + cButton.cIndex;
     [cButton setImage:buttonImage forState:UIControlStateNormal];
     [cButton addTarget:middleModal action:@selector(commandSelected:) forControlEvents:UIControlEventTouchUpInside];
     
-    UILongPressGestureRecognizer *lPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(editPress:)];
+    UILongPressGestureRecognizer *lPress = [[UILongPressGestureRecognizer alloc] initWithTarget:middleModal   action:@selector(commandSelected:)];
     [cButton addGestureRecognizer:lPress];
     
     cButton.animationType = @"BounceRight";
@@ -81,18 +82,6 @@
 
 }
 
-- (void)editPress:(UILongPressGestureRecognizer *)gesture
-{
-    UIImage *cancelImage     = [UIImage imageNamed:@"彩条取消图标.png"];
-    UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    cancelButton.frame     = CGRectMake(550, 15, 20, 20);
-    [cancelButton setImage:cancelImage forState:UIControlStateNormal];
-    
-    [cancelButton addTarget:middleModal action:@selector(carCodeSelected:) forControlEvents:UIControlEventTouchUpInside];
-    
-    [gesture.view addSubview:cancelButton];
-
-}
 
 
 

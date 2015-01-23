@@ -42,6 +42,34 @@ static QCommandManager *qCommandManager = nil;
     [currentQueue removeObject:qCommand];
 }
 
+- (void)removeCommandWithName:(NSString *)name
+{
+    NSInteger len = [currentQueue count];
+    for (int i = 0; i < len; i++)
+    {
+        id<QCommand> command = [currentQueue objectAtIndex:i];
+        NSString *cName = NSStringFromClass([command class]);
+        if ([cName isEqualToString:name])
+        {
+            [currentQueue removeObject:command];
+            break;
+        }
+
+        
+    }
+    
+    /*for (id<QCommand> command in currentQueue)
+    {
+        NSString *cName = NSStringFromClass([command class]);
+        if ([cName isEqualToString:name])
+        {
+            [currentQueue removeObject:command];
+        }
+        
+    }*/
+}
+
+
 - (NSInteger)queueCount
 {
     return [currentQueue count];

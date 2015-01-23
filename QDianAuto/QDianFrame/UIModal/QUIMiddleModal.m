@@ -9,6 +9,7 @@
 #import "QUIMiddleModal.h"
 #import "QUIManager.h"
 #import "QUIStateManager.h"
+#import "CommandButton.h"
 
 @implementation QUIMiddleModal
 @synthesize stateView;
@@ -39,9 +40,38 @@
 
 }
 
-- (void)commandSelected:(id)sender
+- (void)deleteSelected:(id)sender
 {
+    CommandButton *cButton = (CommandButton *)[sender superview];
+
+    QCommandManager *commandManager = [QCommandManager shareCommandManager];
+    NSInteger endIndex   = [commandManager queueCount] + CBUTTON_BASE - 1;
+    NSInteger beginIndex = cButton.tag;
+
+    [commandManager removeCommandWithName:cButton.commandName];
+    [[sender superview] removeFromSuperview];
     
+    for (NSInteger i = beginIndex + 1; i <= endIndex; i++)
+    {
+        UIView *ajustView = [stateView viewWithTag:i];
+        ajustView.tag = ajustView.tag - 1;
+        ajustView.frame   = CGRectMake(ajustView.frame.origin.x, ajustView.frame.origin.y - 80, ajustView.frame.size.width, ajustView.frame.size.height);
+    }
+    
+    
+}
+
+- (void)commandSelected:(UILongPressGestureRecognizer *)gesture
+{
+    UIImage *cancelImage     = [UIImage imageNamed:@"彩条取消图标.png"];
+    UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    cancelButton.frame     = CGRectMake(550, 18, 20, 20);
+    [cancelButton setImage:cancelImage forState:UIControlStateNormal];
+    
+    [cancelButton addTarget:self action:@selector(deleteSelected:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [gesture.view addSubview:cancelButton];
+
 }
 
 

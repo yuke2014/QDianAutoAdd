@@ -10,6 +10,8 @@
 #import "QUi.h"
 #import "QUIMessage.h"
 
+#define CBUTTON_BASE 1000
+
 @interface QUIManager : NSObject
 {
     NSMutableDictionary *uiDictionary;

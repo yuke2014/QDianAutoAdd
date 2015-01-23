@@ -19,6 +19,7 @@
 
 - (void)addCommandToQueue:(id<QCommand>)qCommand;
 - (void)removeCommandFromQueue:(id<QCommand>)qCommand;
+- (void)removeCommandWithName:(NSString *)name;
 - (NSInteger)queueCount;
 
 - (void)commitQueue;
