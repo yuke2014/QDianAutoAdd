@@ -9,6 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "QUIState.h"
 
+
+@protocol QUIModal;
+
 @interface QUITopBarStateSetting : UIView<QUIState>
+{
+    id<QUIModal> topModal;
+}
 
 @end

@@ -40,6 +40,11 @@
     id<QUi>      nUITop    = [[QUIManager shareUIManager] obtainUI:@"Top"];
     [nUITop setState:nStateTop];
     [nUITop reloadUI];
+    
+    id<QUIState> nStateRight = [[QUIStateManager shareUIStateManager] createRightStateWithName:@"dd"];
+    id<QUi>      nUIRight    = [[QUIManager shareUIManager] obtainUI:@"Right"];
+    [nUIRight setState:nStateRight];
+    [nUIRight reloadUI];
 
 }
 
@@ -54,9 +59,11 @@
     UIView *removeView = [sender superview];
     POPSpringAnimation *positionAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
     positionAnimation.fromValue = [NSValue valueWithCGRect:cButton.frame];
-    positionAnimation.toValue = [NSValue valueWithCGRect:CGRectMake(cButton.frame.origin.x, cButton.frame.origin.y, 0, 0)];
+    positionAnimation.toValue = [NSValue valueWithCGRect:CGRectMake(cButton.center.x+30, cButton.center.y, 0, 0)];
     positionAnimation.springBounciness = 15.0f;
-    positionAnimation.springSpeed = 20.0f;
+    positionAnimation.springSpeed = 30.0f;
+    
+    
 
     
     positionAnimation.completionBlock = ^(POPAnimation *anim, BOOL finished)
@@ -83,8 +90,6 @@
         }
     };
     [removeView pop_addAnimation:positionAnimation forKey:@"aaaa"];
-    
-    
     
 }
 

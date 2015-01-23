@@ -117,7 +117,7 @@
     
     id<QUi> mUpdateUi =  [[QUIManager shareUIManager] obtainUI:@"Middle"];
     NSInteger qCount = [cManager queueCount];
-    QUIMessage *message = [[QUIManager shareUIManager] genMessageType:commandClass withIntValue:qCount withType:0];
+    QUIMessage *message = [[QUIManager shareUIManager] genMessageType:commandClass withIntValue:qCount withType:0 withDName:[cArray objectAtIndex:0]];
     [mUpdateUi updateUI:message];
     
     id<QUi> rUpdateUi = [[QUIManager shareUIManager] obtainUI:@"Right"];

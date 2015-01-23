@@ -13,6 +13,7 @@
 @property  NSInteger mType;
 @property  NSInteger mLen;
 @property (nonatomic,strong) NSString  *mName;
+@property (nonatomic,strong) NSString  *dName;
 @property (nonatomic,strong) id        mContent;
 
 

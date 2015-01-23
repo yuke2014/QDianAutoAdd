@@ -46,12 +46,13 @@ static QUIManager *uiManager = nil;
     return [uiDictionary objectForKey:key];
 }
 
-- (QUIMessage *)genMessageType:(NSString *)aName withIntValue:(NSInteger)aLen withType:(NSInteger)aType
+- (QUIMessage *)genMessageType:(NSString *)aName withIntValue:(NSInteger)aLen withType:(NSInteger)aType withDName:(NSString *)dName
 {
     QUIMessage *sendMessage = [[QUIMessage alloc] init];
     sendMessage.mName = aName;
     sendMessage.mLen  = aLen;
     sendMessage.mType = aType;
+    sendMessage.dName = dName;
     return sendMessage;
 }
 

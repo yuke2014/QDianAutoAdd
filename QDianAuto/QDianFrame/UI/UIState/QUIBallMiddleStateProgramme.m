@@ -69,8 +69,15 @@
     cButton.commandName = sMessage.mName;
     cButton.cIndex      = messageCount - 1;
     cButton.tag         = CBUTTON_BASE + cButton.cIndex;
+    
+    [cButton setTitleEdgeInsets:UIEdgeInsetsMake(0.0, -buttonImage.size.width, 0.0, 0.0)];
     [cButton setImage:buttonImage forState:UIControlStateNormal];
+    [cButton setTitle:sMessage.dName forState:UIControlStateNormal];
+    [cButton setImageEdgeInsets:UIEdgeInsetsMake(2.0, 0.0, 0.0, -cButton.titleLabel.bounds.size.width)];
+   
     [cButton addTarget:middleModal action:@selector(commandSelected:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
     
     UILongPressGestureRecognizer *lPress = [[UILongPressGestureRecognizer alloc] initWithTarget:middleModal   action:@selector(commandSelected:)];
     [cButton addGestureRecognizer:lPress];
@@ -79,6 +86,8 @@
     cButton.animationParams[@"springBounciness"] = @16;
     [self addSubview:cButton];
     [cButton startFAAnimation];
+    
+    
 
 }
 

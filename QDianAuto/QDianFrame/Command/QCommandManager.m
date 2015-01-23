@@ -75,6 +75,15 @@ static QCommandManager *qCommandManager = nil;
     return [currentQueue count];
 }
 
+- (void)printQueueName
+{
+    for (int i = 0; i < [currentQueue count]; i++)
+    {
+        id<QCommand> command = [currentQueue objectAtIndex:i];
+        NSLog(@"command class is : %@",NSStringFromClass([command class]));
+    }
+}
+
 #pragma mark -
 #pragma mark interface
 

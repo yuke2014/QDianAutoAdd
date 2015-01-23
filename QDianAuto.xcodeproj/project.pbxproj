@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C22D23E1A72537D00BADD0E /* QUITopModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C22D23D1A72537D00BADD0E /* QUITopModal.m */; };
 		0C243ADB1A713DBA00679CC1 /* QUIRightModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C243ADA1A713DBA00679CC1 /* QUIRightModal.m */; };
 		0C2D042F1A621FDD00379BF4 /* UIConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C2D042E1A621FDD00379BF4 /* UIConfig.plist */; };
 		0C2DAAEA1A617C3A008EA1EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DAAE91A617C3A008EA1EA /* main.m */; };
@@ -113,6 +114,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C22D23C1A72537D00BADD0E /* QUITopModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUITopModal.h; sourceTree = "<group>"; };
+		0C22D23D1A72537D00BADD0E /* QUITopModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUITopModal.m; sourceTree = "<group>"; };
 		0C243AD91A713DBA00679CC1 /* QUIRightModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIRightModal.h; sourceTree = "<group>"; };
 		0C243ADA1A713DBA00679CC1 /* QUIRightModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIRightModal.m; sourceTree = "<group>"; };
 		0C2D042E1A621FDD00379BF4 /* UIConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UIConfig.plist; sourceTree = "<group>"; };
@@ -464,6 +467,8 @@
 				0C81B22D1A6BF8980018F6AB /* QUICommonTableModal.m */,
 				0C243AD91A713DBA00679CC1 /* QUIRightModal.h */,
 				0C243ADA1A713DBA00679CC1 /* QUIRightModal.m */,
+				0C22D23C1A72537D00BADD0E /* QUITopModal.h */,
+				0C22D23D1A72537D00BADD0E /* QUITopModal.m */,
 			);
 			path = UIModal;
 			sourceTree = "<group>";
@@ -759,6 +764,7 @@
 				0C83F0F11A67659400EC9A57 /* QUIRight.m in Sources */,
 				0C83F0FA1A67AC7500EC9A57 /* QUIBallLeftStateNormal.m in Sources */,
 				0CDBCFC61A6F7C9700E600F9 /* QCommandManager.m in Sources */,
+				0C22D23E1A72537D00BADD0E /* QUITopModal.m in Sources */,
 				0C83F1001A67B62B00EC9A57 /* QUIBallMiddleStateNormal.m in Sources */,
 				0CE733571A710021002BEF10 /* QBallFade.m in Sources */,
 				0C83F0EF1A67659400EC9A57 /* QUILeft.m in Sources */,

@@ -21,6 +21,7 @@
 - (void)removeCommandFromQueue:(id<QCommand>)qCommand;
 - (void)removeCommandWithName:(NSString *)name;
 - (NSInteger)queueCount;
+- (void)printQueueName;
 
 - (void)commitQueue;
 - (id<QCommand>)createQCommand:(NSString *)classname withRobot:(id)aRobot;
