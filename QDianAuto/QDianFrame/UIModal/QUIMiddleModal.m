@@ -10,6 +10,9 @@
 #import "QUIManager.h"
 #import "QUIStateManager.h"
 #import "CommandButton.h"
+#import "UIView+FastAnimation.h"
+#import "POP/POP.h"
+
 
 @implementation QUIMiddleModal
 @synthesize stateView;
@@ -43,20 +46,44 @@
 - (void)deleteSelected:(id)sender
 {
     CommandButton *cButton = (CommandButton *)[sender superview];
-
     QCommandManager *commandManager = [QCommandManager shareCommandManager];
     NSInteger endIndex   = [commandManager queueCount] + CBUTTON_BASE - 1;
     NSInteger beginIndex = cButton.tag;
 
     [commandManager removeCommandWithName:cButton.commandName];
-    [[sender superview] removeFromSuperview];
+    UIView *removeView = [sender superview];
+    POPSpringAnimation *positionAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
+    positionAnimation.fromValue = [NSValue valueWithCGRect:cButton.frame];
+    positionAnimation.toValue = [NSValue valueWithCGRect:CGRectMake(cButton.frame.origin.x, cButton.frame.origin.y, 0, 0)];
+    positionAnimation.springBounciness = 15.0f;
+    positionAnimation.springSpeed = 20.0f;
+
     
-    for (NSInteger i = beginIndex + 1; i <= endIndex; i++)
+    positionAnimation.completionBlock = ^(POPAnimation *anim, BOOL finished)
     {
-        UIView *ajustView = [stateView viewWithTag:i];
-        ajustView.tag = ajustView.tag - 1;
-        ajustView.frame   = CGRectMake(ajustView.frame.origin.x, ajustView.frame.origin.y - 80, ajustView.frame.size.width, ajustView.frame.size.height);
-    }
+        if (finished)
+        {
+            [removeView removeFromSuperview];
+            for (NSInteger i = beginIndex + 1; i <= endIndex; i++)
+            {
+                POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
+                
+                UIView *ajustView = [stateView viewWithTag:i];
+                CGPoint point = ajustView.center;
+
+                ajustView.tag = ajustView.tag - 1;
+                springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(point.x, point.y - 80)];
+                springAnimation.springBounciness = 20.0;
+                springAnimation.springSpeed = 20.0;
+                [ajustView pop_addAnimation:springAnimation forKey:@"changeposition"];
+
+                //ajustView.frame   = CGRectMake(ajustView.frame.origin.x, ajustView.frame.origin.y - 80, ajustView.frame.size.width, ajustView.frame.size.height);
+                //[ajustView startFAAnimation];
+            }
+        }
+    };
+    [removeView pop_addAnimation:positionAnimation forKey:@"aaaa"];
+    
     
     
 }
