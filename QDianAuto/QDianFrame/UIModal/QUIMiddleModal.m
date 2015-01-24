@@ -51,7 +51,7 @@
 - (void)deleteSelected:(id)sender
 {
     CommandButton *cButton = (CommandButton *)[sender superview];
-    QCommandManager *commandManager = [QCommandManager shareCommandManager];
+    QCommandManager *commandManager = [QBallCommandManager shareCommandManager];
     NSInteger endIndex   = [commandManager queueCount] + CBUTTON_BASE - 1;
     NSInteger beginIndex = cButton.tag;
 

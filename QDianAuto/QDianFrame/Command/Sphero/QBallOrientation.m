@@ -10,4 +10,11 @@
 
 @implementation QBallOrientation
 
+- (id)execute
+{
+    NSLog(@"QBallOrientation param is : %@",self.p);
+    return nil;
+}
+
+
 @end

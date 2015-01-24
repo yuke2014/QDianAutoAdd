@@ -108,8 +108,10 @@
         i++;
     }
     
-    
+    paramView.animationType = @"ZoomInY";
+
     [self addSubview:paramView];
+    [paramView startFAAnimation];
     
     
 }

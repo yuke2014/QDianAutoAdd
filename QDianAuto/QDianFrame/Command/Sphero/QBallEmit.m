@@ -10,4 +10,10 @@
 
 @implementation QBallEmit
 
+- (id)execute
+{
+    NSLog(@"QBallEmit param is : %@",self.p);
+    return nil;
+}
+
 @end

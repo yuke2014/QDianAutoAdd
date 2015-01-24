@@ -10,4 +10,11 @@
 
 @implementation QBallDelay
 
+- (id)execute
+{
+    NSLog(@"QBallDelay param is : %@",self.p);
+    return nil;
+}
+
+
 @end

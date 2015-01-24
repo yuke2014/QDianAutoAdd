@@ -10,4 +10,10 @@
 
 @implementation QBallStabilization
 
+- (id)execute
+{
+    NSLog(@"QBallStabilization param is : %@",self.p);
+    return nil;
+}
+
 @end

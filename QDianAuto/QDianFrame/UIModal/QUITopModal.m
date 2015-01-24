@@ -7,7 +7,7 @@
 //
 
 #import "QUITopModal.h"
-#import "QCommandManager.h"
+#import "QBallCommandManager.h"
 
 @implementation QUITopModal
 @synthesize stateView;
@@ -19,7 +19,9 @@
 
 - (void)playButtonDown:(id)sender
 {
-    [[QCommandManager shareCommandManager] printQueueName];
+    //[[QCommandManager shareCommandManager] printQueueName];
+    
+    [[QBallCommandManager shareCommandManager] commitQueue];
 }
 
 @end
