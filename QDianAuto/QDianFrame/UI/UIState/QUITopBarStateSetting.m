@@ -39,6 +39,8 @@
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     backButton.frame     = CGRectMake(5, 11, 18, 18);
     [backButton setImage:backImage forState:UIControlStateNormal];
+    [backButton addTarget:topModal action:@selector(backToMain:) forControlEvents:UIControlEventTouchUpInside];
+    
     [self addSubview:backButton];
     
     UIImage *playImage     = [UIImage imageNamed:@"开始.png"];

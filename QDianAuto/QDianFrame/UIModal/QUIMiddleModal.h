@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "QUIModal.h"
+#import "ProgrammeBallManager.h"
 
 @interface QUIMiddleModal : NSObject<QUIModal>
 

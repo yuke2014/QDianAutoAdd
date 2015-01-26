@@ -25,6 +25,9 @@
 - (id<QCommand>)obtainCommandWithIndex:(NSInteger)index;
 - (id<QCommand>)obtainSelectedCommand;
 - (NSInteger)queueCount;
+- (NSArray *)buildSaveCommand;
+
+
 - (void)printQueueName;
 
 - (void)commitQueue;

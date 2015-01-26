@@ -24,4 +24,31 @@
     [[QBallCommandManager shareCommandManager] commitQueue];
 }
 
+- (void)backToMain:(id)sender
+{
+    id<QUIState> nStateLeft = [[QUIStateManager shareUIStateManager] createLeftStateWithName:@"LeftNormal"];
+    id<QUi>      nUI    = [[QUIManager shareUIManager] obtainUI:@"Left"];
+    [nUI setState:nStateLeft];
+    [nUI reloadUI];
+    
+    
+    id<QUIState> nStateMiddle = [[QUIStateManager shareUIStateManager] createMiddleStateWithName:@"MiddleNormal"];
+    id<QUi>      nUIMiddle    = [[QUIManager shareUIManager] obtainUI:@"Middle"];
+    [nUIMiddle setState:nStateMiddle];
+    [nUIMiddle reloadUI];
+    
+    id<QUIState> nStateTop = [[QUIStateManager shareUIStateManager] createTopBarStateWithName:@"TopNormal"];
+    id<QUi>      nUITop    = [[QUIManager shareUIManager] obtainUI:@"Top"];
+    [nUITop setState:nStateTop];
+    [nUITop reloadUI];
+    
+    id<QUIState> nStateRight = [[QUIStateManager shareUIStateManager] createRightStateWithName:@"RightNormal"];
+    id<QUi>      nUIRight    = [[QUIManager shareUIManager] obtainUI:@"Right"];
+    [nUIRight setState:nStateRight];
+    [nUIRight reloadUI];
+    
+    NSArray *saveArray = [[QBallCommandManager shareCommandManager] buildSaveCommand];
+    [[ProgrammeBallManager shareProgrammeManager] saveCurrentProgramme:saveArray];
+}
+
 @end

@@ -17,10 +17,15 @@
 #import "QUITopBarStateSetting.h"
 
 
+#define BALLADD 0
+#define BALLALTER 1
+#define CARRADD 2
+#define CARALTER 3
 
 
 @interface QUIStateManager : NSObject
 
+@property int stateOperator;
 
 + (QUIStateManager *)shareUIStateManager;
 

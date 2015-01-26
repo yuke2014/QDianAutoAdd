@@ -7,6 +7,10 @@
 //
 
 #import "QUIBallMiddleStateNormal.h"
+#import "ProgrammeButton.h"
+
+
+
 
 @implementation QUIBallMiddleStateNormal
 @synthesize stateName;
@@ -26,6 +30,20 @@
 
 - (void)loadUI:(UIView *)fView
 {
+    NSComparator cmptr = ^(id obj1, id obj2){
+        if ([obj1 integerValue] > [obj2 integerValue]) {
+            return (NSComparisonResult)NSOrderedDescending;
+        }
+        
+        if ([obj1 integerValue] < [obj2 integerValue]) {
+            return (NSComparisonResult)NSOrderedAscending;
+        }
+        return (NSComparisonResult)NSOrderedSame;
+    };
+    
+    NSDictionary *commandDic = [[ProgrammeBallManager shareProgrammeManager] loadAllProgrammerFromPath];
+    NSArray *fileName = [commandDic allKeys];
+    NSArray  *fileNameOrder =  [fileName sortedArrayUsingComparator:cmptr];
     
     float     flagWidth    = 80;
     float     flagHeight   = 80;
@@ -53,8 +71,22 @@
     [ballButton setImage:ballImage forState:UIControlStateNormal];
     
     [ballButton addTarget:middleModal action:@selector(carCodeSelected:) forControlEvents:UIControlEventTouchUpInside];
-    
     [self addSubview:ballButton];
+    
+    UIImage *pBallImage     = [UIImage imageNamed:@"太空球.png"];
+
+    for (int i = 0; i < fileNameOrder.count; i++)
+    {
+
+        ProgrammeButton *pButton = [ProgrammeButton buttonWithType:UIButtonTypeCustom];
+        pButton.frame = CGRectMake(leftMargin + ((i+1) * flagWidth+50), controlPos + 15, 50, 50);
+    
+        [pButton setImage:pBallImage forState:UIControlStateNormal];
+        pButton.commandString = [commandDic objectForKey:[fileNameOrder objectAtIndex:i]];
+        [self addSubview:pButton];
+    }
+    
+    
     [fView addSubview:self];
 
 }

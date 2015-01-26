@@ -25,6 +25,8 @@
 
 - (void)carCodeSelected:(id)sender
 {
+    [QUIStateManager shareUIStateManager].stateOperator = BALLADD;
+    
     id<QUIState> nStateLeft = [[QUIStateManager shareUIStateManager] createLeftStateWithName:@"LeftProgrammer"];
     id<QUi>      nUI    = [[QUIManager shareUIManager] obtainUI:@"Left"];
     [nUI setState:nStateLeft];
@@ -45,6 +47,9 @@
     id<QUi>      nUIRight    = [[QUIManager shareUIManager] obtainUI:@"Right"];
     [nUIRight setState:nStateRight];
     [nUIRight reloadUI];
+    
+    [QUIStateManager shareUIStateManager].stateOperator = BALLADD;
+    [ProgrammeBallManager shareProgrammeManager].selectedProgramme =     [ProgrammeBallManager shareProgrammeManager].maxFileName + 1;
 
 }
 

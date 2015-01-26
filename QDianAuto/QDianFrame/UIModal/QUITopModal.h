@@ -8,9 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "QUIModal.h"
+#import "QUIState.h"
+#import "QUi.h"
+#import "QUIManager.h"
+#import "QUIStateManager.h"
+#import "ProgrammeBallManager.h"
 
 @interface QUITopModal : NSObject<QUIModal>
 
 - (void)playButtonDown:(id)sender;
+- (void)backToMain:(id)sender;
 
 @end

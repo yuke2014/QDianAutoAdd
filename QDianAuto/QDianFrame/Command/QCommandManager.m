@@ -94,6 +94,27 @@ static QCommandManager *qCommandManager = nil;
     }
 }
 
+- (NSArray *)buildSaveCommand
+{
+    NSMutableArray *resultArray = [[NSMutableArray alloc] init];
+    for (int i = 0; i < [currentQueue count]; i++)
+    {
+        id<QCommand> command = [currentQueue objectAtIndex:i];
+        NSString *className = NSStringFromClass([command class]);
+        NSMutableString *paramString = [[NSMutableString alloc] init];
+        [paramString appendString:className];
+        NSArray *keyArray = [command.p allKeys];
+        for (int i = 0; i < keyArray.count; i++)
+        {
+            [paramString appendFormat:@"&%f",[[command.p objectForKey:[NSNumber numberWithInt:i]] floatValue]];
+        }
+        [resultArray addObject:paramString];
+    }
+    
+    return [NSArray arrayWithArray:resultArray];
+    
+}
+
 #pragma mark -
 #pragma mark interface
 

@@ -71,6 +71,10 @@
 		0C83F1001A67B62B00EC9A57 /* QUIBallMiddleStateNormal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C83F0FF1A67B62B00EC9A57 /* QUIBallMiddleStateNormal.m */; };
 		0C83F1031A67BF3F00EC9A57 /* QUILeftModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C83F1021A67BF3F00EC9A57 /* QUILeftModal.m */; };
 		0C86E62B1A6A756F00543456 /* QUIMiddleModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C86E62A1A6A756F00543456 /* QUIMiddleModal.m */; };
+		0C922EC71A75D7DF00669F1C /* ProgrammerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C922EC61A75D7DF00669F1C /* ProgrammerManager.m */; };
+		0C922ECA1A75E25400669F1C /* ProgrammeBallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C922EC91A75E25400669F1C /* ProgrammeBallManager.m */; };
+		0C922ECD1A761DD300669F1C /* ProgrammeCarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C922ECC1A761DD300669F1C /* ProgrammeCarManager.m */; };
+		0C922ED01A76485300669F1C /* ProgrammeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C922ECF1A76485300669F1C /* ProgrammeButton.m */; };
 		0C94117C1A6CB1D6003723EE /* QUIMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C94117B1A6CB1D6003723EE /* QUIMessageManager.m */; };
 		0C9F2B951A6FF2D800C223E6 /* QUITopBarStateSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9F2B941A6FF2D800C223E6 /* QUITopBarStateSetting.m */; };
 		0CA0771B1A70911C00632993 /* 驾驶舱.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CA077191A70911C00632993 /* 驾驶舱.png */; };
@@ -205,6 +209,14 @@
 		0C86E6281A6A658900543456 /* QUIModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIModal.h; sourceTree = "<group>"; };
 		0C86E6291A6A756F00543456 /* QUIMiddleModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIMiddleModal.h; sourceTree = "<group>"; };
 		0C86E62A1A6A756F00543456 /* QUIMiddleModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIMiddleModal.m; sourceTree = "<group>"; };
+		0C922EC51A75D7DF00669F1C /* ProgrammerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgrammerManager.h; sourceTree = "<group>"; };
+		0C922EC61A75D7DF00669F1C /* ProgrammerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgrammerManager.m; sourceTree = "<group>"; };
+		0C922EC81A75E25400669F1C /* ProgrammeBallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgrammeBallManager.h; sourceTree = "<group>"; };
+		0C922EC91A75E25400669F1C /* ProgrammeBallManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgrammeBallManager.m; sourceTree = "<group>"; };
+		0C922ECB1A761DD300669F1C /* ProgrammeCarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgrammeCarManager.h; sourceTree = "<group>"; };
+		0C922ECC1A761DD300669F1C /* ProgrammeCarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgrammeCarManager.m; sourceTree = "<group>"; };
+		0C922ECE1A76485300669F1C /* ProgrammeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgrammeButton.h; sourceTree = "<group>"; };
+		0C922ECF1A76485300669F1C /* ProgrammeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgrammeButton.m; sourceTree = "<group>"; };
 		0C94117A1A6CB1D6003723EE /* QUIMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIMessageManager.h; sourceTree = "<group>"; };
 		0C94117B1A6CB1D6003723EE /* QUIMessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIMessageManager.m; sourceTree = "<group>"; };
 		0C9F2B931A6FF2D800C223E6 /* QUITopBarStateSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUITopBarStateSetting.h; sourceTree = "<group>"; };
@@ -428,6 +440,12 @@
 			children = (
 				0C6547641A6E35B000E8B8C7 /* ControlTools.h */,
 				0C6547651A6E35B000E8B8C7 /* ControlTools.m */,
+				0C922EC51A75D7DF00669F1C /* ProgrammerManager.h */,
+				0C922EC61A75D7DF00669F1C /* ProgrammerManager.m */,
+				0C922EC81A75E25400669F1C /* ProgrammeBallManager.h */,
+				0C922EC91A75E25400669F1C /* ProgrammeBallManager.m */,
+				0C922ECB1A761DD300669F1C /* ProgrammeCarManager.h */,
+				0C922ECC1A761DD300669F1C /* ProgrammeCarManager.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -501,6 +519,8 @@
 			children = (
 				0CA077241A709EE400632993 /* CommandButton.h */,
 				0CA077251A709EE400632993 /* CommandButton.m */,
+				0C922ECE1A76485300669F1C /* ProgrammeButton.h */,
+				0C922ECF1A76485300669F1C /* ProgrammeButton.m */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -775,6 +795,7 @@
 				0C4F3CEA1A69165C001D6859 /* QUIModalManager.m in Sources */,
 				0C83F1031A67BF3F00EC9A57 /* QUILeftModal.m in Sources */,
 				0C243ADB1A713DBA00679CC1 /* QUIRightModal.m in Sources */,
+				0C922ED01A76485300669F1C /* ProgrammeButton.m in Sources */,
 				0CDBCFC31A6F7C4100E600F9 /* QBallStop.m in Sources */,
 				0CE733601A7100AE002BEF10 /* QBallRotate.m in Sources */,
 				0CE733631A7100DC002BEF10 /* QBallOrientation.m in Sources */,
@@ -794,11 +815,14 @@
 				0C9F2B951A6FF2D800C223E6 /* QUITopBarStateSetting.m in Sources */,
 				0CDBCFBD1A6F56FC00E600F9 /* QBallRoll.m in Sources */,
 				0C2DAAED1A617C3A008EA1EA /* AppDelegate.m in Sources */,
+				0C922ECA1A75E25400669F1C /* ProgrammeBallManager.m in Sources */,
 				0C83F0F01A67659400EC9A57 /* QUIMiddle.m in Sources */,
 				0C2DAAEA1A617C3A008EA1EA /* main.m in Sources */,
 				0CE733721A7101C1002BEF10 /* QBallLoop.m in Sources */,
 				0CE7335A1A710056002BEF10 /* QBallDelay.m in Sources */,
+				0C922EC71A75D7DF00669F1C /* ProgrammerManager.m in Sources */,
 				0CA077221A709A3000632993 /* QUIMessage.m in Sources */,
+				0C922ECD1A761DD300669F1C /* ProgrammeCarManager.m in Sources */,
 				0C83F0ED1A67659400EC9A57 /* QUIConfig.m in Sources */,
 				0CCE1FF01A68E48C008B5A66 /* QUIStateManager.m in Sources */,
 				0CE733751A7101E9002BEF10 /* QBallLoopEnd.m in Sources */,
