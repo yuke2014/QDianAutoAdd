@@ -34,6 +34,7 @@ static QCommandManager *qCommandManager = nil;
 
 - (void)addCommandToQueue:(id<QCommand>)qCommand
 {
+    
     [currentQueue addObject:qCommand];
 }
 

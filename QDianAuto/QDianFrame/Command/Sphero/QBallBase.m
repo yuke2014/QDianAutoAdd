@@ -7,6 +7,7 @@
 //
 
 #import "QBallBase.h"
+#import "QBallCommandManager.h"
 
 
 @implementation QBallBase
@@ -20,6 +21,20 @@
     {
         iRobot = robot;
         p = [[NSMutableDictionary alloc] init];
+        //NSLog(@"QBallBase class name is : %@",NSStringFromClass([self class]));
+        QCommandManager *ballManager = [QBallCommandManager shareCommandManager];
+        NSDictionary *pDic = [ballManager obtainParamConfig];
+        
+        NSDictionary *dic = [pDic objectForKey:NSStringFromClass([self class])];
+        NSArray      *array = [dic objectForKey:@"param"];
+        
+        for (int i = 0; i < array.count; i++)
+        {
+            [p setObject:@0 forKey:[NSNumber numberWithInt:i]];
+        }
+
+        
+        
     }
     return self;
 }

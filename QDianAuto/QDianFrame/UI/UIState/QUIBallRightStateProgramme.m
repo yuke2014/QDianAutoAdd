@@ -62,7 +62,6 @@
     float     leftMargin   = 10;
     
     QUIMessage *rMessage = (QUIMessage *)message;
-    NSLog(@"right update name is : %@",rMessage.mName);
     
     NSDictionary *pDic = [paramConfig objectForKey:rMessage.mName];
     NSArray *pList     = [pDic objectForKey:@"param"];
