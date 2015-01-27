@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C22D23E1A72537D00BADD0E /* QUITopModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C22D23D1A72537D00BADD0E /* QUITopModal.m */; };
 		0C243ADB1A713DBA00679CC1 /* QUIRightModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C243ADA1A713DBA00679CC1 /* QUIRightModal.m */; };
+		0C2868771A778E0E00CC0467 /* 启动.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C2868761A778E0E00CC0467 /* 启动.png */; };
 		0C2D042F1A621FDD00379BF4 /* UIConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C2D042E1A621FDD00379BF4 /* UIConfig.plist */; };
 		0C2DAAEA1A617C3A008EA1EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DAAE91A617C3A008EA1EA /* main.m */; };
 		0C2DAAED1A617C3A008EA1EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DAAEC1A617C3A008EA1EA /* AppDelegate.m */; };
@@ -122,6 +123,7 @@
 		0C22D23D1A72537D00BADD0E /* QUITopModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUITopModal.m; sourceTree = "<group>"; };
 		0C243AD91A713DBA00679CC1 /* QUIRightModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIRightModal.h; sourceTree = "<group>"; };
 		0C243ADA1A713DBA00679CC1 /* QUIRightModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIRightModal.m; sourceTree = "<group>"; };
+		0C2868761A778E0E00CC0467 /* 启动.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "启动.png"; sourceTree = "<group>"; };
 		0C2D042E1A621FDD00379BF4 /* UIConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UIConfig.plist; sourceTree = "<group>"; };
 		0C2DAAE41A617C3A008EA1EA /* QDianAuto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QDianAuto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C2DAAE81A617C3A008EA1EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -418,6 +420,7 @@
 				0C6547271A6DF3EE00E8B8C7 /* 锁定按下.png */,
 				0C6547281A6DF3EE00E8B8C7 /* 锁定.png */,
 				0C6547291A6DF3EE00E8B8C7 /* 太空车选中按下.png */,
+				0C2868761A778E0E00CC0467 /* 启动.png */,
 				0C65472A1A6DF3EE00E8B8C7 /* 太空车.png */,
 				0C65472B1A6DF3EE00E8B8C7 /* 太空球选中按下.png */,
 				0C65472C1A6DF3EE00E8B8C7 /* 太空球.png */,
@@ -708,6 +711,7 @@
 				0C6547471A6DF3EE00E8B8C7 /* 功能参数--数值调节-深黑色部分.png in Resources */,
 				0C6547401A6DF3EE00E8B8C7 /* 彩条5.png in Resources */,
 				0C65474E1A6DF3EE00E8B8C7 /* 锁定.png in Resources */,
+				0C2868771A778E0E00CC0467 /* 启动.png in Resources */,
 				0C6547431A6DF3EE00E8B8C7 /* 返回.png in Resources */,
 				0CDBCFB31A6F451100E600F9 /* BallAction.plist in Resources */,
 				0C65474C1A6DF3EE00E8B8C7 /* 设置.png in Resources */,

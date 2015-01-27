@@ -69,7 +69,7 @@
     
     QCommandManager *cManager = [QBallCommandManager shareCommandManager];
     id<QCommand> command = [cManager obtainSelectedCommand];
-
+    
     
     NSInteger i = 0;
     for (NSString *p in pList)
