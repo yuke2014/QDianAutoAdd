@@ -12,6 +12,7 @@
 #import "CommandButton.h"
 #import "UIView+FastAnimation.h"
 #import "POP/POP.h"
+#import "ProgrammeButton.h"
 
 
 @implementation QUIMiddleModal
@@ -22,11 +23,8 @@
     return @"LeftModal";
 }
 
-
-- (void)carCodeSelected:(id)sender
+- (void)allChangeToProgramme
 {
-    [QUIStateManager shareUIStateManager].stateOperator = BALLADD;
-    
     id<QUIState> nStateLeft = [[QUIStateManager shareUIStateManager] createLeftStateWithName:@"LeftProgrammer"];
     id<QUi>      nUI    = [[QUIManager shareUIManager] obtainUI:@"Left"];
     [nUI setState:nStateLeft];
@@ -47,10 +45,15 @@
     id<QUi>      nUIRight    = [[QUIManager shareUIManager] obtainUI:@"Right"];
     [nUIRight setState:nStateRight];
     [nUIRight reloadUI];
-    
-    [QUIStateManager shareUIStateManager].stateOperator = BALLADD;
-    [ProgrammeBallManager shareProgrammeManager].selectedProgramme =     [ProgrammeBallManager shareProgrammeManager].maxFileName + 1;
 
+}
+
+
+- (void)addCodeSelected:(id)sender
+{
+    [QUIStateManager shareUIStateManager].stateOperator = BALLADD;
+    [self allChangeToProgramme];
+    
 }
 
 - (void)deleteSelected:(id)sender
@@ -122,6 +125,37 @@
     id<QUi> rUpdateUi = [[QUIManager shareUIManager] obtainUI:@"Right"];
     [rUpdateUi updateUI:message];
 
+}
+
+- (void)programmeSelected:(id)sender
+{
+    ProgrammeButton *pButton = (ProgrammeButton *)sender;
+    QCommandManager *ballManager =  [QBallCommandManager shareCommandManager];
+    [ballManager clearAllCommand];
+    NSArray *commandArray = pButton.commandArray;
+    
+    for (NSString *commandString in commandArray)
+    {
+        NSArray *paramArray = [commandString componentsSeparatedByString:@"&"];
+        id<QCommand> command = [[NSClassFromString([paramArray objectAtIndex:0]) alloc] init];
+        
+        for (int i = 1; i < paramArray.count; i++)
+        {
+            NSNumber *p1 = [NSNumber numberWithFloat:[paramArray[i] floatValue]];
+            [command.p setObject:p1 forKey:[NSNumber numberWithInt:i - 1]];
+            
+            
+        }
+        [ballManager addCommandToQueue:command];
+
+    }
+    
+    [QUIStateManager shareUIStateManager].stateOperator = BALLALTER;
+    [ProgrammeBallManager shareProgrammeManager].selectedProgramme =  pButton.indexFile;
+    [self allChangeToProgramme];
+
+    
+    
 }
 
 

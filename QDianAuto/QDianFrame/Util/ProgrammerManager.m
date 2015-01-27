@@ -74,6 +74,7 @@ static ProgrammerManager *pManager = nil;
     
     NSArray *pArray = [fileManager contentsOfDirectoryAtPath:pDir error:nil];
     
+    
     self.fileCount = [pArray count] - 1;
     
     NSInteger mFileName = 0;

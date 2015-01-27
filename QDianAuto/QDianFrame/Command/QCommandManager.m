@@ -85,6 +85,11 @@ static QCommandManager *qCommandManager = nil;
     return [currentQueue objectAtIndex:_selectedCommand];
 }
 
+- (void)clearAllCommand
+{
+    [currentQueue removeAllObjects];
+}
+
 - (void)printQueueName
 {
     for (int i = 0; i < [currentQueue count]; i++)

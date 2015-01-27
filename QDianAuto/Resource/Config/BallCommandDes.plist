@@ -4,6 +4,8 @@
 <dict>
 	<key>QBallLoopEnd</key>
 	<dict>
+		<key>name</key>
+		<string>循环停止</string>
 		<key>param</key>
 		<array>
 			<string>次数&amp;0&amp;100</string>
@@ -13,6 +15,8 @@
 	</dict>
 	<key>QBallLoop</key>
 	<dict>
+		<key>name</key>
+		<string>循环</string>
 		<key>param</key>
 		<array>
 			<string>次数&amp;0&amp;100</string>
@@ -22,6 +26,8 @@
 	</dict>
 	<key>QBallEmit</key>
 	<dict>
+		<key>name</key>
+		<string>发射</string>
 		<key>param</key>
 		<array>
 			<string>标识&amp;0&amp;255</string>
@@ -31,6 +37,8 @@
 	</dict>
 	<key>QBallMotor</key>
 	<dict>
+		<key>name</key>
+		<string>马达</string>
 		<key>param</key>
 		<array>
 			<string>左马达&amp;switch</string>
@@ -44,6 +52,8 @@
 	</dict>
 	<key>QBallStabilization</key>
 	<dict>
+		<key>name</key>
+		<string>稳定</string>
 		<key>param</key>
 		<array>
 			<string>设置&amp;switch</string>
@@ -54,6 +64,8 @@
 	</dict>
 	<key>QBallRotateRate</key>
 	<dict>
+		<key>name</key>
+		<string>旋转率</string>
 		<key>param</key>
 		<array>
 			<string>比率&amp;0&amp;100</string>
@@ -63,6 +75,8 @@
 	</dict>
 	<key>QBallOrientation</key>
 	<dict>
+		<key>name</key>
+		<string>方向</string>
 		<key>param</key>
 		<array>
 			<string>朝向&amp;0&amp;360</string>
@@ -73,6 +87,8 @@
 	</dict>
 	<key>QBallRotate</key>
 	<dict>
+		<key>name</key>
+		<string>旋转</string>
 		<key>param</key>
 		<array>
 			<string>角度&amp;0&amp;360</string>
@@ -83,6 +99,8 @@
 	</dict>
 	<key>QBallWaitStop</key>
 	<dict>
+		<key>name</key>
+		<string>等待停止</string>
 		<key>param</key>
 		<array>
 			<string>延迟&amp;0&amp;10000</string>
@@ -92,6 +110,8 @@
 	</dict>
 	<key>QBallDelay</key>
 	<dict>
+		<key>name</key>
+		<string>延迟</string>
 		<key>param</key>
 		<array>
 			<string>延迟&amp;0&amp;10000</string>
@@ -101,6 +121,8 @@
 	</dict>
 	<key>QBallFade</key>
 	<dict>
+		<key>name</key>
+		<string>渐隐</string>
 		<key>param</key>
 		<array>
 			<string>红&amp;0&amp;255</string>
@@ -113,6 +135,8 @@
 	</dict>
 	<key>QBallColor</key>
 	<dict>
+		<key>name</key>
+		<string>颜色</string>
 		<key>param</key>
 		<array>
 			<string>红&amp;0&amp;255</string>
@@ -125,6 +149,8 @@
 	</dict>
 	<key>QBallRoll</key>
 	<dict>
+		<key>name</key>
+		<string>滚动</string>
 		<key>remark</key>
 		<string>指令说明</string>
 		<key>param</key>
@@ -136,8 +162,10 @@
 	</dict>
 	<key>QBallStop</key>
 	<dict>
-		<key>New item</key>
+		<key>remark</key>
 		<string></string>
+		<key>name</key>
+		<string>停止</string>
 		<key>param</key>
 		<array>
 			<string>延迟&amp;0&amp;10000</string>

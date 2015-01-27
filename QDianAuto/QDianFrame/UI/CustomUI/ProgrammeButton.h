@@ -10,7 +10,8 @@
 
 @interface ProgrammeButton : UIButton
 
-@property NSInteger index;
+@property NSInteger indexFile;
 @property (nonatomic,strong) NSString *commandString;
+@property (nonatomic,strong) NSArray *commandArray;
 
 @end

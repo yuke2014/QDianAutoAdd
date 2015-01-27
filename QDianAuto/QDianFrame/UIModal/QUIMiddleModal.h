@@ -12,9 +12,10 @@
 
 @interface QUIMiddleModal : NSObject<QUIModal>
 
-- (void)carCodeSelected:(id)sender;
+- (void)addCodeSelected:(id)sender;
 - (void)commandSelected:(id)sender;
 - (void)deleteSelected:(id)sender;
 - (void)commandTouched:(id)sender;
+- (void)programmeSelected:(id)sender;
 
 @end

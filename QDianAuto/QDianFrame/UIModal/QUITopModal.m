@@ -26,6 +26,10 @@
 
 - (void)backToMain:(id)sender
 {
+    
+    NSArray *saveArray = [[QBallCommandManager shareCommandManager] buildSaveCommand];
+    [[ProgrammeBallManager shareProgrammeManager] saveCurrentProgramme:saveArray];
+    
     id<QUIState> nStateLeft = [[QUIStateManager shareUIStateManager] createLeftStateWithName:@"LeftNormal"];
     id<QUi>      nUI    = [[QUIManager shareUIManager] obtainUI:@"Left"];
     [nUI setState:nStateLeft];
@@ -47,8 +51,7 @@
     [nUIRight setState:nStateRight];
     [nUIRight reloadUI];
     
-    NSArray *saveArray = [[QBallCommandManager shareCommandManager] buildSaveCommand];
-    [[ProgrammeBallManager shareProgrammeManager] saveCurrentProgramme:saveArray];
+    
 }
 
 @end

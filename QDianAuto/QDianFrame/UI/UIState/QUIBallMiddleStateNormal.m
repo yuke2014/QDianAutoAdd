@@ -70,7 +70,7 @@
     ballButton.frame     = CGRectMake(leftMargin, controlPos, flagWidth, flagHeight);
     [ballButton setImage:ballImage forState:UIControlStateNormal];
     
-    [ballButton addTarget:middleModal action:@selector(carCodeSelected:) forControlEvents:UIControlEventTouchUpInside];
+    [ballButton addTarget:middleModal action:@selector(addCodeSelected:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:ballButton];
     
     UIImage *pBallImage     = [UIImage imageNamed:@"太空球.png"];
@@ -80,9 +80,11 @@
 
         ProgrammeButton *pButton = [ProgrammeButton buttonWithType:UIButtonTypeCustom];
         pButton.frame = CGRectMake(leftMargin + ((i+1) * flagWidth+50), controlPos + 15, 50, 50);
-    
+        
         [pButton setImage:pBallImage forState:UIControlStateNormal];
-        pButton.commandString = [commandDic objectForKey:[fileNameOrder objectAtIndex:i]];
+        pButton.commandArray = [commandDic objectForKey:[fileNameOrder objectAtIndex:i]];
+        pButton.indexFile    = [fileName[i] integerValue];
+        [pButton addTarget:middleModal action:@selector(programmeSelected:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:pButton];
     }
     

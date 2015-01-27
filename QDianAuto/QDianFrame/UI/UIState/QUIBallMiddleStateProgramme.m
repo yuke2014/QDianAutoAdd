@@ -11,6 +11,7 @@
 #import "QUIConfig.h"
 #import "CommandButton.h"
 #import "UIView+FastAnimation.h"
+#import "QUIStateManager.h"
 
 
 @implementation QUIBallMiddleStateProgramme
@@ -47,6 +48,20 @@
     sepLine.image = [UIImage imageNamed:@"中间指令分割线.png"];
     [self addSubview:sepLine];
     [fView addSubview:self];
+    
+    if ([QUIStateManager shareUIStateManager].stateOperator == BALLALTER)
+    {
+        QCommandManager *ballManager = [QBallCommandManager shareCommandManager];
+        NSInteger qCount = [ballManager queueCount];
+        
+        for (int i = 0; i < qCount; i++)
+        {
+            id<QCommand> c = [ballManager obtainCommandWithIndex:i];
+            QUIMessage *message = [[QUIManager shareUIManager] genMessageType:NSStringFromClass([c class]) withIntValue:qCount withType:0 withDName:@"Test"];
+            [self updateUI:message];
+        }
+        
+    }
 
 }
 
