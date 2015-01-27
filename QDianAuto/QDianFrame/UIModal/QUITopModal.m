@@ -51,6 +51,8 @@
     [nUIRight setState:nStateRight];
     [nUIRight reloadUI];
     
+    [[QBallCommandManager shareCommandManager] clearAllCommand];
+    
     
 }
 

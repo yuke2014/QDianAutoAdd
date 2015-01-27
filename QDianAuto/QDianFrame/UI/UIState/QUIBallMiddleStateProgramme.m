@@ -44,6 +44,7 @@
     
     controlPos+=80;
     
+    
     UIImageView *sepLine = [[UIImageView alloc] initWithFrame:CGRectMake(leftMargin,controlPos , 648.0, 2.0)];
     sepLine.image = [UIImage imageNamed:@"中间指令分割线.png"];
     [self addSubview:sepLine];
@@ -53,11 +54,14 @@
     {
         QCommandManager *ballManager = [QBallCommandManager shareCommandManager];
         NSInteger qCount = [ballManager queueCount];
+        NSDictionary *pDic = [ballManager obtainParamConfig];
         
         for (int i = 0; i < qCount; i++)
         {
             id<QCommand> c = [ballManager obtainCommandWithIndex:i];
-            QUIMessage *message = [[QUIManager shareUIManager] genMessageType:NSStringFromClass([c class]) withIntValue:qCount withType:0 withDName:@"Test"];
+            NSString *className = NSStringFromClass([c class]);
+            NSDictionary *dName     = [pDic objectForKey:className];
+            QUIMessage *message = [[QUIManager shareUIManager] genMessageType:className withIntValue:qCount withType:i withDName:[dName objectForKey:@"name"]];
             [self updateUI:message];
         }
         
@@ -72,7 +76,15 @@
     
     
     float beginPos = 110;
-    beginPos = beginPos + (messageCount - 1) * 80;
+//    if ([QUIStateManager shareUIStateManager].stateOperator == BALLADD)
+//    {
+//        beginPos = beginPos + (messageCount - 1) * 80;
+//    }
+//    else
+//    {
+        beginPos = beginPos + sMessage.mType * 80;
+
+    //}
     
     int flagIndex = (arc4random() % 6) + 1;
     
@@ -82,7 +94,7 @@
     CommandButton *cButton = [CommandButton buttonWithType:UIButtonTypeCustom];
     cButton.frame = CGRectMake(60, beginPos, 580.0, 56.0);
     cButton.commandName = sMessage.mName;
-    cButton.cIndex      = messageCount - 1;
+    cButton.cIndex      = sMessage.mType;
     cButton.tag         = CBUTTON_BASE + cButton.cIndex;
     
     [cButton setTitleEdgeInsets:UIEdgeInsetsMake(0.0, -buttonImage.size.width, 0.0, 0.0)];

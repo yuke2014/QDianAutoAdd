@@ -90,6 +90,15 @@ static QCommandManager *qCommandManager = nil;
     [currentQueue removeAllObjects];
 }
 
+- (NSDictionary *)obtainParamConfig
+{
+    NSString *pListPath = [[NSBundle mainBundle] pathForResource:@"BallCommandDes" ofType:@"plist"];
+    NSDictionary  *paramConfig    = [[NSMutableDictionary alloc] initWithContentsOfFile:pListPath];
+    
+    return paramConfig;
+
+}
+
 - (void)printQueueName
 {
     for (int i = 0; i < [currentQueue count]; i++)

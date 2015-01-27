@@ -101,6 +101,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //NSLog(@"select row is : %d",indexPath.row);
+    [QUIStateManager shareUIStateManager].stateOperator = BALLADD;
     NSString *keyName = [keyCommand objectAtIndex:indexPath.section];
     NSArray  *keyArray = [command objectForKey:keyName];
     
@@ -119,7 +120,7 @@
     NSInteger qCount = [cManager queueCount];
     cManager.selectedCommand = qCount - 1;
     
-    QUIMessage *message = [[QUIManager shareUIManager] genMessageType:commandClass withIntValue:qCount withType:0 withDName:[cArray objectAtIndex:0]];
+    QUIMessage *message = [[QUIManager shareUIManager] genMessageType:commandClass withIntValue:qCount withType:qCount - 1 withDName:[cArray objectAtIndex:0]];
     [mUpdateUi updateUI:message];
     
     id<QUi> rUpdateUi = [[QUIManager shareUIManager] obtainUI:@"Right"];

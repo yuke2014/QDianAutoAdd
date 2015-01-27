@@ -51,7 +51,14 @@
 
 - (void)addCodeSelected:(id)sender
 {
+    if ([ProgrammeBallManager shareProgrammeManager].fileCount == 9)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"警告" message:@"目前只允许创建9个自定义程序。。" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
     [QUIStateManager shareUIStateManager].stateOperator = BALLADD;
+    [ProgrammeBallManager shareProgrammeManager].selectedProgramme = [ProgrammeBallManager shareProgrammeManager].maxFileName + 1;
     [self allChangeToProgramme];
     
 }
@@ -137,7 +144,7 @@
     for (NSString *commandString in commandArray)
     {
         NSArray *paramArray = [commandString componentsSeparatedByString:@"&"];
-        id<QCommand> command = [[NSClassFromString([paramArray objectAtIndex:0]) alloc] init];
+        id<QCommand> command = [[NSClassFromString([paramArray objectAtIndex:0]) alloc] initWithAuto:nil];
         
         for (int i = 1; i < paramArray.count; i++)
         {

@@ -12,6 +12,7 @@
 #import "QUIModal.h"
 #import "QBallCommandManager.h"
 #import "QUIManager.h"
+#import "QUIStateManager.h"
 
 @interface QUICommonTableModal : NSObject<QUIModal,UITableViewDelegate,UITableViewDataSource>
 {

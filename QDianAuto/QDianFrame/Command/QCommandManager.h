@@ -27,6 +27,7 @@
 - (NSInteger)queueCount;
 - (NSArray *)buildSaveCommand;
 - (void)clearAllCommand;
+- (NSDictionary *)obtainParamConfig;
 
 
 - (void)printQueueName;
