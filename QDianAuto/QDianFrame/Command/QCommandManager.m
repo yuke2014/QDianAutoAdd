@@ -8,17 +8,18 @@
 
 #import "QCommandManager.h"
 
-static QCommandManager *qCommandManager = nil;
 @implementation QCommandManager
 
 + (QCommandManager *)shareCommandManager
 {
-    if (qCommandManager == nil)
-    {
-        qCommandManager = [[self alloc] init];
-    }
+//    if (qCommandManager == nil)
+//    {
+//        qCommandManager = [[self alloc] init];
+//    }
+//    
+//    return qCommandManager;
     
-    return qCommandManager;
+    return nil;
 }
 
 

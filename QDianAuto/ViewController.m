@@ -13,6 +13,8 @@
 #import "QUIManager.h"
 #import "QUIRight.h"
 #import "ProgrammeBallManager.h"
+#import "QCarCommandManager.h"
+#import "QBallCommandManager.h"
 
 @interface ViewController ()
 
@@ -33,7 +35,7 @@
     }
     
     
-    
+   
     
     
     //----------------------

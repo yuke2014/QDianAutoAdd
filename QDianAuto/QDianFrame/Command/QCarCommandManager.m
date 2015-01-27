@@ -1,16 +1,17 @@
 //
-//  QBallCommandManager.m
+//  QCarCommandManager.m
 //  QDianAuto
 //
-//  Created by cuiyk on 15/1/21.
+//  Created by cuiyk on 15/1/27.
 //  Copyright (c) 2015年 崔宇科. All rights reserved.
 //
 
-#import "QBallCommandManager.h"
+#import "QCarCommandManager.h"
+
 static QCommandManager *qCommandManager = nil;
 
 
-@implementation QBallCommandManager
+@implementation QCarCommandManager
 
 + (QCommandManager *)shareCommandManager
 {
@@ -38,5 +39,6 @@ static QCommandManager *qCommandManager = nil;
     
     //最后执行
 }
+
 
 @end
