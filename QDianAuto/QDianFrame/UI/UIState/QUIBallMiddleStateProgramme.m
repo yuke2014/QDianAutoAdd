@@ -23,6 +23,7 @@
     {
         middleModal = [[QUIModalManager shareModalManager] createMiddleModal];
         middleModal.stateView = self;
+        self.userInteractionEnabled = YES;
     }
     
     return self;
@@ -117,6 +118,66 @@
     
 
 }
+
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    QUIStateManager *sManager = [QUIStateManager shareUIStateManager];
+    UIView *selectedView = [self viewWithTag:sManager.middleSelelctedButton];
+    self.srcRect = selectedView.frame;
+}
+
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    QUIStateManager *sManager = [QUIStateManager shareUIStateManager];
+    if (sManager.middleTouchState == 1)
+    {
+        UITouch *touch = [touches anyObject];
+        UIView *selectedView = [self viewWithTag:sManager.middleSelelctedButton];
+        selectedView.center = [touch locationInView:self];
+        [self checkButtonMove:selectedView];
+    }
+}
+
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    QUIStateManager *sManager = [QUIStateManager shareUIStateManager];
+    sManager.middleTouchState = 0;
+    
+    UIView *selectedView = [self viewWithTag:sManager.middleSelelctedButton];
+    selectedView.frame = self.dstRect;
+    
+    
+
+}
+
+- (void)checkButtonMove:(CommandButton *)moveButton
+{
+    QCommandManager *ballManager = [QBallCommandManager shareCommandManager];
+    NSInteger buttonCount = [ballManager queueCount];
+    NSLog(@"moveButton frame is : %@",NSStringFromCGRect(moveButton.frame));
+    
+    for (int i = 0 ; i < buttonCount; i++)
+    {
+        if (i != ballManager.selectedCommand)
+        {
+            CommandButton *cButton = (CommandButton *)[self viewWithTag:CBUTTON_BASE + i];
+        
+            CGRect iRect = CGRectIntersection(cButton.frame, moveButton.frame);
+            
+            if (iRect.size.height > (moveButton.frame.size.height / 2))
+            {
+                    self.dstRect = cButton.frame;
+                    cButton.frame = self.srcRect;
+                    self.srcRect = self.dstRect;
+            }
+        }
+    }
+}
+
+
 
 
 

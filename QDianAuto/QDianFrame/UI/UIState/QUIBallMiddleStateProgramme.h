@@ -15,4 +15,9 @@
     id<QUIModal> middleModal;
 }
 
+@property CGRect srcRect;
+@property CGRect dstRect;
+
+
+
 @end

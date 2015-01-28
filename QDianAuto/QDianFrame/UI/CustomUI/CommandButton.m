@@ -7,8 +7,24 @@
 //
 
 #import "CommandButton.h"
+#import "QUIStateManager.h"
+
 
 @implementation CommandButton
+
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
+{
+    QUIStateManager *sManager = [QUIStateManager shareUIStateManager];
+    if (sManager.middleTouchState == 1)
+    {
+        return [self superview];
+    }
+    else
+    {
+        return [super hitTest:point withEvent:event];
+    }
+    
+}
 
 
 @end

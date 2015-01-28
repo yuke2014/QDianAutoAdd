@@ -13,6 +13,7 @@
 #import "UIView+FastAnimation.h"
 #import "POP/POP.h"
 #import "ProgrammeButton.h"
+#import "QUIBallMiddleStateProgramme.h"
 
 
 @implementation QUIMiddleModal
@@ -110,14 +111,23 @@
 
 - (void)commandSelected:(UILongPressGestureRecognizer *)gesture
 {
-    UIImage *cancelImage     = [UIImage imageNamed:@"彩条取消图标.png"];
+    /*UIImage *cancelImage     = [UIImage imageNamed:@"彩条取消图标.png"];
     UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
     cancelButton.frame     = CGRectMake(550, 18, 20, 20);
     [cancelButton setImage:cancelImage forState:UIControlStateNormal];
     
     [cancelButton addTarget:self action:@selector(deleteSelected:) forControlEvents:UIControlEventTouchUpInside];
     
-    [gesture.view addSubview:cancelButton];
+    [gesture.view addSubview:cancelButton];*/
+    
+    QUIStateManager *sManager = [QUIStateManager shareUIStateManager];
+
+    sManager.middleTouchState = 1;
+    sManager.middleSelelctedButton      =  gesture.view.tag;
+    
+    
+    
+    
 
 }
 
