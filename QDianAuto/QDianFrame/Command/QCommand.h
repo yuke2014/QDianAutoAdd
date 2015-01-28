@@ -11,7 +11,7 @@
 
 @protocol QCommand <NSObject>
 
-@property (nonatomic,strong) CommandParam *p;
+@property (nonatomic,strong) NSMutableDictionary *p;
 
 - (id)initWithAuto:(id)robot;
 - (id)execute;

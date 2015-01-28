@@ -10,4 +10,11 @@
 
 @implementation QBallRotateRate
 
+- (id)execute
+{
+    NSLog(@"QBallRotateRate param is : %@",self.p);
+    return nil;
+}
+
+
 @end

@@ -8,6 +8,8 @@
 
 #import "QUIBallRightStateProgramme.h"
 #import "QUIMessage.h"
+#import "QUIManager.h"
+#import "QBallCommandManager.h"
 
 @implementation QUIBallRightStateProgramme
 @synthesize stateName;
@@ -64,29 +66,68 @@
     NSDictionary *pDic = [paramConfig objectForKey:rMessage.mName];
     NSArray *pList     = [pDic objectForKey:@"param"];
     
+    QCommandManager *cManager = [QBallCommandManager shareCommandManager];
+    id<QCommand> command = [cManager obtainSelectedCommand];
+    
+    
+    NSInteger i = 0;
     for (NSString *p in pList)
     {
-        UILabel *fLabel = [[UILabel alloc] initWithFrame:CGRectMake(leftMargin, controlPos, 80, 40)];
+        NSArray *ajustArray = [p componentsSeparatedByString:@"&"];
+        if (ajustArray.count < 3)
+        {
+            continue;
+        }
+
+        UILabel *fLabel = [[UILabel alloc] initWithFrame:CGRectMake(leftMargin+10, controlPos, 80, 40)];
         fLabel.font = [UIFont systemFontOfSize:15];
         fLabel.textColor = [UIColor whiteColor];
-        fLabel.text = p;
+        fLabel.text = [ajustArray objectAtIndex:0];
         [paramView addSubview:fLabel];
+        
+        UILabel *vLabel = [[UILabel alloc] initWithFrame:CGRectMake(leftMargin+130, controlPos, 80, 40)];
+        vLabel.font = [UIFont systemFontOfSize:15];
+        vLabel.textColor = [UIColor whiteColor];
+        vLabel.tag = CLABEL_BASE + i;
+        vLabel.text = [[command.p objectForKey:[NSNumber numberWithInt:i]] stringValue];
+        [paramView addSubview:vLabel];
+
+
         
         controlPos+=42;
         UISlider *fSlider = [[UISlider alloc] initWithFrame:CGRectMake(leftMargin, controlPos, 180, 15)];
-        fSlider.minimumValue = 0.0;
-        fSlider.maximumValue = 1.0;
+        fSlider.minimumValue = [[ajustArray objectAtIndex:1] floatValue];
+        fSlider.maximumValue = [[ajustArray objectAtIndex:2] floatValue];
+        fSlider.tag = CSLIDER_BASE + i;
+        fSlider.value = [[command.p objectForKey:[NSNumber numberWithInt:i]] floatValue];
+        [fSlider addTarget:self action:@selector(changeParam:) forControlEvents:UIControlEventValueChanged];
         [paramView addSubview:fSlider];
         
         controlPos+=12;
+        i++;
     }
     
-    
-    [self addSubview:paramView];
-    
-    
-    
+    paramView.animationType = @"ZoomInY";
 
+    [self addSubview:paramView];
+    [paramView startFAAnimation];
+    
+    
+}
+
+- (void)changeParam:(id)sender
+{
+    UISlider *slider = (UISlider *)sender;
+    NSInteger index  =  slider.tag - CSLIDER_BASE;
+    NSInteger lTag   = index + CLABEL_BASE;
+    
+    UILabel *sLabel = (UILabel *)[paramView viewWithTag:lTag];
+    sLabel.text = [NSString stringWithFormat:@"%f",slider.value];
+    
+    QCommandManager *cManager = [QBallCommandManager shareCommandManager];
+    id<QCommand> command = [cManager obtainSelectedCommand];
+    [command.p setObject:[NSNumber numberWithFloat:slider.value]  forKey:[NSNumber numberWithInt:index]];
+    
 }
 
 

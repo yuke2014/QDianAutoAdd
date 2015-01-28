@@ -8,17 +8,18 @@
 
 #import "QCommandManager.h"
 
-static QCommandManager *qCommandManager = nil;
 @implementation QCommandManager
 
 + (QCommandManager *)shareCommandManager
 {
-    if (qCommandManager == nil)
-    {
-        qCommandManager = [[self alloc] init];
-    }
+//    if (qCommandManager == nil)
+//    {
+//        qCommandManager = [[self alloc] init];
+//    }
+//    
+//    return qCommandManager;
     
-    return qCommandManager;
+    return nil;
 }
 
 
@@ -34,6 +35,7 @@ static QCommandManager *qCommandManager = nil;
 
 - (void)addCommandToQueue:(id<QCommand>)qCommand
 {
+    
     [currentQueue addObject:qCommand];
 }
 
@@ -42,9 +44,91 @@ static QCommandManager *qCommandManager = nil;
     [currentQueue removeObject:qCommand];
 }
 
+- (void)removeCommandWithName:(NSString *)name
+{
+    NSInteger len = [currentQueue count];
+    for (int i = 0; i < len; i++)
+    {
+        id<QCommand> command = [currentQueue objectAtIndex:i];
+        NSString *cName = NSStringFromClass([command class]);
+        if ([cName isEqualToString:name])
+        {
+            [currentQueue removeObject:command];
+            break;
+        }
+
+        
+    }
+    
+    /*for (id<QCommand> command in currentQueue)
+    {
+        NSString *cName = NSStringFromClass([command class]);
+        if ([cName isEqualToString:name])
+        {
+            [currentQueue removeObject:command];
+        }
+        
+    }*/
+}
+
+
 - (NSInteger)queueCount
 {
     return [currentQueue count];
+}
+
+- (id<QCommand>)obtainCommandWithIndex:(NSInteger)index
+{
+    return [currentQueue objectAtIndex:index];
+}
+
+- (id<QCommand>)obtainSelectedCommand
+{
+    return [currentQueue objectAtIndex:_selectedCommand];
+}
+
+- (void)clearAllCommand
+{
+    [currentQueue removeAllObjects];
+}
+
+- (NSDictionary *)obtainParamConfig
+{
+    NSString *pListPath = [[NSBundle mainBundle] pathForResource:@"BallCommandDes" ofType:@"plist"];
+    NSDictionary  *paramConfig    = [[NSMutableDictionary alloc] initWithContentsOfFile:pListPath];
+    
+    return paramConfig;
+
+}
+
+- (void)printQueueName
+{
+    for (int i = 0; i < [currentQueue count]; i++)
+    {
+        id<QCommand> command = [currentQueue objectAtIndex:i];
+        NSLog(@"command class is : %@",NSStringFromClass([command class]));
+    }
+}
+
+- (NSArray *)buildSaveCommand
+{
+    NSMutableArray *resultArray = [[NSMutableArray alloc] init];
+    for (int i = 0; i < [currentQueue count]; i++)
+    {
+        id<QCommand> command = [currentQueue objectAtIndex:i];
+        NSString *className = NSStringFromClass([command class]);
+        NSMutableString *paramString = [[NSMutableString alloc] init];
+        [paramString appendString:className];
+        NSArray *keyArray = [command.p allKeys];
+        for (int i = 0; i < keyArray.count; i++)
+        {
+            [paramString appendFormat:@"&%f",[[command.p objectForKey:[NSNumber numberWithInt:i]] floatValue]];
+        }
+        [resultArray addObject:paramString];
+    }
+    
+    return [NSArray arrayWithArray:resultArray];
+    
 }
 
 #pragma mark -

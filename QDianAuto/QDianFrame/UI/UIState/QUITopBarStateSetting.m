@@ -7,6 +7,7 @@
 //
 
 #import "QUITopBarStateSetting.h"
+#import "QUITopModal.h"
 
 @implementation QUITopBarStateSetting
 @synthesize stateName;
@@ -15,6 +16,7 @@
 {
     if ((self = [super initWithFrame:frame]) != nil)
     {
+        topModal = [[QUITopModal alloc] init];
     }
     
     return self;
@@ -37,6 +39,8 @@
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     backButton.frame     = CGRectMake(5, 11, 18, 18);
     [backButton setImage:backImage forState:UIControlStateNormal];
+    [backButton addTarget:topModal action:@selector(backToMain:) forControlEvents:UIControlEventTouchUpInside];
+    
     [self addSubview:backButton];
     
     UIImage *playImage     = [UIImage imageNamed:@"开始.png"];
@@ -45,7 +49,10 @@
     playButton.frame     = CGRectMake(830, 11, 22, 22);
     [playButton setImage:playImage forState:UIControlStateNormal];
     [playButton setImage:playHightLighted forState:UIControlStateHighlighted];
+    [playButton addTarget:topModal action:@selector(playButtonDown:) forControlEvents:UIControlEventTouchUpInside];
+    
     [self addSubview:playButton];
+    
     
     UIImage *pauseImage     = [UIImage imageNamed:@"暂停.png"];
     UIImage *pauseHightLighted     = [UIImage imageNamed:@"暂停按下.png"];

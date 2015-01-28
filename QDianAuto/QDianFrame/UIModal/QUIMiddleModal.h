@@ -8,9 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "QUIModal.h"
+#import "ProgrammeBallManager.h"
 
 @interface QUIMiddleModal : NSObject<QUIModal>
 
-- (void)carCodeSelected:(id)sender;
+- (void)addCodeSelected:(id)sender;
+- (void)commandSelected:(id)sender;
+- (void)deleteSelected:(id)sender;
+- (void)commandTouched:(id)sender;
+- (void)programmeSelected:(id)sender;
 
 @end

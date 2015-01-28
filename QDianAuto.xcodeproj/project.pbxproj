@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C22D23E1A72537D00BADD0E /* QUITopModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C22D23D1A72537D00BADD0E /* QUITopModal.m */; };
 		0C243ADB1A713DBA00679CC1 /* QUIRightModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C243ADA1A713DBA00679CC1 /* QUIRightModal.m */; };
+		0C2868771A778E0E00CC0467 /* 启动.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C2868761A778E0E00CC0467 /* 启动.png */; };
+		0C28687A1A779B4B00CC0467 /* QCarCommandManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2868791A779B4B00CC0467 /* QCarCommandManager.m */; };
 		0C2D042F1A621FDD00379BF4 /* UIConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C2D042E1A621FDD00379BF4 /* UIConfig.plist */; };
 		0C2DAAEA1A617C3A008EA1EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DAAE91A617C3A008EA1EA /* main.m */; };
 		0C2DAAED1A617C3A008EA1EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DAAEC1A617C3A008EA1EA /* AppDelegate.m */; };
@@ -21,13 +24,13 @@
 		0C6547381A6DF3EE00E8B8C7 /* 02--左侧--灰白色底.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547121A6DF3EE00E8B8C7 /* 02--左侧--灰白色底.png */; };
 		0C6547391A6DF3EE00E8B8C7 /* 02.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547131A6DF3EE00E8B8C7 /* 02.png */; };
 		0C65473A1A6DF3EE00E8B8C7 /* 背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547141A6DF3EE00E8B8C7 /* 背景.png */; };
-		0C65473B1A6DF3EE00E8B8C7 /* 彩条--取消图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547151A6DF3EE00E8B8C7 /* 彩条--取消图标.png */; };
-		0C65473C1A6DF3EE00E8B8C7 /* 彩条01.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547161A6DF3EE00E8B8C7 /* 彩条01.png */; };
-		0C65473D1A6DF3EE00E8B8C7 /* 彩条02.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547171A6DF3EE00E8B8C7 /* 彩条02.png */; };
-		0C65473E1A6DF3EE00E8B8C7 /* 彩条-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547181A6DF3EE00E8B8C7 /* 彩条-03.png */; };
-		0C65473F1A6DF3EE00E8B8C7 /* 彩条-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547191A6DF3EE00E8B8C7 /* 彩条-04.png */; };
-		0C6547401A6DF3EE00E8B8C7 /* 彩条-05.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65471A1A6DF3EE00E8B8C7 /* 彩条-05.png */; };
-		0C6547411A6DF3EE00E8B8C7 /* 彩条-06.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65471B1A6DF3EE00E8B8C7 /* 彩条-06.png */; };
+		0C65473B1A6DF3EE00E8B8C7 /* 彩条取消图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547151A6DF3EE00E8B8C7 /* 彩条取消图标.png */; };
+		0C65473C1A6DF3EE00E8B8C7 /* 彩条1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547161A6DF3EE00E8B8C7 /* 彩条1.png */; };
+		0C65473D1A6DF3EE00E8B8C7 /* 彩条2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547171A6DF3EE00E8B8C7 /* 彩条2.png */; };
+		0C65473E1A6DF3EE00E8B8C7 /* 彩条3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547181A6DF3EE00E8B8C7 /* 彩条3.png */; };
+		0C65473F1A6DF3EE00E8B8C7 /* 彩条4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547191A6DF3EE00E8B8C7 /* 彩条4.png */; };
+		0C6547401A6DF3EE00E8B8C7 /* 彩条5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65471A1A6DF3EE00E8B8C7 /* 彩条5.png */; };
+		0C6547411A6DF3EE00E8B8C7 /* 彩条6.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65471B1A6DF3EE00E8B8C7 /* 彩条6.png */; };
 		0C6547421A6DF3EE00E8B8C7 /* 01topbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65471C1A6DF3EE00E8B8C7 /* 01topbar.png */; };
 		0C6547431A6DF3EE00E8B8C7 /* 返回.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65471D1A6DF3EE00E8B8C7 /* 返回.png */; };
 		0C6547441A6DF3EE00E8B8C7 /* 功能参数--50按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C65471E1A6DF3EE00E8B8C7 /* 功能参数--50按钮.png */; };
@@ -70,6 +73,10 @@
 		0C83F1001A67B62B00EC9A57 /* QUIBallMiddleStateNormal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C83F0FF1A67B62B00EC9A57 /* QUIBallMiddleStateNormal.m */; };
 		0C83F1031A67BF3F00EC9A57 /* QUILeftModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C83F1021A67BF3F00EC9A57 /* QUILeftModal.m */; };
 		0C86E62B1A6A756F00543456 /* QUIMiddleModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C86E62A1A6A756F00543456 /* QUIMiddleModal.m */; };
+		0C922EC71A75D7DF00669F1C /* ProgrammerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C922EC61A75D7DF00669F1C /* ProgrammerManager.m */; };
+		0C922ECA1A75E25400669F1C /* ProgrammeBallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C922EC91A75E25400669F1C /* ProgrammeBallManager.m */; };
+		0C922ECD1A761DD300669F1C /* ProgrammeCarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C922ECC1A761DD300669F1C /* ProgrammeCarManager.m */; };
+		0C922ED01A76485300669F1C /* ProgrammeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C922ECF1A76485300669F1C /* ProgrammeButton.m */; };
 		0C94117C1A6CB1D6003723EE /* QUIMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C94117B1A6CB1D6003723EE /* QUIMessageManager.m */; };
 		0C9F2B951A6FF2D800C223E6 /* QUITopBarStateSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9F2B941A6FF2D800C223E6 /* QUITopBarStateSetting.m */; };
 		0CA0771B1A70911C00632993 /* 驾驶舱.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CA077191A70911C00632993 /* 驾驶舱.png */; };
@@ -113,8 +120,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C22D23C1A72537D00BADD0E /* QUITopModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUITopModal.h; sourceTree = "<group>"; };
+		0C22D23D1A72537D00BADD0E /* QUITopModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUITopModal.m; sourceTree = "<group>"; };
 		0C243AD91A713DBA00679CC1 /* QUIRightModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIRightModal.h; sourceTree = "<group>"; };
 		0C243ADA1A713DBA00679CC1 /* QUIRightModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIRightModal.m; sourceTree = "<group>"; };
+		0C2868761A778E0E00CC0467 /* 启动.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "启动.png"; sourceTree = "<group>"; };
+		0C2868781A779B4B00CC0467 /* QCarCommandManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCarCommandManager.h; sourceTree = "<group>"; };
+		0C2868791A779B4B00CC0467 /* QCarCommandManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCarCommandManager.m; sourceTree = "<group>"; };
 		0C2D042E1A621FDD00379BF4 /* UIConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UIConfig.plist; sourceTree = "<group>"; };
 		0C2DAAE41A617C3A008EA1EA /* QDianAuto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QDianAuto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C2DAAE81A617C3A008EA1EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -135,13 +147,13 @@
 		0C6547121A6DF3EE00E8B8C7 /* 02--左侧--灰白色底.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "02--左侧--灰白色底.png"; sourceTree = "<group>"; };
 		0C6547131A6DF3EE00E8B8C7 /* 02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02.png; sourceTree = "<group>"; };
 		0C6547141A6DF3EE00E8B8C7 /* 背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "背景.png"; sourceTree = "<group>"; };
-		0C6547151A6DF3EE00E8B8C7 /* 彩条--取消图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条--取消图标.png"; sourceTree = "<group>"; };
-		0C6547161A6DF3EE00E8B8C7 /* 彩条01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条01.png"; sourceTree = "<group>"; };
-		0C6547171A6DF3EE00E8B8C7 /* 彩条02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条02.png"; sourceTree = "<group>"; };
-		0C6547181A6DF3EE00E8B8C7 /* 彩条-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条-03.png"; sourceTree = "<group>"; };
-		0C6547191A6DF3EE00E8B8C7 /* 彩条-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条-04.png"; sourceTree = "<group>"; };
-		0C65471A1A6DF3EE00E8B8C7 /* 彩条-05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条-05.png"; sourceTree = "<group>"; };
-		0C65471B1A6DF3EE00E8B8C7 /* 彩条-06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条-06.png"; sourceTree = "<group>"; };
+		0C6547151A6DF3EE00E8B8C7 /* 彩条取消图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条取消图标.png"; sourceTree = "<group>"; };
+		0C6547161A6DF3EE00E8B8C7 /* 彩条1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条1.png"; sourceTree = "<group>"; };
+		0C6547171A6DF3EE00E8B8C7 /* 彩条2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条2.png"; sourceTree = "<group>"; };
+		0C6547181A6DF3EE00E8B8C7 /* 彩条3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条3.png"; sourceTree = "<group>"; };
+		0C6547191A6DF3EE00E8B8C7 /* 彩条4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条4.png"; sourceTree = "<group>"; };
+		0C65471A1A6DF3EE00E8B8C7 /* 彩条5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条5.png"; sourceTree = "<group>"; };
+		0C65471B1A6DF3EE00E8B8C7 /* 彩条6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条6.png"; sourceTree = "<group>"; };
 		0C65471C1A6DF3EE00E8B8C7 /* 01topbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01topbar.png; sourceTree = "<group>"; };
 		0C65471D1A6DF3EE00E8B8C7 /* 返回.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回.png"; sourceTree = "<group>"; };
 		0C65471E1A6DF3EE00E8B8C7 /* 功能参数--50按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "功能参数--50按钮.png"; sourceTree = "<group>"; };
@@ -202,6 +214,14 @@
 		0C86E6281A6A658900543456 /* QUIModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIModal.h; sourceTree = "<group>"; };
 		0C86E6291A6A756F00543456 /* QUIMiddleModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIMiddleModal.h; sourceTree = "<group>"; };
 		0C86E62A1A6A756F00543456 /* QUIMiddleModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIMiddleModal.m; sourceTree = "<group>"; };
+		0C922EC51A75D7DF00669F1C /* ProgrammerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgrammerManager.h; sourceTree = "<group>"; };
+		0C922EC61A75D7DF00669F1C /* ProgrammerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgrammerManager.m; sourceTree = "<group>"; };
+		0C922EC81A75E25400669F1C /* ProgrammeBallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgrammeBallManager.h; sourceTree = "<group>"; };
+		0C922EC91A75E25400669F1C /* ProgrammeBallManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgrammeBallManager.m; sourceTree = "<group>"; };
+		0C922ECB1A761DD300669F1C /* ProgrammeCarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgrammeCarManager.h; sourceTree = "<group>"; };
+		0C922ECC1A761DD300669F1C /* ProgrammeCarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgrammeCarManager.m; sourceTree = "<group>"; };
+		0C922ECE1A76485300669F1C /* ProgrammeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgrammeButton.h; sourceTree = "<group>"; };
+		0C922ECF1A76485300669F1C /* ProgrammeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgrammeButton.m; sourceTree = "<group>"; };
 		0C94117A1A6CB1D6003723EE /* QUIMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIMessageManager.h; sourceTree = "<group>"; };
 		0C94117B1A6CB1D6003723EE /* QUIMessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIMessageManager.m; sourceTree = "<group>"; };
 		0C9F2B931A6FF2D800C223E6 /* QUITopBarStateSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUITopBarStateSetting.h; sourceTree = "<group>"; };
@@ -382,13 +402,13 @@
 				0C6547121A6DF3EE00E8B8C7 /* 02--左侧--灰白色底.png */,
 				0C6547131A6DF3EE00E8B8C7 /* 02.png */,
 				0C6547141A6DF3EE00E8B8C7 /* 背景.png */,
-				0C6547151A6DF3EE00E8B8C7 /* 彩条--取消图标.png */,
-				0C6547161A6DF3EE00E8B8C7 /* 彩条01.png */,
-				0C6547171A6DF3EE00E8B8C7 /* 彩条02.png */,
-				0C6547181A6DF3EE00E8B8C7 /* 彩条-03.png */,
-				0C6547191A6DF3EE00E8B8C7 /* 彩条-04.png */,
-				0C65471A1A6DF3EE00E8B8C7 /* 彩条-05.png */,
-				0C65471B1A6DF3EE00E8B8C7 /* 彩条-06.png */,
+				0C6547151A6DF3EE00E8B8C7 /* 彩条取消图标.png */,
+				0C6547161A6DF3EE00E8B8C7 /* 彩条1.png */,
+				0C6547171A6DF3EE00E8B8C7 /* 彩条2.png */,
+				0C6547181A6DF3EE00E8B8C7 /* 彩条3.png */,
+				0C6547191A6DF3EE00E8B8C7 /* 彩条4.png */,
+				0C65471A1A6DF3EE00E8B8C7 /* 彩条5.png */,
+				0C65471B1A6DF3EE00E8B8C7 /* 彩条6.png */,
 				0C65471C1A6DF3EE00E8B8C7 /* 01topbar.png */,
 				0C65471D1A6DF3EE00E8B8C7 /* 返回.png */,
 				0C65471E1A6DF3EE00E8B8C7 /* 功能参数--50按钮.png */,
@@ -403,6 +423,7 @@
 				0C6547271A6DF3EE00E8B8C7 /* 锁定按下.png */,
 				0C6547281A6DF3EE00E8B8C7 /* 锁定.png */,
 				0C6547291A6DF3EE00E8B8C7 /* 太空车选中按下.png */,
+				0C2868761A778E0E00CC0467 /* 启动.png */,
 				0C65472A1A6DF3EE00E8B8C7 /* 太空车.png */,
 				0C65472B1A6DF3EE00E8B8C7 /* 太空球选中按下.png */,
 				0C65472C1A6DF3EE00E8B8C7 /* 太空球.png */,
@@ -425,6 +446,12 @@
 			children = (
 				0C6547641A6E35B000E8B8C7 /* ControlTools.h */,
 				0C6547651A6E35B000E8B8C7 /* ControlTools.m */,
+				0C922EC51A75D7DF00669F1C /* ProgrammerManager.h */,
+				0C922EC61A75D7DF00669F1C /* ProgrammerManager.m */,
+				0C922EC81A75E25400669F1C /* ProgrammeBallManager.h */,
+				0C922EC91A75E25400669F1C /* ProgrammeBallManager.m */,
+				0C922ECB1A761DD300669F1C /* ProgrammeCarManager.h */,
+				0C922ECC1A761DD300669F1C /* ProgrammeCarManager.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -464,6 +491,8 @@
 				0C81B22D1A6BF8980018F6AB /* QUICommonTableModal.m */,
 				0C243AD91A713DBA00679CC1 /* QUIRightModal.h */,
 				0C243ADA1A713DBA00679CC1 /* QUIRightModal.m */,
+				0C22D23C1A72537D00BADD0E /* QUITopModal.h */,
+				0C22D23D1A72537D00BADD0E /* QUITopModal.m */,
 			);
 			path = UIModal;
 			sourceTree = "<group>";
@@ -496,6 +525,8 @@
 			children = (
 				0CA077241A709EE400632993 /* CommandButton.h */,
 				0CA077251A709EE400632993 /* CommandButton.m */,
+				0C922ECE1A76485300669F1C /* ProgrammeButton.h */,
+				0C922ECF1A76485300669F1C /* ProgrammeButton.m */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -520,6 +551,8 @@
 				0CDBCFC51A6F7C9700E600F9 /* QCommandManager.m */,
 				0CDBCFC71A6F841E00E600F9 /* QBallCommandManager.h */,
 				0CDBCFC81A6F841E00E600F9 /* QBallCommandManager.m */,
+				0C2868781A779B4B00CC0467 /* QCarCommandManager.h */,
+				0C2868791A779B4B00CC0467 /* QCarCommandManager.m */,
 			);
 			path = Command;
 			sourceTree = "<group>";
@@ -666,23 +699,24 @@
 				0C65474F1A6DF3EE00E8B8C7 /* 太空车选中按下.png in Resources */,
 				0C6547371A6DF3EE00E8B8C7 /* 01.png in Resources */,
 				0C2D042F1A621FDD00379BF4 /* UIConfig.plist in Resources */,
-				0C65473B1A6DF3EE00E8B8C7 /* 彩条--取消图标.png in Resources */,
+				0C65473B1A6DF3EE00E8B8C7 /* 彩条取消图标.png in Resources */,
 				0C6547541A6DF3EE00E8B8C7 /* 添加后--.png in Resources */,
 				0C65474A1A6DF3EE00E8B8C7 /* 开始.png in Resources */,
 				0C6547551A6DF3EE00E8B8C7 /* 透明黑色底.png in Resources */,
 				0C6547381A6DF3EE00E8B8C7 /* 02--左侧--灰白色底.png in Resources */,
-				0C6547411A6DF3EE00E8B8C7 /* 彩条-06.png in Resources */,
+				0C6547411A6DF3EE00E8B8C7 /* 彩条6.png in Resources */,
 				0C6547521A6DF3EE00E8B8C7 /* 太空球.png in Resources */,
-				0C65473C1A6DF3EE00E8B8C7 /* 彩条01.png in Resources */,
+				0C65473C1A6DF3EE00E8B8C7 /* 彩条1.png in Resources */,
 				0C6547571A6DF3EE00E8B8C7 /* 五星--空.png in Resources */,
 				0C6547561A6DF3EE00E8B8C7 /* 五星--发光.png in Resources */,
 				0C6547451A6DF3EE00E8B8C7 /* 功能参数--数值调节-白色圆.png in Resources */,
 				0C6547581A6DF3EE00E8B8C7 /* 暂停按下.png in Resources */,
-				0C65473F1A6DF3EE00E8B8C7 /* 彩条-04.png in Resources */,
+				0C65473F1A6DF3EE00E8B8C7 /* 彩条4.png in Resources */,
 				0C6547491A6DF3EE00E8B8C7 /* 开始按下.png in Resources */,
 				0C6547471A6DF3EE00E8B8C7 /* 功能参数--数值调节-深黑色部分.png in Resources */,
-				0C6547401A6DF3EE00E8B8C7 /* 彩条-05.png in Resources */,
+				0C6547401A6DF3EE00E8B8C7 /* 彩条5.png in Resources */,
 				0C65474E1A6DF3EE00E8B8C7 /* 锁定.png in Resources */,
+				0C2868771A778E0E00CC0467 /* 启动.png in Resources */,
 				0C6547431A6DF3EE00E8B8C7 /* 返回.png in Resources */,
 				0CDBCFB31A6F451100E600F9 /* BallAction.plist in Resources */,
 				0C65474C1A6DF3EE00E8B8C7 /* 设置.png in Resources */,
@@ -702,9 +736,9 @@
 				0C6547531A6DF3EE00E8B8C7 /* 添加.png in Resources */,
 				0C6547501A6DF3EE00E8B8C7 /* 太空车.png in Resources */,
 				0C6547481A6DF3EE00E8B8C7 /* 功能参数.png in Resources */,
-				0C65473D1A6DF3EE00E8B8C7 /* 彩条02.png in Resources */,
+				0C65473D1A6DF3EE00E8B8C7 /* 彩条2.png in Resources */,
 				0C6547461A6DF3EE00E8B8C7 /* 功能参数--数值调节-蓝色部分.png in Resources */,
-				0C65473E1A6DF3EE00E8B8C7 /* 彩条-03.png in Resources */,
+				0C65473E1A6DF3EE00E8B8C7 /* 彩条3.png in Resources */,
 				0C2DAAF51A617C3A008EA1EA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -759,6 +793,7 @@
 				0C83F0F11A67659400EC9A57 /* QUIRight.m in Sources */,
 				0C83F0FA1A67AC7500EC9A57 /* QUIBallLeftStateNormal.m in Sources */,
 				0CDBCFC61A6F7C9700E600F9 /* QCommandManager.m in Sources */,
+				0C22D23E1A72537D00BADD0E /* QUITopModal.m in Sources */,
 				0C83F1001A67B62B00EC9A57 /* QUIBallMiddleStateNormal.m in Sources */,
 				0CE733571A710021002BEF10 /* QBallFade.m in Sources */,
 				0C83F0EF1A67659400EC9A57 /* QUILeft.m in Sources */,
@@ -769,6 +804,7 @@
 				0C4F3CEA1A69165C001D6859 /* QUIModalManager.m in Sources */,
 				0C83F1031A67BF3F00EC9A57 /* QUILeftModal.m in Sources */,
 				0C243ADB1A713DBA00679CC1 /* QUIRightModal.m in Sources */,
+				0C922ED01A76485300669F1C /* ProgrammeButton.m in Sources */,
 				0CDBCFC31A6F7C4100E600F9 /* QBallStop.m in Sources */,
 				0CE733601A7100AE002BEF10 /* QBallRotate.m in Sources */,
 				0CE733631A7100DC002BEF10 /* QBallOrientation.m in Sources */,
@@ -781,6 +817,7 @@
 				0C83F0FD1A67B5D300EC9A57 /* QUIBallLeftStateProgramme.m in Sources */,
 				0CDBCFB81A6F55C200E600F9 /* CommandParam.m in Sources */,
 				0CDBCFC01A6F7B7200E600F9 /* QBallBase.m in Sources */,
+				0C28687A1A779B4B00CC0467 /* QCarCommandManager.m in Sources */,
 				0CCE1FED1A68B154008B5A66 /* QUIManager.m in Sources */,
 				0CE733691A710149002BEF10 /* QBallStabilization.m in Sources */,
 				0C2DAAF01A617C3A008EA1EA /* ViewController.m in Sources */,
@@ -788,11 +825,14 @@
 				0C9F2B951A6FF2D800C223E6 /* QUITopBarStateSetting.m in Sources */,
 				0CDBCFBD1A6F56FC00E600F9 /* QBallRoll.m in Sources */,
 				0C2DAAED1A617C3A008EA1EA /* AppDelegate.m in Sources */,
+				0C922ECA1A75E25400669F1C /* ProgrammeBallManager.m in Sources */,
 				0C83F0F01A67659400EC9A57 /* QUIMiddle.m in Sources */,
 				0C2DAAEA1A617C3A008EA1EA /* main.m in Sources */,
 				0CE733721A7101C1002BEF10 /* QBallLoop.m in Sources */,
 				0CE7335A1A710056002BEF10 /* QBallDelay.m in Sources */,
+				0C922EC71A75D7DF00669F1C /* ProgrammerManager.m in Sources */,
 				0CA077221A709A3000632993 /* QUIMessage.m in Sources */,
+				0C922ECD1A761DD300669F1C /* ProgrammeCarManager.m in Sources */,
 				0C83F0ED1A67659400EC9A57 /* QUIConfig.m in Sources */,
 				0CCE1FF01A68E48C008B5A66 /* QUIStateManager.m in Sources */,
 				0CE733751A7101E9002BEF10 /* QBallLoopEnd.m in Sources */,

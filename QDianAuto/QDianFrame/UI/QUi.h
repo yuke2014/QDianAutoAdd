@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "QUIState.h"
+#import "UIView+FastAnimation.h"
+
 
 @protocol QUi <NSObject>
 

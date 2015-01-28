@@ -12,6 +12,9 @@
 #import "QUITopBar.h"
 #import "QUIManager.h"
 #import "QUIRight.h"
+#import "ProgrammeBallManager.h"
+#import "QCarCommandManager.h"
+#import "QBallCommandManager.h"
 
 @interface ViewController ()
 
@@ -22,6 +25,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSInteger isLoad = [defaults integerForKey:@"isLoad"];
+    if (isLoad == 0)
+    {
+        [[ProgrammeBallManager shareProgrammeManager] initPDir];
+        [defaults setInteger:1 forKey:@"isLoad"];
+    }
+    
+    
+   
+    
+    
+    //----------------------
     UIImageView *background = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024.0, 768.0)];
     background.image = [UIImage imageNamed:@"背景.png"];
 

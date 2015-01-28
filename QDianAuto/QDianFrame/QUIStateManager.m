@@ -65,7 +65,7 @@ static QUIStateManager *stateManager = nil;
 
 - (id<QUIState>)createTopBarStateWithName:(id)name
 {
-    if ([name isEqualToString:@"Normal"])
+    if ([name isEqualToString:@"TopNormal"])
     {
         return [[QUITopBarState alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 44)];
     }

@@ -10,4 +10,10 @@
 
 @implementation QBallMotor
 
+- (id)execute
+{
+    NSLog(@"QBallMotor param is : %@",self.p);
+    return nil;
+}
+
 @end

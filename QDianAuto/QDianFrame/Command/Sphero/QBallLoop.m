@@ -10,4 +10,10 @@
 
 @implementation QBallLoop
 
+- (id)execute
+{
+    NSLog(@"QBallLoop param is : %@",self.p);
+    return nil;
+}
+
 @end

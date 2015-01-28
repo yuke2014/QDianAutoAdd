@@ -10,4 +10,10 @@
 
 @implementation QBallWaitStop
 
+- (id)execute
+{
+    NSLog(@"QBallWaitStop param is : %@",self.p);
+    return nil;
+}
+
 @end

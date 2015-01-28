@@ -10,4 +10,10 @@
 
 @implementation QBallLoopEnd
 
+- (id)execute
+{
+    NSLog(@"QBallLoopEnd param is : %@",self.p);
+    return nil;
+}
+
 @end

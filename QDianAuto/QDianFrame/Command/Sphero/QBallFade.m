@@ -10,4 +10,11 @@
 
 @implementation QBallFade
 
+- (id)execute
+{
+    NSLog(@"QBallFade param is : %@",self.p);
+    return nil;
+}
+
+
 @end

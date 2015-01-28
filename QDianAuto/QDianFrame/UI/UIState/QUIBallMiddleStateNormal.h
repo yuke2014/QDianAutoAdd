@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "QUIState.h"
 #import "QUIModalManager.h"
+#import "ProgrammeBallManager.h"
 
 @interface QUIBallMiddleStateNormal : UIView<QUIState>
 {

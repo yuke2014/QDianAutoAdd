@@ -7,6 +7,10 @@
 //
 
 #import "QUIBallMiddleStateNormal.h"
+#import "ProgrammeButton.h"
+
+
+
 
 @implementation QUIBallMiddleStateNormal
 @synthesize stateName;
@@ -26,6 +30,20 @@
 
 - (void)loadUI:(UIView *)fView
 {
+    NSComparator cmptr = ^(id obj1, id obj2){
+        if ([obj1 integerValue] > [obj2 integerValue]) {
+            return (NSComparisonResult)NSOrderedDescending;
+        }
+        
+        if ([obj1 integerValue] < [obj2 integerValue]) {
+            return (NSComparisonResult)NSOrderedAscending;
+        }
+        return (NSComparisonResult)NSOrderedSame;
+    };
+    
+    NSDictionary *commandDic = [[ProgrammeBallManager shareProgrammeManager] loadAllProgrammerFromPath];
+    NSArray *fileName = [commandDic allKeys];
+    NSArray  *fileNameOrder =  [fileName sortedArrayUsingComparator:cmptr];
     
     float     flagWidth    = 80;
     float     flagHeight   = 80;
@@ -52,9 +70,71 @@
     ballButton.frame     = CGRectMake(leftMargin, controlPos, flagWidth, flagHeight);
     [ballButton setImage:ballImage forState:UIControlStateNormal];
     
-    [ballButton addTarget:middleModal action:@selector(carCodeSelected:) forControlEvents:UIControlEventTouchUpInside];
-    
+    [ballButton addTarget:middleModal action:@selector(addCodeSelected:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:ballButton];
+    
+    UIImage *pBallImage     = [UIImage imageNamed:@"太空球.png"];
+    
+    NSInteger fRow = 0;
+    NSInteger sRow = 0;
+    
+    if (fileNameOrder.count <= 4)
+    {
+        fRow = fileNameOrder.count;
+    }
+    else
+    {
+        fRow = 4;
+        sRow = fileNameOrder.count - 4;
+    }
+    
+    int pIndex = 0;
+
+    for (int i = 0; i < fRow; i++)
+    {
+
+        ProgrammeButton *pButton = [ProgrammeButton buttonWithType:UIButtonTypeCustom];
+        pButton.frame = CGRectMake(leftMargin + ((i+1) * (flagWidth+60)), controlPos + 15, 50, 50);
+        
+        [pButton setImage:pBallImage forState:UIControlStateNormal];
+        pButton.commandArray = [commandDic objectForKey:[fileNameOrder objectAtIndex:i]];
+        pButton.indexFile    = [fileNameOrder[i] integerValue];
+        [pButton addTarget:middleModal action:@selector(programmeSelected:) forControlEvents:UIControlEventTouchUpInside];
+        
+        UILabel *carLabel = [[UILabel alloc] initWithFrame:CGRectMake(leftMargin + ((i+1) * (flagWidth+60))+10, controlPos+10+50, 80, 40)];
+        carLabel.font = [UIFont systemFontOfSize:16];
+        carLabel.textColor = [UIColor whiteColor];
+        carLabel.text =[ NSString stringWithFormat:@"P%d",pIndex ];
+        [self addSubview:carLabel];
+        [self addSubview:pButton];
+        pIndex++;
+    }
+    
+
+    
+    for (int i = 0; i < sRow; i++)
+    {
+        ProgrammeButton *pButton = [ProgrammeButton buttonWithType:UIButtonTypeCustom];
+        pButton.frame = CGRectMake(leftMargin + (i * (flagWidth+60)), controlPos + 10 + 110, 50, 50);
+        
+        [pButton setImage:pBallImage forState:UIControlStateNormal];
+        pButton.commandArray = [commandDic objectForKey:[fileNameOrder objectAtIndex:i]];
+        pButton.indexFile    = [fileNameOrder[i] integerValue];
+        [pButton addTarget:middleModal action:@selector(programmeSelected:) forControlEvents:UIControlEventTouchUpInside];
+        
+        UILabel *carLabel = [[UILabel alloc] initWithFrame:CGRectMake(leftMargin + (i * (flagWidth+60))+15,  controlPos + 15 + 110 + 40, 80, 40)];
+        carLabel.font = [UIFont systemFontOfSize:16];
+        carLabel.textColor = [UIColor whiteColor];
+        carLabel.text =[ NSString stringWithFormat:@"P%d",pIndex ];
+        [self addSubview:carLabel];
+        [self addSubview:pButton];
+        pIndex++;
+
+        [self addSubview:pButton];
+
+    }
+    
+    
     [fView addSubview:self];
 
 }

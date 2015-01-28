@@ -12,6 +12,7 @@
 
 - (id)execute
 {
+    NSLog(@"QBallStop param is : %@",self.p);
     return nil;
 }
 

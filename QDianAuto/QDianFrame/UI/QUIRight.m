@@ -25,12 +25,16 @@
 
 - (void)setState:(id<QUIState>)changedState
 {
-    
+    [(UIView *)rightState removeFromSuperview];
+    rightState = changedState;
 }
 
 - (void)reloadUI
 {
+    UIView *stateView = (UIView *)rightState;
+    stateView.animationType = @"ZoomInY";
     [rightState loadUI:self];
+    [stateView startFAAnimation];
 }
 
 - (void)loadUI
