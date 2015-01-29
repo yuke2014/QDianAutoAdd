@@ -15,7 +15,7 @@
 {
     if ((self = [super initWithFrame:frame]) != nil)
     {
-        topState = [[QUIStateManager shareUIStateManager] createTopBarStateWithName:@"Normal"];
+        topState = [[QUIStateManager shareUIStateManager] createTopBarStateWithName:@"TopNormal"];
     }
     
     

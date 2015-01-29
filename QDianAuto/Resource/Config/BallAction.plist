@@ -17,8 +17,8 @@
 	</array>
 	<key>时间</key>
 	<array>
-		<string>循环&amp;QBallLoop</string>
-		<string>循环&amp;QBallLoopEnd</string>
+		<string>循环开始&amp;QBallLoop</string>
+		<string>循环停止&amp;QBallLoopEnd</string>
 		<string>延时&amp;QBallDelay</string>
 		<string>到时停&amp;QBallWaitStop</string>
 	</array>

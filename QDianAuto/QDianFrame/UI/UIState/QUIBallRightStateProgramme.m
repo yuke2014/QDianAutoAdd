@@ -122,11 +122,11 @@
     NSInteger lTag   = index + CLABEL_BASE;
     
     UILabel *sLabel = (UILabel *)[paramView viewWithTag:lTag];
-    sLabel.text = [NSString stringWithFormat:@"%f",slider.value];
+    sLabel.text = [NSString stringWithFormat:@"%d",(int)slider.value];
     
     QCommandManager *cManager = [QBallCommandManager shareCommandManager];
     id<QCommand> command = [cManager obtainSelectedCommand];
-    [command.p setObject:[NSNumber numberWithFloat:slider.value]  forKey:[NSNumber numberWithInt:index]];
+    [command.p setObject:[NSNumber numberWithInteger:(NSInteger)slider.value]  forKey:[NSNumber numberWithInt:index]];
     
 }
 

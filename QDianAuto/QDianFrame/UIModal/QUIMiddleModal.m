@@ -72,10 +72,10 @@
     NSInteger beginIndex = cButton.tag;
 
     [commandManager removeCommandWithName:cButton.commandName withIndex:cButton.cIndex];
-    UIView *removeView = [sender superview];
+     UIView *removeView = [sender superview];
     POPSpringAnimation *positionAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
     positionAnimation.fromValue = [NSValue valueWithCGRect:cButton.frame];
-    positionAnimation.toValue = [NSValue valueWithCGRect:CGRectMake(cButton.center.x+30, cButton.center.y, 0, 0)];
+    positionAnimation.toValue = [NSValue valueWithCGRect:CGRectMake(cButton.center.x, cButton.center.y, 200, 300)];
     positionAnimation.springBounciness = 15.0f;
     positionAnimation.springSpeed = 30.0f;
     
@@ -86,13 +86,14 @@
     {
         if (finished)
         {
-            [removeView removeFromSuperview];
+            
             for (NSInteger i = beginIndex + 1; i <= endIndex; i++)
             {
                 POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
                 
                 UIView *ajustView = [stateView viewWithTag:i];
                 CGPoint point = ajustView.center;
+                
 
                 ajustView.tag = ajustView.tag - 1;
                 springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(point.x, point.y - 80)];
@@ -103,6 +104,9 @@
                 //ajustView.frame   = CGRectMake(ajustView.frame.origin.x, ajustView.frame.origin.y - 80, ajustView.frame.size.width, ajustView.frame.size.height);
                 //[ajustView startFAAnimation];
             }
+            
+            [removeView removeFromSuperview];
+
         }
     };
     [removeView pop_addAnimation:positionAnimation forKey:@"aaaa"];
@@ -111,29 +115,44 @@
 
 - (void)commandSelected:(UILongPressGestureRecognizer *)gesture
 {
-    /*UIImage *cancelImage     = [UIImage imageNamed:@"彩条取消图标.png"];
-    UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    cancelButton.frame     = CGRectMake(550, 18, 20, 20);
-    [cancelButton setImage:cancelImage forState:UIControlStateNormal];
     
-    [cancelButton addTarget:self action:@selector(deleteSelected:) forControlEvents:UIControlEventTouchUpInside];
-    
-    [gesture.view addSubview:cancelButton];*/
+    [QBallCommandManager shareCommandManager].selectedCommand = gesture.view.tag - CBUTTON_BASE;
+
     
     QUIStateManager *sManager = [QUIStateManager shareUIStateManager];
-
     sManager.middleTouchState = 1;
     sManager.middleSelelctedButton      =  gesture.view.tag;
     
-    POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerSize];
     
-    CGSize s = gesture.view.frame.size;
+    POPBasicAnimation *scaleAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPViewAlpha];
+    scaleAnimation.duration = 0.5;
+    scaleAnimation.toValue = @0.5;
+    
+    
+//    UIImage *cancelImage     = [UIImage imageNamed:@"彩条取消图标.png"];
+//    UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    cancelButton.frame     = CGRectMake(550, 18, 20, 20);
+//    cancelButton.tag       = 6;
+//    [cancelButton setImage:cancelImage forState:UIControlStateNormal];
+//    
+//    [cancelButton addTarget:self action:@selector(deleteSelected:) forControlEvents:UIControlEventTouchUpInside];
+//    
+//    [gesture.view addSubview:cancelButton];
 
-    springAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(s.width * 1.2, s.height * 1.2)];
+    
+    //gesture.view.frame =
+    
+    /*POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewScaleXY];
+    springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(1.1, 1.1)];
+    
     springAnimation.springBounciness = 20.0;
     springAnimation.springSpeed = 20.0;
+    springAnimation.completionBlock = ^(POPAnimation *anim, BOOL finished){
+      
+        
+    };*/
     
-    [gesture.view.layer pop_addAnimation:springAnimation forKey:@"changesize"];
+    [gesture.view pop_addAnimation:scaleAnimation forKey:@"changesize"];
     
     
 
@@ -141,8 +160,10 @@
 
 - (void)commandTouched:(id)sender
 {
+//    QUIStateManager *sManager = [QUIStateManager shareUIStateManager];
+//    sManager.middleTouchState = 0;
     CommandButton *button = (CommandButton *)sender;
-    NSLog(@"selelcted button is : %d",button.tag);
+   // NSLog(@"selelcted button is : %d",button.tag);
     [QBallCommandManager shareCommandManager].selectedCommand = button.tag - CBUTTON_BASE;
     
     QUIMessage *message = [[QUIManager shareUIManager] genMessageType:button.commandName withIntValue:0 withType:0 withDName:@"NO"];
@@ -181,6 +202,22 @@
 
     
     
+}
+
+- (void)swipeDel:(UISwipeGestureRecognizer *)sender
+{
+    if (sender.direction == UISwipeGestureRecognizerDirectionLeft)
+    {
+         UIImage *cancelImage     = [UIImage imageNamed:@"彩条取消图标.png"];
+         UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
+         cancelButton.frame     = CGRectMake(550, 18, 20, 20);
+         [cancelButton setImage:cancelImage forState:UIControlStateNormal];
+         
+         [cancelButton addTarget:self action:@selector(deleteSelected:) forControlEvents:UIControlEventTouchUpInside];
+         
+         [sender.view addSubview:cancelButton];
+
+    }
 }
 
 

@@ -12,6 +12,9 @@
 #import "CommandButton.h"
 #import "UIView+FastAnimation.h"
 #import "QUIStateManager.h"
+#import "POP/POP.h"
+
+
 
 
 @implementation QUIBallMiddleStateProgramme
@@ -24,10 +27,13 @@
         middleModal = [[QUIModalManager shareModalManager] createMiddleModal];
         middleModal.stateView = self;
         self.userInteractionEnabled = YES;
+        isAnimationRun = NO;
+        
     }
     
     return self;
 }
+
 
 - (void)loadUI:(UIView *)fView
 {
@@ -110,6 +116,11 @@
     UILongPressGestureRecognizer *lPress = [[UILongPressGestureRecognizer alloc] initWithTarget:middleModal   action:@selector(commandSelected:)];
     [cButton addGestureRecognizer:lPress];
     
+    UISwipeGestureRecognizer *sGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:middleModal action:@selector(swipeDel:)];
+    [cButton addGestureRecognizer:sGesture];
+    
+    
+    
     cButton.animationType = @"BounceRight";
     cButton.animationParams[@"springBounciness"] = @16;
     [self addSubview:cButton];
@@ -147,7 +158,16 @@
     sManager.middleTouchState = 0;
     
     UIView *selectedView = [self viewWithTag:sManager.middleSelelctedButton];
-    selectedView.frame = self.dstRect;
+    POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
+    
+    springAnimation.toValue = [NSValue valueWithCGRect:self.dstRect];
+    springAnimation.springBounciness = 20.0;
+    springAnimation.springSpeed = 20.0;
+
+    [selectedView pop_addAnimation:springAnimation forKey:@"back"];
+    //selectedView.frame = self.dstRect;
+    selectedView.alpha = 1.0;
+    [[selectedView viewWithTag:6] removeFromSuperview];
     
     
 
@@ -157,7 +177,6 @@
 {
     QCommandManager *ballManager = [QBallCommandManager shareCommandManager];
     NSInteger buttonCount = [ballManager queueCount];
-    NSLog(@"moveButton frame is : %@",NSStringFromCGRect(moveButton.frame));
     
     for (int i = 0 ; i < buttonCount; i++)
     {
@@ -167,11 +186,24 @@
         
             CGRect iRect = CGRectIntersection(cButton.frame, moveButton.frame);
             
-            if (iRect.size.height > (moveButton.frame.size.height / 2))
+            if ((iRect.size.height > (moveButton.frame.size.height / 2)) && !isAnimationRun)
             {
-                    self.dstRect = cButton.frame;
-                    cButton.frame = self.srcRect;
+                isAnimationRun = YES;
+                self.dstRect = cButton.frame;
+
+                POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
+                
+                
+                springAnimation.toValue = [NSValue valueWithCGRect:self.srcRect];
+                springAnimation.springBounciness = 10.0;
+                springAnimation.springSpeed = 20.0;
+                springAnimation.completionBlock =  ^(POPAnimation *anim, BOOL finished){
                     self.srcRect = self.dstRect;
+                    isAnimationRun = NO;
+                };
+                [cButton pop_addAnimation:springAnimation forKey:@"ButtonSrc"];
+                
+                    //cButton.frame = self.srcRect;
                 
                 [[ballManager queue] exchangeObjectAtIndex:moveButton.cIndex withObjectAtIndex:cButton.cIndex];
                 

@@ -35,8 +35,8 @@
     }
     
     
-   
-    
+
+    NSLog(@"iphone 6 plus frame is :::::::: %@",NSStringFromCGRect([[UIScreen mainScreen] bounds]));
     
     //----------------------
     UIImageView *background = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024.0, 768.0)];
@@ -44,10 +44,10 @@
 
     
     
-    id<QUi> left = [[QUILeft alloc] initWithFrame:CGRectMake(0.0, 80.0, 80, 680)];
+    id<QUi> left = [[QUILeft alloc] initWithFrame:CGRectMake(0.0, 80.0, 110, 680)];
     [left loadUI];
     
-    id<QUi> middle = [[QUIMiddle alloc] initWithFrame:CGRectMake(92, 80.0, 715, 680)];
+    id<QUi> middle = [[QUIMiddle alloc] initWithFrame:CGRectMake(122, 80.0, 685, 680)];
     [middle loadUI];
     
     id<QUi> topBar = [[QUITopBar alloc] initWithFrame:CGRectMake(0.0, 20.0, 1024, 44)];

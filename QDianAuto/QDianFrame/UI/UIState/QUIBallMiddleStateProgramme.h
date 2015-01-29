@@ -13,6 +13,7 @@
 @interface QUIBallMiddleStateProgramme : UIView<QUIState>
 {
     id<QUIModal> middleModal;
+    BOOL isAnimationRun;
 }
 
 @property CGRect srcRect;

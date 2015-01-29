@@ -17,5 +17,7 @@
 - (void)deleteSelected:(id)sender;
 - (void)commandTouched:(id)sender;
 - (void)programmeSelected:(id)sender;
+- (void)swipeDel:(UISwipeGestureRecognizer *)sender
+;
 
 @end

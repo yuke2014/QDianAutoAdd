@@ -14,6 +14,7 @@
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
 {
+    
     QUIStateManager *sManager = [QUIStateManager shareUIStateManager];
     if (sManager.middleTouchState == 1)
     {
