@@ -71,7 +71,7 @@
     NSInteger endIndex   = [commandManager queueCount] + CBUTTON_BASE - 1;
     NSInteger beginIndex = cButton.tag;
 
-    [commandManager removeCommandWithName:cButton.commandName];
+    [commandManager removeCommandWithName:cButton.commandName withIndex:cButton.cIndex];
     UIView *removeView = [sender superview];
     POPSpringAnimation *positionAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
     positionAnimation.fromValue = [NSValue valueWithCGRect:cButton.frame];
@@ -125,7 +125,15 @@
     sManager.middleTouchState = 1;
     sManager.middleSelelctedButton      =  gesture.view.tag;
     
+    POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerSize];
     
+    CGSize s = gesture.view.frame.size;
+
+    springAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(s.width * 1.2, s.height * 1.2)];
+    springAnimation.springBounciness = 20.0;
+    springAnimation.springSpeed = 20.0;
+    
+    [gesture.view.layer pop_addAnimation:springAnimation forKey:@"changesize"];
     
     
 

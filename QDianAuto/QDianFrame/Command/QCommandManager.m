@@ -44,20 +44,18 @@
     [currentQueue removeObject:qCommand];
 }
 
-- (void)removeCommandWithName:(NSString *)name
+- (void)removeCommandWithName:(NSString *)name withIndex:(NSInteger)index
 {
     NSInteger len = [currentQueue count];
     for (int i = 0; i < len; i++)
     {
         id<QCommand> command = [currentQueue objectAtIndex:i];
         NSString *cName = NSStringFromClass([command class]);
-        if ([cName isEqualToString:name])
+        if ([cName isEqualToString:name] && (i == index))
         {
             [currentQueue removeObject:command];
             break;
         }
-
-        
     }
     
     /*for (id<QCommand> command in currentQueue)
@@ -75,6 +73,11 @@
 - (NSInteger)queueCount
 {
     return [currentQueue count];
+}
+
+- (NSMutableArray *)queue
+{
+    return currentQueue;
 }
 
 - (id<QCommand>)obtainCommandWithIndex:(NSInteger)index

@@ -134,7 +134,7 @@
     if (sManager.middleTouchState == 1)
     {
         UITouch *touch = [touches anyObject];
-        UIView *selectedView = [self viewWithTag:sManager.middleSelelctedButton];
+        CommandButton *selectedView = (CommandButton *)[self viewWithTag:sManager.middleSelelctedButton];
         selectedView.center = [touch locationInView:self];
         [self checkButtonMove:selectedView];
     }
@@ -172,10 +172,19 @@
                     self.dstRect = cButton.frame;
                     cButton.frame = self.srcRect;
                     self.srcRect = self.dstRect;
+                
+                [[ballManager queue] exchangeObjectAtIndex:moveButton.cIndex withObjectAtIndex:cButton.cIndex];
+                
+                NSInteger temp = moveButton.cIndex;
+                moveButton.cIndex = cButton.cIndex;
+                cButton.cIndex    = temp;
+                
             }
         }
     }
 }
+
+
 
 
 
