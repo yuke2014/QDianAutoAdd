@@ -12,20 +12,28 @@
 
 @implementation CommandButton
 
-//- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
-//{
-//    
-//    QUIStateManager *sManager = [QUIStateManager shareUIStateManager];
-//    if (sManager.middleTouchState == 1)
-//    {
-//        return [self superview];
-//    }
-//    else
-//    {
-//        return [super hitTest:point withEvent:event];
-//    }
-//    
-//}
-//
+- (id)initWithFrame:(CGRect)frame
+{
+    if ((self = [super initWithFrame:frame]) != nil)
+    {
+         indexLabel =  [[UILabel alloc] initWithFrame:CGRectMake(22, -10, 80, 80)];
+        indexLabel.font = [UIFont systemFontOfSize:20];
+        indexLabel.textColor = [UIColor whiteColor];
+        [self addSubview:indexLabel];
+    }
+    
+    return self;
+}
+
+
+- (void)setCIndex:(NSInteger)cIndex
+{
+    _cIndex = cIndex;
+    indexLabel.text = [NSString stringWithFormat:@"%d",(int)(cIndex+1)];
+    
+    
+}
+
+
 
 @end

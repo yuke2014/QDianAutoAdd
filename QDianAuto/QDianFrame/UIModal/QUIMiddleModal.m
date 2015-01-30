@@ -117,7 +117,7 @@
 {
     if (gesture.state == UIGestureRecognizerStateBegan)
     {
-    [QBallCommandManager shareCommandManager].selectedCommand = gesture.view.tag - CBUTTON_BASE;
+    [QBallCommandManager shareCommandManager].selectedCommand = ((CommandButton *)gesture.view).cIndex;
         
     QUIStateManager *sManager = [QUIStateManager shareUIStateManager];
         if (sManager.middleTouchState == 1) {
@@ -170,8 +170,7 @@
     [stateView viewWithTag:sManager.middleSelelctedButton].alpha = 1;
     [[[stateView viewWithTag:sManager.middleSelelctedButton] viewWithTag:9000] removeFromSuperview];
     CommandButton *button = (CommandButton *)sender;
-   // NSLog(@"selelcted button is : %d",button.tag);
-    [QBallCommandManager shareCommandManager].selectedCommand = button.tag - CBUTTON_BASE;
+    [QBallCommandManager shareCommandManager].selectedCommand = button.cIndex;
     
     QUIMessage *message = [[QUIManager shareUIManager] genMessageType:button.commandName withIntValue:0 withType:0 withDName:@"NO"];
     

@@ -70,6 +70,7 @@
             NSDictionary *dName     = [pDic objectForKey:className];
             QUIMessage *message = [[QUIManager shareUIManager] genMessageType:className withIntValue:qCount withType:i withDName:[dName objectForKey:@"name"]];
             [self updateUI:message];
+            
         }
         
     }
@@ -90,6 +91,10 @@
 //    else
 //    {
         beginPos = beginPos + sMessage.mType * 80;
+    
+    if (beginPos > self.frame.size.height) {
+        self.contentSize = CGSizeMake(self.frame.size.width, beginPos + 80);
+    }
 
     //}
     
@@ -103,6 +108,7 @@
     cButton.commandName = sMessage.mName;
     cButton.cIndex      = sMessage.mType;
     cButton.tag         = CBUTTON_BASE + cButton.cIndex;
+    
     
     [cButton setTitleEdgeInsets:UIEdgeInsetsMake(0.0, -buttonImage.size.width, 0.0, 0.0)];
     [cButton setImage:buttonImage forState:UIControlStateNormal];
@@ -122,10 +128,6 @@
     UIPanGestureRecognizer *pGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(dragButton:)];
     [cButton addGestureRecognizer:pGesture];
     
-    
-    
-    
-    
     cButton.animationType = @"BounceRight";
     cButton.animationParams[@"springBounciness"] = @16;
     [self addSubview:cButton];
@@ -139,6 +141,9 @@
 {
     NSLog(@"swipe is running.......");
 }
+
+#pragma mark -
+#pragma mark 拖拽调整顺序
 
 - (void)dragButton:(UIPanGestureRecognizer *)gesture
 {
@@ -211,47 +216,6 @@
 }
 
 
-/*- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    QUIStateManager *sManager = [QUIStateManager shareUIStateManager];
-    UIView *selectedView = [self viewWithTag:sManager.middleSelelctedButton];
-    self.srcRect = selectedView.frame;
-}
-
-
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    QUIStateManager *sManager = [QUIStateManager shareUIStateManager];
-    if (sManager.middleTouchState == 1)
-    {
-        UITouch *touch = [touches anyObject];
-        CommandButton *selectedView = (CommandButton *)[self viewWithTag:sManager.middleSelelctedButton];
-        selectedView.center = [touch locationInView:self];
-        [self checkButtonMove:selectedView];
-    }
-}
-
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    QUIStateManager *sManager = [QUIStateManager shareUIStateManager];
-    sManager.middleTouchState = 0;
-    
-    UIView *selectedView = [self viewWithTag:sManager.middleSelelctedButton];
-    POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
-    
-    springAnimation.toValue = [NSValue valueWithCGRect:self.dstRect];
-    springAnimation.springBounciness = 20.0;
-    springAnimation.springSpeed = 20.0;
-
-    [selectedView pop_addAnimation:springAnimation forKey:@"back"];
-    //selectedView.frame = self.dstRect;
-    selectedView.alpha = 1.0;
-    //[[selectedView viewWithTag:6] removeFromSuperview];
-    
-    ((CommandButton *)selectedView).isMove = NO;
-
-}*/
 
 - (void)checkButtonMove:(CommandButton *)moveButton
 {
