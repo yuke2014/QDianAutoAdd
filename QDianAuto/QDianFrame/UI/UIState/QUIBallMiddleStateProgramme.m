@@ -116,8 +116,13 @@
     UILongPressGestureRecognizer *lPress = [[UILongPressGestureRecognizer alloc] initWithTarget:middleModal   action:@selector(commandSelected:)];
     [cButton addGestureRecognizer:lPress];
     
-    UISwipeGestureRecognizer *sGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:middleModal action:@selector(swipeDel:)];
-    [cButton addGestureRecognizer:sGesture];
+//    UISwipeGestureRecognizer *sGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:middleModal action:@selector(swipeDel:)];
+//    [self addGestureRecognizer:sGesture];
+    
+    UIPanGestureRecognizer *pGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(dragButton:)];
+    [cButton addGestureRecognizer:pGesture];
+    
+    
     
     
     
@@ -130,8 +135,83 @@
 
 }
 
+- (void)test:(id)sender
+{
+    NSLog(@"swipe is running.......");
+}
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+- (void)dragButton:(UIPanGestureRecognizer *)gesture
+{
+    QUIStateManager *sManager = [QUIStateManager shareUIStateManager];
+
+    if (sManager.middleTouchState == 1 && gesture.view.tag == sManager.middleSelelctedButton)
+    {
+
+        switch (gesture.state)
+        {
+            case UIGestureRecognizerStateBegan:
+            {
+                [self dragBegin:gesture];
+            }
+            break;
+            case UIGestureRecognizerStateChanged:
+            {
+                [self dragMove:gesture];
+            }
+            break;
+            case UIGestureRecognizerStateEnded:
+            {
+                [self dragEnd:gesture];
+            }
+            break;
+            default:
+                break;
+        }
+    }
+}
+
+- (void)dragBegin:(UIPanGestureRecognizer *)gesture
+{
+    QUIStateManager *sManager = [QUIStateManager shareUIStateManager];
+    UIView *selectedView = [self viewWithTag:sManager.middleSelelctedButton];
+    self.srcRect = selectedView.frame;
+    self.dstRect = selectedView.frame;
+
+}
+
+- (void)dragMove:(UIPanGestureRecognizer *)gesture
+{
+        QUIStateManager *sManager = [QUIStateManager shareUIStateManager];
+        CommandButton *selectedView = (CommandButton *)[self viewWithTag:sManager.middleSelelctedButton];
+        selectedView.center = [gesture locationInView:self];
+        [self checkButtonMove:selectedView];
+    
+
+}
+
+- (void)dragEnd:(UIPanGestureRecognizer *)gesture
+{
+    QUIStateManager *sManager = [QUIStateManager shareUIStateManager];
+    sManager.middleTouchState = 0;
+    
+    UIView *selectedView = [self viewWithTag:sManager.middleSelelctedButton];
+    POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
+    
+    springAnimation.toValue = [NSValue valueWithCGRect:self.dstRect];
+    springAnimation.springBounciness = 20.0;
+    springAnimation.springSpeed = 20.0;
+    
+    [selectedView pop_addAnimation:springAnimation forKey:@"back"];
+    //selectedView.frame = self.dstRect;
+    selectedView.alpha = 1.0;
+    //[[selectedView viewWithTag:6] removeFromSuperview];
+    
+    //((CommandButton *)selectedView).isMove = NO;
+
+}
+
+
+/*- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     QUIStateManager *sManager = [QUIStateManager shareUIStateManager];
     UIView *selectedView = [self viewWithTag:sManager.middleSelelctedButton];
@@ -167,11 +247,11 @@
     [selectedView pop_addAnimation:springAnimation forKey:@"back"];
     //selectedView.frame = self.dstRect;
     selectedView.alpha = 1.0;
-    [[selectedView viewWithTag:6] removeFromSuperview];
+    //[[selectedView viewWithTag:6] removeFromSuperview];
     
-    
+    ((CommandButton *)selectedView).isMove = NO;
 
-}
+}*/
 
 - (void)checkButtonMove:(CommandButton *)moveButton
 {

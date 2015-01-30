@@ -11,5 +11,6 @@
 @interface CommandButton : UIButton
 @property NSInteger cIndex;
 @property (nonatomic,strong) NSString *commandName;
+@property BOOL isMove;
 
 @end
