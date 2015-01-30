@@ -7,6 +7,7 @@
 //
 
 #import "QUICommonTableModal.h"
+#import "MusicEffectPlay.h"
 
 
 @implementation QUICommonTableModal
@@ -121,6 +122,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //NSLog(@"select row is : %d",indexPath.row);
+    
+    [MusicEffectPlay playMusicWithFileName:@"jump"];
+    
     [QUIStateManager shareUIStateManager].stateOperator = BALLADD;
     NSString *keyName = [keyCommand objectAtIndex:indexPath.section];
     NSArray  *keyArray = [command objectForKey:keyName];

@@ -212,6 +212,12 @@
     //[[selectedView viewWithTag:6] removeFromSuperview];
     
     //((CommandButton *)selectedView).isMove = NO;
+    
+    UIView *dstView = [self viewWithTag:self.dstTag];
+    NSInteger temp1 = selectedView.tag;
+    selectedView.tag = self.dstTag;
+    dstView.tag = temp1;
+    
 
 }
 
@@ -254,6 +260,9 @@
                 NSInteger temp = moveButton.cIndex;
                 moveButton.cIndex = cButton.cIndex;
                 cButton.cIndex    = temp;
+                
+                self.dstTag = cButton.tag;
+                
                 
             }
         }

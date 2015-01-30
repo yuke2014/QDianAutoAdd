@@ -57,7 +57,7 @@
 {
     [paramView removeFromSuperview];
     paramView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 48.0, 230.0, 400.0)];
-    
+    paramView.tag = 7001;
     float controlPos = 0.0;
     float     leftMargin   = 10;
     
@@ -85,12 +85,24 @@
         fLabel.text = [ajustArray objectAtIndex:0];
         [paramView addSubview:fLabel];
         
-        UILabel *vLabel = [[UILabel alloc] initWithFrame:CGRectMake(leftMargin+130, controlPos, 80, 40)];
+        /*UILabel *vLabel = [[UILabel alloc] initWithFrame:CGRectMake(leftMargin+130, controlPos, 80, 40)];
         vLabel.font = [UIFont systemFontOfSize:15];
         vLabel.textColor = [UIColor whiteColor];
         vLabel.tag = CLABEL_BASE + i;
         vLabel.text = [[command.p objectForKey:[NSNumber numberWithInt:i]] stringValue];
-        [paramView addSubview:vLabel];
+        [paramView addSubview:vLabel];*/
+        
+        UITextField *vText = [[UITextField alloc] initWithFrame:CGRectMake(leftMargin+130, controlPos, 80, 40)];
+        vText.font = [UIFont systemFontOfSize:15];
+        vText.textColor = [UIColor whiteColor];
+        vText.tag = CLABEL_BASE + i;
+        vText.text = [[command.p objectForKey:[NSNumber numberWithInteger:i]] stringValue];
+        vText.keyboardType = UIKeyboardTypeNumberPad;
+        vText.returnKeyType = UIReturnKeyDone;
+        vText.delegate = self;
+        [paramView addSubview:vText];
+
+
 
 
         
@@ -99,7 +111,7 @@
         fSlider.minimumValue = [[ajustArray objectAtIndex:1] floatValue];
         fSlider.maximumValue = [[ajustArray objectAtIndex:2] floatValue];
         fSlider.tag = CSLIDER_BASE + i;
-        fSlider.value = [[command.p objectForKey:[NSNumber numberWithInt:i]] floatValue];
+        fSlider.value = [[command.p objectForKey:[NSNumber numberWithInteger:i]] floatValue];
         [fSlider addTarget:self action:@selector(changeParam:) forControlEvents:UIControlEventValueChanged];
         [paramView addSubview:fSlider];
         
@@ -121,14 +133,39 @@
     NSInteger index  =  slider.tag - CSLIDER_BASE;
     NSInteger lTag   = index + CLABEL_BASE;
     
-    UILabel *sLabel = (UILabel *)[paramView viewWithTag:lTag];
+    UITextField *sLabel = (UITextField *)[paramView viewWithTag:lTag];
     sLabel.text = [NSString stringWithFormat:@"%d",(int)slider.value];
     
     QCommandManager *cManager = [QBallCommandManager shareCommandManager];
     id<QCommand> command = [cManager obtainSelectedCommand];
-    [command.p setObject:[NSNumber numberWithInteger:(NSInteger)slider.value]  forKey:[NSNumber numberWithInt:index]];
+    [command.p setObject:[NSNumber numberWithInteger:(NSInteger)slider.value]  forKey:[NSNumber numberWithInteger:index]];
     
 }
+
+#pragma mark -
+#pragma mark TextField Dlegate
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    NSInteger index  =  textField.tag - CLABEL_BASE;
+    NSInteger sTag   =  index + CSLIDER_BASE;
+    
+    UISlider *sSlider = (UISlider *)[paramView viewWithTag:sTag];
+    
+    sSlider.value = [textField.text floatValue];
+    
+    textField.text = [NSString stringWithFormat:@"%d",(int)([textField.text integerValue])];
+    
+    QCommandManager *cManager = [QBallCommandManager shareCommandManager];
+    id<QCommand> command = [cManager obtainSelectedCommand];
+    [command.p setObject:[NSNumber numberWithInteger:(NSInteger)([textField.text integerValue])]  forKey:[NSNumber numberWithInteger:index]];
+    
+    [textField resignFirstResponder];
+
+    return  YES;
+}
+
+
 
 
 @end

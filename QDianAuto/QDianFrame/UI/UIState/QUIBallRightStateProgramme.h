@@ -11,7 +11,7 @@
 #import "QUIState.h"
 #import "QUIModal.h"
 
-@interface QUIBallRightStateProgramme : UIView<QUIState>
+@interface QUIBallRightStateProgramme : UIView<QUIState,UITextFieldDelegate>
 {
     UIView *paramView;
     id<QUIModal> rightModal;

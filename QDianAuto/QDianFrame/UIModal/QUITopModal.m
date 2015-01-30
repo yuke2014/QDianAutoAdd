@@ -8,6 +8,7 @@
 
 #import "QUITopModal.h"
 #import "QBallCommandManager.h"
+#import "MusicEffectPlay.h"
 
 @implementation QUITopModal
 @synthesize stateView;
@@ -20,6 +21,7 @@
 - (void)playButtonDown:(id)sender
 {
     //[[QCommandManager shareCommandManager] printQueueName];
+    [MusicEffectPlay playMusicWithFileName:@"晋级"];
     
     [[QBallCommandManager shareCommandManager] commitQueue];
 }

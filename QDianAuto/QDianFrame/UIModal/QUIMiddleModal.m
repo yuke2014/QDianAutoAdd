@@ -14,6 +14,7 @@
 #import "POP/POP.h"
 #import "ProgrammeButton.h"
 #import "QUIBallMiddleStateProgramme.h"
+#import "MusicEffectPlay.h"
 
 
 @implementation QUIMiddleModal
@@ -70,6 +71,10 @@
     QCommandManager *commandManager = [QBallCommandManager shareCommandManager];
     NSInteger endIndex   = [commandManager queueCount] + CBUTTON_BASE - 1;
     NSInteger beginIndex = cButton.tag;
+//    NSInteger endIndex   = [commandManager queueCount] - 1;
+//    NSInteger beginIndex = cButton.cIndex;
+     UIView *rView =     (UIView *)[[QUIManager shareUIManager] obtainUI:@"Right"];
+    [[[rView viewWithTag:7000] viewWithTag:70001] removeFromSuperview];
 
     [commandManager removeCommandWithName:cButton.commandName withIndex:cButton.cIndex];
      UIView *removeView = [sender superview];
@@ -96,6 +101,7 @@
                 
 
                 ajustView.tag = ajustView.tag - 1;
+                ((CommandButton *)ajustView).cIndex =  ((CommandButton *)ajustView).cIndex - 1;
                 springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(point.x, point.y - 80)];
                 springAnimation.springBounciness = 20.0;
                 springAnimation.springSpeed = 20.0;
@@ -165,6 +171,11 @@
 
 - (void)commandTouched:(id)sender
 {
+    
+    NSLog(@"Command Touch Tag is : %d",((UIView *)sender).tag);
+    
+    [MusicEffectPlay playMusicWithFileName:@"加分"];
+
     QUIStateManager *sManager = [QUIStateManager shareUIStateManager];
     sManager.middleTouchState = 0;
     [stateView viewWithTag:sManager.middleSelelctedButton].alpha = 1;

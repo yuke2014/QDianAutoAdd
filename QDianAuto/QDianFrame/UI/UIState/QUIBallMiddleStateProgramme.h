@@ -18,6 +18,7 @@
 
 @property CGRect srcRect;
 @property CGRect dstRect;
+@property NSInteger dstTag;
 
 
 

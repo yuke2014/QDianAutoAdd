@@ -83,6 +83,12 @@
 		0CA0771C1A70911C00632993 /* bb.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CA0771A1A70911C00632993 /* bb.png */; };
 		0CA077221A709A3000632993 /* QUIMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA077211A709A3000632993 /* QUIMessage.m */; };
 		0CA077261A709EE400632993 /* CommandButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA077251A709EE400632993 /* CommandButton.m */; };
+		0CB215901A7B7DA600E0CD1D /* MusicEffectPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB2158F1A7B7DA600E0CD1D /* MusicEffectPlay.m */; };
+		0CB215921A7B7E0200E0CD1D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB215911A7B7E0200E0CD1D /* AVFoundation.framework */; };
+		0CB215941A7B7E0B00E0CD1D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB215931A7B7E0B00E0CD1D /* AudioToolbox.framework */; };
+		0CB215971A7B7F8D00E0CD1D /* jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0CB215961A7B7F8D00E0CD1D /* jump.wav */; };
+		0CB2159A1A7B7FA000E0CD1D /* 加分.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0CB215981A7B7FA000E0CD1D /* 加分.wav */; };
+		0CB2159B1A7B7FA000E0CD1D /* 晋级.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0CB215991A7B7FA000E0CD1D /* 晋级.wav */; };
 		0CCE1FED1A68B154008B5A66 /* QUIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCE1FEC1A68B154008B5A66 /* QUIManager.m */; };
 		0CCE1FF01A68E48C008B5A66 /* QUIStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCE1FEF1A68E48C008B5A66 /* QUIStateManager.m */; };
 		0CDBCFB31A6F451100E600F9 /* BallAction.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0CDBCFB21A6F451100E600F9 /* BallAction.plist */; };
@@ -232,6 +238,13 @@
 		0CA077211A709A3000632993 /* QUIMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIMessage.m; sourceTree = "<group>"; };
 		0CA077241A709EE400632993 /* CommandButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandButton.h; sourceTree = "<group>"; };
 		0CA077251A709EE400632993 /* CommandButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandButton.m; sourceTree = "<group>"; };
+		0CB2158E1A7B7DA600E0CD1D /* MusicEffectPlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicEffectPlay.h; sourceTree = "<group>"; };
+		0CB2158F1A7B7DA600E0CD1D /* MusicEffectPlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicEffectPlay.m; sourceTree = "<group>"; };
+		0CB215911A7B7E0200E0CD1D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0CB215931A7B7E0B00E0CD1D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0CB215961A7B7F8D00E0CD1D /* jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jump.wav; sourceTree = "<group>"; };
+		0CB215981A7B7FA000E0CD1D /* 加分.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "加分.wav"; sourceTree = "<group>"; };
+		0CB215991A7B7FA000E0CD1D /* 晋级.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "晋级.wav"; sourceTree = "<group>"; };
 		0CCE1FEB1A68B154008B5A66 /* QUIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIManager.h; sourceTree = "<group>"; };
 		0CCE1FEC1A68B154008B5A66 /* QUIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIManager.m; sourceTree = "<group>"; };
 		0CCE1FEE1A68E48C008B5A66 /* QUIStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIStateManager.h; sourceTree = "<group>"; };
@@ -287,6 +300,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CB215941A7B7E0B00E0CD1D /* AudioToolbox.framework in Frameworks */,
+				0CB215921A7B7E0200E0CD1D /* AVFoundation.framework in Frameworks */,
 				82953D440FF1927B71B9DA4D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +402,7 @@
 		0C65470F1A6DF27500E8B8C7 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				0CB215951A7B7F6800E0CD1D /* Music */,
 				0CDBCFB11A6F44C300E600F9 /* Config */,
 				0C6547101A6DF2D400E8B8C7 /* Pic */,
 			);
@@ -452,6 +468,8 @@
 				0C922EC91A75E25400669F1C /* ProgrammeBallManager.m */,
 				0C922ECB1A761DD300669F1C /* ProgrammeCarManager.h */,
 				0C922ECC1A761DD300669F1C /* ProgrammeCarManager.m */,
+				0CB2158E1A7B7DA600E0CD1D /* MusicEffectPlay.h */,
+				0CB2158F1A7B7DA600E0CD1D /* MusicEffectPlay.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -531,6 +549,16 @@
 			path = CustomUI;
 			sourceTree = "<group>";
 		};
+		0CB215951A7B7F6800E0CD1D /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				0CB215981A7B7FA000E0CD1D /* 加分.wav */,
+				0CB215991A7B7FA000E0CD1D /* 晋级.wav */,
+				0CB215961A7B7F8D00E0CD1D /* jump.wav */,
+			);
+			name = Music;
+			sourceTree = "<group>";
+		};
 		0CDBCFB11A6F44C300E600F9 /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,6 +625,8 @@
 		6EBAEB1202ADEA76151C82D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0CB215931A7B7E0B00E0CD1D /* AudioToolbox.framework */,
+				0CB215911A7B7E0200E0CD1D /* AVFoundation.framework */,
 				7D2C4CA21FFD73928BF3F69D /* libPods.a */,
 			);
 			name = Frameworks;
@@ -729,10 +759,13 @@
 				0C65475A1A6DF3EE00E8B8C7 /* 指令区--选中指令--圆角底.png in Resources */,
 				0C65474D1A6DF3EE00E8B8C7 /* 锁定按下.png in Resources */,
 				0C65473A1A6DF3EE00E8B8C7 /* 背景.png in Resources */,
+				0CB2159A1A7B7FA000E0CD1D /* 加分.wav in Resources */,
 				0CA0771C1A70911C00632993 /* bb.png in Resources */,
 				0C2DAAF31A617C3A008EA1EA /* Main.storyboard in Resources */,
 				0CA0771B1A70911C00632993 /* 驾驶舱.png in Resources */,
+				0CB2159B1A7B7FA000E0CD1D /* 晋级.wav in Resources */,
 				0C2DAAF81A617C3A008EA1EA /* LaunchScreen.xib in Resources */,
+				0CB215971A7B7F8D00E0CD1D /* jump.wav in Resources */,
 				0C6547531A6DF3EE00E8B8C7 /* 添加.png in Resources */,
 				0C6547501A6DF3EE00E8B8C7 /* 太空车.png in Resources */,
 				0C6547481A6DF3EE00E8B8C7 /* 功能参数.png in Resources */,
@@ -830,6 +863,7 @@
 				0C2DAAEA1A617C3A008EA1EA /* main.m in Sources */,
 				0CE733721A7101C1002BEF10 /* QBallLoop.m in Sources */,
 				0CE7335A1A710056002BEF10 /* QBallDelay.m in Sources */,
+				0CB215901A7B7DA600E0CD1D /* MusicEffectPlay.m in Sources */,
 				0C922EC71A75D7DF00669F1C /* ProgrammerManager.m in Sources */,
 				0CA077221A709A3000632993 /* QUIMessage.m in Sources */,
 				0C922ECD1A761DD300669F1C /* ProgrammeCarManager.m in Sources */,
