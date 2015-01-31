@@ -96,7 +96,6 @@ static ProgrammerManager *pManager = nil;
     }
     
     self.maxFileName = mFileName;
-    
     return pDic;
 
 }
@@ -105,7 +104,7 @@ static ProgrammerManager *pManager = nil;
 {
     NSString *pDir = [[self getDocumentPath] stringByAppendingPathComponent:[self programmeName]];
     
-    NSString *filePath = [pDir stringByAppendingPathComponent:[NSString stringWithFormat:@"%d",self.selectedProgramme]];
+    NSString *filePath = [pDir stringByAppendingPathComponent:[NSString stringWithFormat:@"%ld",self.selectedProgramme]];
     NSLog(@"save command filepath is : %@",filePath);
     [commandArray writeToFile:filePath  atomically:YES];
     

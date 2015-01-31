@@ -209,17 +209,22 @@
     [selectedView pop_addAnimation:springAnimation forKey:@"back"];
     //selectedView.frame = self.dstRect;
     selectedView.alpha = 1.0;
+    
+    //QCommandManager *ballManager = [QBallCommandManager shareCommandManager];
+
+    //ballManager.selectedCommand = ((CommandButton *)gesture.view).cIndex;
     //[[selectedView viewWithTag:6] removeFromSuperview];
     
     //((CommandButton *)selectedView).isMove = NO;
     
-    UIView *dstView = [self viewWithTag:self.dstTag];
-    NSInteger temp1 = selectedView.tag;
-    selectedView.tag = self.dstTag;
-    dstView.tag = temp1;
+//    UIView *dstView = [self viewWithTag:self.dstTag];
+//    NSInteger temp1 = selectedView.tag;
+//    selectedView.tag = self.dstTag;
+//    dstView.tag = temp1;
     
 
 }
+
 
 
 
@@ -230,9 +235,10 @@
     
     for (int i = 0 ; i < buttonCount; i++)
     {
-        if (i != ballManager.selectedCommand)
-        {
             CommandButton *cButton = (CommandButton *)[self viewWithTag:CBUTTON_BASE + i];
+        if (cButton.tag != moveButton.tag)
+        {
+
         
             CGRect iRect = CGRectIntersection(cButton.frame, moveButton.frame);
             
@@ -252,16 +258,13 @@
                     isAnimationRun = NO;
                 };
                 [cButton pop_addAnimation:springAnimation forKey:@"ButtonSrc"];
-                
-                    //cButton.frame = self.srcRect;
-                
+                                
                 [[ballManager queue] exchangeObjectAtIndex:moveButton.cIndex withObjectAtIndex:cButton.cIndex];
                 
-                NSInteger temp = moveButton.cIndex;
+                NSInteger temp    = moveButton.cIndex;
                 moveButton.cIndex = cButton.cIndex;
                 cButton.cIndex    = temp;
                 
-                self.dstTag = cButton.tag;
                 
                 
             }

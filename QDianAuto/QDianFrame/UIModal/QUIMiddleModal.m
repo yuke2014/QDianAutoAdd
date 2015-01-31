@@ -71,10 +71,9 @@
     QCommandManager *commandManager = [QBallCommandManager shareCommandManager];
     NSInteger endIndex   = [commandManager queueCount] + CBUTTON_BASE - 1;
     NSInteger beginIndex = cButton.tag;
-//    NSInteger endIndex   = [commandManager queueCount] - 1;
-//    NSInteger beginIndex = cButton.cIndex;
-     UIView *rView =     (UIView *)[[QUIManager shareUIManager] obtainUI:@"Right"];
-    [[[rView viewWithTag:7000] viewWithTag:70001] removeFromSuperview];
+
+    UIView *rView =     (UIView *)[[QUIManager shareUIManager] obtainUI:@"Right"];
+    [[[rView viewWithTag:7000] viewWithTag:7001] removeFromSuperview];
 
     [commandManager removeCommandWithName:cButton.commandName withIndex:cButton.cIndex];
      UIView *removeView = [sender superview];
@@ -84,10 +83,47 @@
     positionAnimation.springBounciness = 15.0f;
     positionAnimation.springSpeed = 30.0f;
     
-    
+    positionAnimation.completionBlock = ^(POPAnimation *anim, BOOL finished)
+    {
+        if (finished)
+        {
+            
+            for (NSInteger i = 1000; i <= endIndex; i++)
+            {
+                POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
+                
+                CommandButton *ajustView = (CommandButton *)[stateView viewWithTag:i];
+                if (ajustView.cIndex <= cButton.cIndex) {
+                    continue;
+                }
+                
+                CGPoint point = ajustView.center;
+                
+//                if (ajustView.tag > cButton.tag)
+//                    ajustView.tag = ajustView.tag - 1;
+                ((CommandButton *)ajustView).cIndex =  ((CommandButton *)ajustView).cIndex - 1;
+                springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(point.x, point.y - 80)];
+                springAnimation.springBounciness = 20.0;
+                springAnimation.springSpeed = 20.0;
+                [ajustView pop_addAnimation:springAnimation forKey:@"changeposition"];
+                
+            }
+            
+            for (NSInteger i = 1000; i <= endIndex; i++)
+            {
+                CommandButton *ajustView = (CommandButton *)[stateView viewWithTag:i];
+                if (ajustView.tag > cButton.tag)
+                            ajustView.tag = ajustView.tag - 1;
+
+            }
+            
+            [removeView removeFromSuperview];
+            
+        }
+    };
 
     
-    positionAnimation.completionBlock = ^(POPAnimation *anim, BOOL finished)
+    /*positionAnimation.completionBlock = ^(POPAnimation *anim, BOOL finished)
     {
         if (finished)
         {
@@ -114,7 +150,7 @@
             [removeView removeFromSuperview];
 
         }
-    };
+    };*/
     [removeView pop_addAnimation:positionAnimation forKey:@"aaaa"];
     
 }
@@ -123,47 +159,36 @@
 {
     if (gesture.state == UIGestureRecognizerStateBegan)
     {
-    [QBallCommandManager shareCommandManager].selectedCommand = ((CommandButton *)gesture.view).cIndex;
+        [QBallCommandManager shareCommandManager].selectedCommand = ((CommandButton *)gesture.view).cIndex;
+        QUIStateManager *sManager = [QUIStateManager shareUIStateManager];
         
-    QUIStateManager *sManager = [QUIStateManager shareUIStateManager];
-        if (sManager.middleTouchState == 1) {
+        if (sManager.middleTouchState == 1)
+        {
             [[[stateView viewWithTag:sManager.middleSelelctedButton] viewWithTag:9000] removeFromSuperview];
             [stateView viewWithTag:sManager.middleSelelctedButton].alpha = 1.0;
         }
+            
+        sManager.middleTouchState = 1;
+        sManager.middleSelelctedButton      =  gesture.view.tag;
         
-    sManager.middleTouchState = 1;
-    sManager.middleSelelctedButton      =  gesture.view.tag;
-    
-    
-    POPBasicAnimation *scaleAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPViewAlpha];
-    scaleAnimation.duration = 0.5;
-    scaleAnimation.toValue = @0.5;
-    
-    
-    UIImage *cancelImage     = [UIImage imageNamed:@"彩条取消图标.png"];
-    UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    cancelButton.frame     = CGRectMake(550, 18, 20, 20);
-    cancelButton.tag       = 9000;
-    [cancelButton setImage:cancelImage forState:UIControlStateNormal];
-    
-    [cancelButton addTarget:self action:@selector(deleteSelected:) forControlEvents:UIControlEventTouchUpInside];
-    
-    [gesture.view addSubview:cancelButton];
+        
+        POPBasicAnimation *scaleAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPViewAlpha];
+        scaleAnimation.duration = 0.5;
+        scaleAnimation.toValue = @0.5;
+        
+        
+        UIImage *cancelImage     = [UIImage imageNamed:@"彩条取消图标.png"];
+        UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        cancelButton.frame     = CGRectMake(550, 18, 20, 20);
+        cancelButton.tag       = 9000;
+        [cancelButton setImage:cancelImage forState:UIControlStateNormal];
+        
+        [cancelButton addTarget:self action:@selector(deleteSelected:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [gesture.view addSubview:cancelButton];
 
-    
-    //gesture.view.frame =
-    
-    /*POPSpringAnimation *springAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewScaleXY];
-    springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(1.1, 1.1)];
-    
-    springAnimation.springBounciness = 20.0;
-    springAnimation.springSpeed = 20.0;
-    springAnimation.completionBlock = ^(POPAnimation *anim, BOOL finished){
-      
         
-    };*/
-    
-    [gesture.view pop_addAnimation:scaleAnimation forKey:@"changesize"];
+        [gesture.view pop_addAnimation:scaleAnimation forKey:@"changesize"];
     
     }
 
@@ -172,7 +197,6 @@
 - (void)commandTouched:(id)sender
 {
     
-    NSLog(@"Command Touch Tag is : %d",((UIView *)sender).tag);
     
     [MusicEffectPlay playMusicWithFileName:@"加分"];
 
@@ -182,6 +206,8 @@
     [[[stateView viewWithTag:sManager.middleSelelctedButton] viewWithTag:9000] removeFromSuperview];
     CommandButton *button = (CommandButton *)sender;
     [QBallCommandManager shareCommandManager].selectedCommand = button.cIndex;
+    
+    NSLog(@"button index is : %d",button.tag);
     
     QUIMessage *message = [[QUIManager shareUIManager] genMessageType:button.commandName withIntValue:0 withType:0 withDName:@"NO"];
     
