@@ -70,7 +70,6 @@
     CommandButton *cButton = (CommandButton *)[sender superview];
     QCommandManager *commandManager = [QBallCommandManager shareCommandManager];
     NSInteger endIndex   = [commandManager queueCount] + CBUTTON_BASE - 1;
-    NSInteger beginIndex = cButton.tag;
 
     UIView *rView =     (UIView *)[[QUIManager shareUIManager] obtainUI:@"Right"];
     [[[rView viewWithTag:7000] viewWithTag:7001] removeFromSuperview];
@@ -99,8 +98,6 @@
                 
                 CGPoint point = ajustView.center;
                 
-//                if (ajustView.tag > cButton.tag)
-//                    ajustView.tag = ajustView.tag - 1;
                 ((CommandButton *)ajustView).cIndex =  ((CommandButton *)ajustView).cIndex - 1;
                 springAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(point.x, point.y - 80)];
                 springAnimation.springBounciness = 20.0;
@@ -207,8 +204,8 @@
     CommandButton *button = (CommandButton *)sender;
     [QBallCommandManager shareCommandManager].selectedCommand = button.cIndex;
     
-    NSLog(@"button index is : %d",button.tag);
-    
+    sManager.chageParamButton = ((CommandButton *)sender).tag;
+        
     QUIMessage *message = [[QUIManager shareUIManager] genMessageType:button.commandName withIntValue:0 withType:0 withDName:@"NO"];
     
     id<QUi> rUpdateUi = [[QUIManager shareUIManager] obtainUI:@"Right"];

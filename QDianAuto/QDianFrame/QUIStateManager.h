@@ -31,6 +31,8 @@
 @property NSInteger middleTouchState;
 @property NSInteger middleSelelctedButton;
 
+@property NSInteger chageParamButton;
+
 
 + (QUIStateManager *)shareUIStateManager;
 

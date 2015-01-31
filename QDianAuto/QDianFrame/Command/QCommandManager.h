@@ -29,6 +29,7 @@
 - (void)clearAllCommand;
 - (NSDictionary *)obtainParamConfig;
 - (NSMutableArray *)queue;
+- (NSString *)genButtonDisplay:(NSInteger)index;
 
 
 - (void)printQueueName;

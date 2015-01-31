@@ -18,7 +18,7 @@
     if ((self = [super initWithFrame:frame]) != nil)
     {
         middleState       = [[QUIStateManager shareUIStateManager] createMiddleStateWithName:@"MiddleNormal"];
-        
+        self.temp = middleState;
     }
     
     
@@ -31,6 +31,7 @@
 {
     [((UIView *)middleState) removeFromSuperview];
     middleState = changedState;
+    self.temp = middleState;
 }
 
 - (void)reloadUI

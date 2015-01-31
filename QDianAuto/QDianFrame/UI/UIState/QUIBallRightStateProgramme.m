@@ -10,6 +10,8 @@
 #import "QUIMessage.h"
 #import "QUIManager.h"
 #import "QBallCommandManager.h"
+#import "CommandButton.h"
+#import "QUIMiddle.h"
 
 @implementation QUIBallRightStateProgramme
 @synthesize stateName;
@@ -83,6 +85,7 @@
         fLabel.font = [UIFont systemFontOfSize:15];
         fLabel.textColor = [UIColor whiteColor];
         fLabel.text = [ajustArray objectAtIndex:0];
+        fLabel.tag  = 8000 + i;
         [paramView addSubview:fLabel];
         
         /*UILabel *vLabel = [[UILabel alloc] initWithFrame:CGRectMake(leftMargin+130, controlPos, 80, 40)];
@@ -139,6 +142,21 @@
     QCommandManager *cManager = [QBallCommandManager shareCommandManager];
     id<QCommand> command = [cManager obtainSelectedCommand];
     [command.p setObject:[NSNumber numberWithInteger:(NSInteger)slider.value]  forKey:[NSNumber numberWithInteger:index]];
+    
+    NSString *cName = [[QBallCommandManager shareCommandManager] genButtonDisplay:cManager.selectedCommand];
+    
+    QUIMiddle *mUI = (QUIMiddle *)[[QUIManager shareUIManager] obtainUI:@"Middle"];
+    CommandButton *cButton = (CommandButton *)[(UIView *)mUI.temp viewWithTag:[QUIStateManager shareUIStateManager].chageParamButton];
+    
+    NSString *title = ((UITextField *)[paramView viewWithTag:8000 + index]).text;
+    NSString *dName = [NSString stringWithFormat:@"%@(%@)",title,cName];
+    
+    
+    [cButton setTitle:dName forState:UIControlStateNormal];
+
+    
+    
+    
     
 }
 

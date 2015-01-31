@@ -109,10 +109,12 @@
     cButton.cIndex      = sMessage.mType;
     cButton.tag         = CBUTTON_BASE + cButton.cIndex;
     
+    NSString *cName = [[QBallCommandManager shareCommandManager] genButtonDisplay:cButton.cIndex];
+    NSString *dName = [NSString stringWithFormat:@"%@(%@)",sMessage.dName,cName];
     
     [cButton setTitleEdgeInsets:UIEdgeInsetsMake(0.0, -buttonImage.size.width, 0.0, 0.0)];
     [cButton setImage:buttonImage forState:UIControlStateNormal];
-    [cButton setTitle:sMessage.dName forState:UIControlStateNormal];
+    [cButton setTitle:dName forState:UIControlStateNormal];
     [cButton setImageEdgeInsets:UIEdgeInsetsMake(2.0, 0.0, 0.0, -cButton.titleLabel.bounds.size.width)];
    
     [cButton addTarget:middleModal action:@selector(commandTouched:) forControlEvents:UIControlEventTouchUpInside];

@@ -15,4 +15,6 @@
     id<QUIState> middleState;
 }
 
+@property (nonatomic,strong) id<QUIState> temp;
+
 @end

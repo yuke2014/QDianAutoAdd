@@ -104,6 +104,41 @@
 
 }
 
+- (NSString *)genButtonDisplay:(NSInteger)index
+{
+    id<QCommand> c = [currentQueue objectAtIndex:index];
+    
+    NSString *pListPath = [[NSBundle mainBundle] pathForResource:@"BallCommandDes" ofType:@"plist"];
+    NSMutableDictionary *paramConfig    = [[NSMutableDictionary alloc] initWithContentsOfFile:pListPath];
+    
+    NSDictionary *pDic = [paramConfig objectForKey:NSStringFromClass([c class])];
+    NSArray *pList     = [pDic objectForKey:@"param"];
+    
+    NSMutableString *resultString = [[NSMutableString alloc] init];
+    
+    NSInteger len = 0;
+    if ([pList count] > 3)
+    {
+        len = 3;
+    }
+    else
+    {
+        len = (NSInteger)[pList count];
+    }
+    
+    for (int i = 0; i < [pList count]; i++)
+    {
+        NSInteger v = [[c.p objectForKey:[NSNumber numberWithInt:i]] integerValue];
+        NSString  *name = [[[pList objectAtIndex:i] componentsSeparatedByString:@"&"] objectAtIndex:0];
+        NSString *oneParam = [NSString stringWithFormat:@"%@:%ld ",name,v];
+        [resultString appendString:oneParam];
+                              
+    }
+    
+    return resultString;
+    
+}
+
 - (void)printQueueName
 {
     for (int i = 0; i < [currentQueue count]; i++)
