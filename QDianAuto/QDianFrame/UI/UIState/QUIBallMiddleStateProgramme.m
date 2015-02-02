@@ -37,8 +37,8 @@
 
 - (void)loadUI:(UIView *)fView
 {
-    float     flagWidth    = 90;
-    float     flagHeight   = 90;
+//    float     flagWidth    = 90;
+//    float     flagHeight   = 90;
     float     controlPos   = 0;
     float     leftMargin   = 34;
     
@@ -80,30 +80,27 @@
 - (void)updateUI:(id)message
 {
     QUIMessage *sMessage = (QUIMessage *)message;
-    NSInteger messageCount = sMessage.mLen;
     
     
-    UILabel *centerLabel = [[UILabel alloc] initWithFrame:CGRectMake(400, 35, 180, 24)];
-    centerLabel.font = [UIFont systemFontOfSize:20];
-    centerLabel.textColor = [UIColor whiteColor];
-    centerLabel.text = [NSString stringWithFormat:@"(当前程序:%@)",[ProgrammeBallManager shareProgrammeManager].selectedProgrammeName];
-    [self addSubview:centerLabel];
+    if ([QUIStateManager shareUIStateManager].stateOperator != BALLADD)
+    {
+        UILabel *centerLabel = [[UILabel alloc] initWithFrame:CGRectMake(400, 35, 180, 24)];
+        centerLabel.font = [UIFont systemFontOfSize:20];
+        centerLabel.textColor = [UIColor whiteColor];
+        centerLabel.text = [NSString stringWithFormat:@"(当前程序:%@)",[ProgrammeBallManager shareProgrammeManager].selectedProgrammeName];
+        [self addSubview:centerLabel];
+
+    }
+    
     
     
     float beginPos = 110;
-//    if ([QUIStateManager shareUIStateManager].stateOperator == BALLADD)
-//    {
-//        beginPos = beginPos + (messageCount - 1) * 80;
-//    }
-//    else
-//    {
-        beginPos = beginPos + sMessage.mType * 80;
+    beginPos = beginPos + sMessage.mType * 80;
     
     if (beginPos > self.frame.size.height) {
         self.contentSize = CGSizeMake(self.frame.size.width, beginPos + 80);
     }
 
-    //}
     
     int flagIndex = (arc4random() % 4) + 7;
     
@@ -131,8 +128,7 @@
     UILongPressGestureRecognizer *lPress = [[UILongPressGestureRecognizer alloc] initWithTarget:middleModal   action:@selector(commandSelected:)];
     [cButton addGestureRecognizer:lPress];
     
-//    UISwipeGestureRecognizer *sGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:middleModal action:@selector(swipeDel:)];
-//    [self addGestureRecognizer:sGesture];
+
     
     UIPanGestureRecognizer *pGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(dragButton:)];
     [cButton addGestureRecognizer:pGesture];
@@ -195,10 +191,10 @@
 
 - (void)dragMove:(UIPanGestureRecognizer *)gesture
 {
-        QUIStateManager *sManager = [QUIStateManager shareUIStateManager];
-        CommandButton *selectedView = (CommandButton *)[self viewWithTag:sManager.middleSelelctedButton];
-        selectedView.center = [gesture locationInView:self];
-        [self checkButtonMove:selectedView];
+    QUIStateManager *sManager = [QUIStateManager shareUIStateManager];
+    CommandButton *selectedView = (CommandButton *)[self viewWithTag:sManager.middleSelelctedButton];
+    selectedView.center = [gesture locationInView:self];
+    [self checkButtonMove:selectedView];
     
 
 }
@@ -225,11 +221,6 @@
     [[selectedView viewWithTag:9000] removeFromSuperview];
     
     //((CommandButton *)selectedView).isMove = NO;
-    
-//    UIView *dstView = [self viewWithTag:self.dstTag];
-//    NSInteger temp1 = selectedView.tag;
-//    selectedView.tag = self.dstTag;
-//    dstView.tag = temp1;
     
 
 }

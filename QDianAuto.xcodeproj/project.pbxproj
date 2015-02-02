@@ -94,6 +94,10 @@
 		0CCE1FED1A68B154008B5A66 /* QUIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCE1FEC1A68B154008B5A66 /* QUIManager.m */; };
 		0CCE1FF01A68E48C008B5A66 /* QUIStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCE1FEF1A68E48C008B5A66 /* QUIStateManager.m */; };
 		0CD67A431A7F129D00C539FE /* QUIWelcomState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD67A421A7F129D00C539FE /* QUIWelcomState.m */; };
+		0CD67A481A7F21F700C539FE /* 彩条7.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD67A441A7F21F700C539FE /* 彩条7.png */; };
+		0CD67A491A7F21F700C539FE /* 彩条8.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD67A451A7F21F700C539FE /* 彩条8.png */; };
+		0CD67A4A1A7F21F700C539FE /* 彩条9.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD67A461A7F21F700C539FE /* 彩条9.png */; };
+		0CD67A4B1A7F21F700C539FE /* 彩条10.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CD67A471A7F21F700C539FE /* 彩条10.png */; };
 		0CDBCFB31A6F451100E600F9 /* BallAction.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0CDBCFB21A6F451100E600F9 /* BallAction.plist */; };
 		0CDBCFB81A6F55C200E600F9 /* CommandParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBCFB71A6F55C200E600F9 /* CommandParam.m */; };
 		0CDBCFBD1A6F56FC00E600F9 /* QBallRoll.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBCFBC1A6F56FC00E600F9 /* QBallRoll.m */; };
@@ -257,6 +261,10 @@
 		0CCE1FEF1A68E48C008B5A66 /* QUIStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIStateManager.m; sourceTree = "<group>"; };
 		0CD67A411A7F129D00C539FE /* QUIWelcomState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIWelcomState.h; sourceTree = "<group>"; };
 		0CD67A421A7F129D00C539FE /* QUIWelcomState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIWelcomState.m; sourceTree = "<group>"; };
+		0CD67A441A7F21F700C539FE /* 彩条7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条7.png"; sourceTree = "<group>"; };
+		0CD67A451A7F21F700C539FE /* 彩条8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条8.png"; sourceTree = "<group>"; };
+		0CD67A461A7F21F700C539FE /* 彩条9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条9.png"; sourceTree = "<group>"; };
+		0CD67A471A7F21F700C539FE /* 彩条10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "彩条10.png"; sourceTree = "<group>"; };
 		0CDBCFB21A6F451100E600F9 /* BallAction.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BallAction.plist; sourceTree = "<group>"; };
 		0CDBCFB51A6F554000E600F9 /* QCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCommand.h; sourceTree = "<group>"; };
 		0CDBCFB61A6F55C200E600F9 /* CommandParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandParam.h; sourceTree = "<group>"; };
@@ -424,6 +432,10 @@
 			isa = PBXGroup;
 			children = (
 				0CA077191A70911C00632993 /* 驾驶舱.png */,
+				0CD67A441A7F21F700C539FE /* 彩条7.png */,
+				0CD67A451A7F21F700C539FE /* 彩条8.png */,
+				0CD67A461A7F21F700C539FE /* 彩条9.png */,
+				0CD67A471A7F21F700C539FE /* 彩条10.png */,
 				0CA0771A1A70911C00632993 /* bb.png */,
 				0C6547111A6DF3EE00E8B8C7 /* 01.png */,
 				0C6547121A6DF3EE00E8B8C7 /* 02--左侧--灰白色底.png */,
@@ -751,6 +763,7 @@
 				0C3B0D821A7D07A800573923 /* SettingViewConroller.xib in Resources */,
 				0C6547521A6DF3EE00E8B8C7 /* 太空球.png in Resources */,
 				0C65473C1A6DF3EE00E8B8C7 /* 彩条1.png in Resources */,
+				0CD67A481A7F21F700C539FE /* 彩条7.png in Resources */,
 				0C6547571A6DF3EE00E8B8C7 /* 五星--空.png in Resources */,
 				0C6547561A6DF3EE00E8B8C7 /* 五星--发光.png in Resources */,
 				0C6547451A6DF3EE00E8B8C7 /* 功能参数--数值调节-白色圆.png in Resources */,
@@ -763,11 +776,13 @@
 				0C2868771A778E0E00CC0467 /* 启动.png in Resources */,
 				0C6547431A6DF3EE00E8B8C7 /* 返回.png in Resources */,
 				0CDBCFB31A6F451100E600F9 /* BallAction.plist in Resources */,
+				0CD67A491A7F21F700C539FE /* 彩条8.png in Resources */,
 				0C65474C1A6DF3EE00E8B8C7 /* 设置.png in Resources */,
 				0C6547441A6DF3EE00E8B8C7 /* 功能参数--50按钮.png in Resources */,
 				0C6547421A6DF3EE00E8B8C7 /* 01topbar.png in Resources */,
 				0C6547391A6DF3EE00E8B8C7 /* 02.png in Resources */,
 				0C6547591A6DF3EE00E8B8C7 /* 暂停.png in Resources */,
+				0CD67A4B1A7F21F700C539FE /* 彩条10.png in Resources */,
 				0C65474B1A6DF3EE00E8B8C7 /* 设置按下.png in Resources */,
 				0C65475B1A6DF3EE00E8B8C7 /* 指令区圆角黑色透明底.png in Resources */,
 				0C65475A1A6DF3EE00E8B8C7 /* 指令区--选中指令--圆角底.png in Resources */,
@@ -785,6 +800,7 @@
 				0C6547481A6DF3EE00E8B8C7 /* 功能参数.png in Resources */,
 				0C65473D1A6DF3EE00E8B8C7 /* 彩条2.png in Resources */,
 				0C6547461A6DF3EE00E8B8C7 /* 功能参数--数值调节-蓝色部分.png in Resources */,
+				0CD67A4A1A7F21F700C539FE /* 彩条9.png in Resources */,
 				0C65473E1A6DF3EE00E8B8C7 /* 彩条3.png in Resources */,
 				0C2DAAF51A617C3A008EA1EA /* Images.xcassets in Resources */,
 			);
