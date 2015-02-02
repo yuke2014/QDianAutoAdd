@@ -60,6 +60,7 @@
     pauseButton.frame     = CGRectMake(880, 11, 22, 22);
     [pauseButton setImage:pauseImage forState:UIControlStateNormal];
     [pauseButton setImage:pauseHightLighted forState:UIControlStateHighlighted];
+    [pauseButton addTarget:topModal action:@selector(stop:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:pauseButton];
     
     UIImage *lockImage     = [UIImage imageNamed:@"锁定.png"];
@@ -73,10 +74,12 @@
     
     UIImage *settingImage     = [UIImage imageNamed:@"设置.png"];
     UIImage *settingHightLighted     = [UIImage imageNamed:@"设置按下.png"];
+    
     UIButton *settingButton = [UIButton buttonWithType:UIButtonTypeCustom];
     settingButton.frame     = CGRectMake(980, 11, 22, 22);
     [settingButton setImage:settingImage forState:UIControlStateNormal];
     [settingButton setImage:settingHightLighted forState:UIControlStateHighlighted];
+    [settingButton addTarget:topModal  action:@selector(settingDown:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:settingButton];
     
     

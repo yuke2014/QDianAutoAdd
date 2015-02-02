@@ -19,6 +19,8 @@
 		0C2DAAF51A617C3A008EA1EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C2DAAF41A617C3A008EA1EA /* Images.xcassets */; };
 		0C2DAAF81A617C3A008EA1EA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C2DAAF61A617C3A008EA1EA /* LaunchScreen.xib */; };
 		0C2DAB041A617C3A008EA1EA /* QDianAutoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DAB031A617C3A008EA1EA /* QDianAutoTests.m */; };
+		0C3B0D811A7D07A800573923 /* SettingViewConroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3B0D7F1A7D07A800573923 /* SettingViewConroller.m */; };
+		0C3B0D821A7D07A800573923 /* SettingViewConroller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C3B0D801A7D07A800573923 /* SettingViewConroller.xib */; };
 		0C4F3CEA1A69165C001D6859 /* QUIModalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4F3CE91A69165C001D6859 /* QUIModalManager.m */; };
 		0C6547371A6DF3EE00E8B8C7 /* 01.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547111A6DF3EE00E8B8C7 /* 01.png */; };
 		0C6547381A6DF3EE00E8B8C7 /* 02--左侧--灰白色底.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6547121A6DF3EE00E8B8C7 /* 02--左侧--灰白色底.png */; };
@@ -91,6 +93,7 @@
 		0CB2159B1A7B7FA000E0CD1D /* 晋级.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0CB215991A7B7FA000E0CD1D /* 晋级.wav */; };
 		0CCE1FED1A68B154008B5A66 /* QUIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCE1FEC1A68B154008B5A66 /* QUIManager.m */; };
 		0CCE1FF01A68E48C008B5A66 /* QUIStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCE1FEF1A68E48C008B5A66 /* QUIStateManager.m */; };
+		0CD67A431A7F129D00C539FE /* QUIWelcomState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD67A421A7F129D00C539FE /* QUIWelcomState.m */; };
 		0CDBCFB31A6F451100E600F9 /* BallAction.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0CDBCFB21A6F451100E600F9 /* BallAction.plist */; };
 		0CDBCFB81A6F55C200E600F9 /* CommandParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBCFB71A6F55C200E600F9 /* CommandParam.m */; };
 		0CDBCFBD1A6F56FC00E600F9 /* QBallRoll.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBCFBC1A6F56FC00E600F9 /* QBallRoll.m */; };
@@ -147,6 +150,9 @@
 		0C2DAAFD1A617C3A008EA1EA /* QDianAutoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QDianAutoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C2DAB021A617C3A008EA1EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C2DAB031A617C3A008EA1EA /* QDianAutoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QDianAutoTests.m; sourceTree = "<group>"; };
+		0C3B0D7E1A7D07A800573923 /* SettingViewConroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewConroller.h; sourceTree = "<group>"; };
+		0C3B0D7F1A7D07A800573923 /* SettingViewConroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewConroller.m; sourceTree = "<group>"; };
+		0C3B0D801A7D07A800573923 /* SettingViewConroller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewConroller.xib; sourceTree = "<group>"; };
 		0C4F3CE81A69165C001D6859 /* QUIModalManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIModalManager.h; sourceTree = "<group>"; };
 		0C4F3CE91A69165C001D6859 /* QUIModalManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIModalManager.m; sourceTree = "<group>"; };
 		0C6547111A6DF3EE00E8B8C7 /* 01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01.png; sourceTree = "<group>"; };
@@ -249,6 +255,8 @@
 		0CCE1FEC1A68B154008B5A66 /* QUIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIManager.m; sourceTree = "<group>"; };
 		0CCE1FEE1A68E48C008B5A66 /* QUIStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIStateManager.h; sourceTree = "<group>"; };
 		0CCE1FEF1A68E48C008B5A66 /* QUIStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIStateManager.m; sourceTree = "<group>"; };
+		0CD67A411A7F129D00C539FE /* QUIWelcomState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QUIWelcomState.h; sourceTree = "<group>"; };
+		0CD67A421A7F129D00C539FE /* QUIWelcomState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QUIWelcomState.m; sourceTree = "<group>"; };
 		0CDBCFB21A6F451100E600F9 /* BallAction.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BallAction.plist; sourceTree = "<group>"; };
 		0CDBCFB51A6F554000E600F9 /* QCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCommand.h; sourceTree = "<group>"; };
 		0CDBCFB61A6F55C200E600F9 /* CommandParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandParam.h; sourceTree = "<group>"; };
@@ -345,6 +353,9 @@
 				0C2DAAEE1A617C3A008EA1EA /* ViewController.h */,
 				0C2DAAEF1A617C3A008EA1EA /* ViewController.m */,
 				0C2DAAF11A617C3A008EA1EA /* Main.storyboard */,
+				0C3B0D7E1A7D07A800573923 /* SettingViewConroller.h */,
+				0C3B0D7F1A7D07A800573923 /* SettingViewConroller.m */,
+				0C3B0D801A7D07A800573923 /* SettingViewConroller.xib */,
 				0C2DAAF41A617C3A008EA1EA /* Images.xcassets */,
 				0C2DAAF61A617C3A008EA1EA /* LaunchScreen.xib */,
 				0C2DAAE71A617C3A008EA1EA /* Supporting Files */,
@@ -518,6 +529,8 @@
 		0C83F0F71A67ABD300EC9A57 /* UIState */ = {
 			isa = PBXGroup;
 			children = (
+				0CD67A411A7F129D00C539FE /* QUIWelcomState.h */,
+				0CD67A421A7F129D00C539FE /* QUIWelcomState.m */,
 				0C83F0F81A67AC7500EC9A57 /* QUIBallLeftStateNormal.h */,
 				0C83F0F91A67AC7500EC9A57 /* QUIBallLeftStateNormal.m */,
 				0C83F0FB1A67B5D300EC9A57 /* QUIBallLeftStateProgramme.h */,
@@ -735,6 +748,7 @@
 				0C6547551A6DF3EE00E8B8C7 /* 透明黑色底.png in Resources */,
 				0C6547381A6DF3EE00E8B8C7 /* 02--左侧--灰白色底.png in Resources */,
 				0C6547411A6DF3EE00E8B8C7 /* 彩条6.png in Resources */,
+				0C3B0D821A7D07A800573923 /* SettingViewConroller.xib in Resources */,
 				0C6547521A6DF3EE00E8B8C7 /* 太空球.png in Resources */,
 				0C65473C1A6DF3EE00E8B8C7 /* 彩条1.png in Resources */,
 				0C6547571A6DF3EE00E8B8C7 /* 五星--空.png in Resources */,
@@ -865,10 +879,12 @@
 				0CE7335A1A710056002BEF10 /* QBallDelay.m in Sources */,
 				0CB215901A7B7DA600E0CD1D /* MusicEffectPlay.m in Sources */,
 				0C922EC71A75D7DF00669F1C /* ProgrammerManager.m in Sources */,
+				0CD67A431A7F129D00C539FE /* QUIWelcomState.m in Sources */,
 				0CA077221A709A3000632993 /* QUIMessage.m in Sources */,
 				0C922ECD1A761DD300669F1C /* ProgrammeCarManager.m in Sources */,
 				0C83F0ED1A67659400EC9A57 /* QUIConfig.m in Sources */,
 				0CCE1FF01A68E48C008B5A66 /* QUIStateManager.m in Sources */,
+				0C3B0D811A7D07A800573923 /* SettingViewConroller.m in Sources */,
 				0CE733751A7101E9002BEF10 /* QBallLoopEnd.m in Sources */,
 				0C6547691A6E618500E8B8C7 /* QUIRightStateNormal.m in Sources */,
 				0CE7335D1A710086002BEF10 /* QBallWaitStop.m in Sources */,
@@ -933,8 +949,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Leyou (China) Supermarket Chain Co., Ltd.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Leyou (China) Supermarket Chain Co., Ltd.";
+				CODE_SIGN_IDENTITY = "iPhone Developer: saimeng geng (K3A6WTW59J)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: saimeng geng (K3A6WTW59J)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -976,8 +992,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Leyou (China) Supermarket Chain Co., Ltd.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Leyou (China) Supermarket Chain Co., Ltd.";
+				CODE_SIGN_IDENTITY = "iPhone Developer: saimeng geng (K3A6WTW59J)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: saimeng geng (K3A6WTW59J)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1001,7 +1017,7 @@
 			baseConfigurationReference = B1C2CAB3CEDDC19AF43F6E7E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Leyou (China) Supermarket Chain Co., Ltd.";
+				CODE_SIGN_IDENTITY = "iPhone Developer: saimeng geng (K3A6WTW59J)";
 				INFOPLIST_FILE = QDianAuto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1013,7 +1029,7 @@
 			baseConfigurationReference = 540A23EB8AC0FCFB407A28BE /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Leyou (China) Supermarket Chain Co., Ltd.";
+				CODE_SIGN_IDENTITY = "iPhone Developer: saimeng geng (K3A6WTW59J)";
 				INFOPLIST_FILE = QDianAuto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

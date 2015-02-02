@@ -36,7 +36,6 @@
     
     
 
-    NSLog(@"iphone 6 plus frame is :::::::: %@",NSStringFromCGRect([[UIScreen mainScreen] bounds]));
     
     //----------------------
     UIImageView *background = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024.0, 768.0)];
@@ -82,9 +81,10 @@
     [super didReceiveMemoryWarning];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return YES;
+    // Return YES for supported orientations
+    return ((interfaceOrientation ==UIDeviceOrientationLandscapeLeft)||(interfaceOrientation ==UIDeviceOrientationLandscapeRight));
 }
 
 -(UIInterfaceOrientation)interfaceOrientation

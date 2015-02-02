@@ -15,11 +15,12 @@
 
 +(void)playMusicWithFileName:(NSString *)aName
 {
-    SystemSoundID soundID;
-    NSURL *fileUrl = [[NSBundle mainBundle] URLForResource:aName withExtension:@"wav"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)fileUrl, &soundID);
-    AudioServicesPlaySystemSound(soundID);
-
+    SystemSoundID soundid;
+    NSString *soundPath = [[NSBundle mainBundle] pathForResource:aName ofType:@"wav"];
+    NSURL *soundUrl = [NSURL fileURLWithPath:soundPath];
+    
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundUrl, &soundid);
+    AudioServicesPlaySystemSound(soundid);
 }
 
 @end

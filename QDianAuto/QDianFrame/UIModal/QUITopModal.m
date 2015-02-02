@@ -9,6 +9,8 @@
 #import "QUITopModal.h"
 #import "QBallCommandManager.h"
 #import "MusicEffectPlay.h"
+#import "AppDelegate.h"
+#import "SettingViewConroller.h"
 
 @implementation QUITopModal
 @synthesize stateView;
@@ -56,6 +58,21 @@
     [[QBallCommandManager shareCommandManager] clearAllCommand];
     
     
+}
+
+- (void)settingDown:(id)sender
+{
+    AppDelegate *appDelegate =  (AppDelegate *)[UIApplication sharedApplication].delegate;
+    SettingViewConroller *settingViewController = [[SettingViewConroller alloc] initWithNibName:@"SettingViewConroller" bundle:nil];
+    
+    [appDelegate.window.rootViewController presentModalViewController:settingViewController animated:YES];
+}
+
+- (void)stop:(id)sender
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"所有指令已经停止运行...." delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    
+    [alert show];
 }
 
 @end

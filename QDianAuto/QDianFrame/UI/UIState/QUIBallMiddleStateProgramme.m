@@ -83,6 +83,13 @@
     NSInteger messageCount = sMessage.mLen;
     
     
+    UILabel *centerLabel = [[UILabel alloc] initWithFrame:CGRectMake(400, 35, 180, 24)];
+    centerLabel.font = [UIFont systemFontOfSize:20];
+    centerLabel.textColor = [UIColor whiteColor];
+    centerLabel.text = [NSString stringWithFormat:@"(当前程序:%@)",[ProgrammeBallManager shareProgrammeManager].selectedProgrammeName];
+    [self addSubview:centerLabel];
+    
+    
     float beginPos = 110;
 //    if ([QUIStateManager shareUIStateManager].stateOperator == BALLADD)
 //    {
@@ -98,7 +105,7 @@
 
     //}
     
-    int flagIndex = (arc4random() % 6) + 1;
+    int flagIndex = (arc4random() % 4) + 7;
     
     
     UIImage *buttonImage = [UIImage imageNamed:[NSString stringWithFormat:@"彩条%d",flagIndex]];
@@ -212,10 +219,10 @@
     //selectedView.frame = self.dstRect;
     selectedView.alpha = 1.0;
     
-    //QCommandManager *ballManager = [QBallCommandManager shareCommandManager];
+    QCommandManager *ballManager = [QBallCommandManager shareCommandManager];
 
-    //ballManager.selectedCommand = ((CommandButton *)gesture.view).cIndex;
-    //[[selectedView viewWithTag:6] removeFromSuperview];
+    ballManager.selectedCommand = ((CommandButton *)gesture.view).cIndex;
+    [[selectedView viewWithTag:9000] removeFromSuperview];
     
     //((CommandButton *)selectedView).isMove = NO;
     

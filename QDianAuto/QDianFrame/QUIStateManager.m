@@ -67,11 +67,11 @@ static QUIStateManager *stateManager = nil;
 {
     if ([name isEqualToString:@"TopNormal"])
     {
-        return [[QUITopBarState alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 44)];
+        return [[QUITopBarState alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 70)];
     }
     else
     {
-        return [[QUITopBarStateSetting alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 44)];
+        return [[QUITopBarStateSetting alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 70)];
     }
 }
 

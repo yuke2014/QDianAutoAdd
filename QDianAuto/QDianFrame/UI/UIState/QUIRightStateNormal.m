@@ -32,6 +32,12 @@
     profileButton.frame     = CGRectMake(40, 5, 130, 130);
     [profileButton setImage:ballImage forState:UIControlStateNormal];
     
+    UILabel *contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(80, 145, 180, 25)];
+    contentLabel.font = [UIFont systemFontOfSize:16];
+    contentLabel.textColor = [UIColor whiteColor];
+    contentLabel.text = @"驾驶员";
+    [self addSubview:contentLabel];
+    
     //[ballButton addTarget:middleModal action:@selector(carCodeSelected:) forControlEvents:UIControlEventTouchUpInside];
     
     [self addSubview:profileButton];

@@ -38,10 +38,11 @@
     imageView.image = [UIImage imageNamed:@"指令区圆角黑色透明底.png"];
     [self addSubview:imageView];
     
-    UILabel *centerLabel = [[UILabel alloc] initWithFrame:CGRectMake(leftMargin, controlPos, 80, 40)];
+    UILabel *centerLabel = [[UILabel alloc] initWithFrame:CGRectMake(leftMargin, controlPos, 220, 40)];
     centerLabel.font = [UIFont systemFontOfSize:16];
     centerLabel.textColor = [UIColor whiteColor];
     centerLabel.text = @"功能参数";
+    centerLabel.tag  = 2010;
     [self addSubview:centerLabel];
     
     
@@ -71,6 +72,9 @@
     QCommandManager *cManager = [QBallCommandManager shareCommandManager];
     id<QCommand> command = [cManager obtainSelectedCommand];
     
+    UILabel *tLabel = (UILabel *)[self viewWithTag:2010];
+    tLabel.text = [NSString stringWithFormat:@"%@(%@)",@"功能参数",[pDic objectForKey:@"name"]];
+    
     
     NSInteger i = 0;
     for (NSString *p in pList)
@@ -99,7 +103,7 @@
         vText.font = [UIFont systemFontOfSize:15];
         vText.textColor = [UIColor whiteColor];
         vText.tag = CLABEL_BASE + i;
-        vText.text = [[command.p objectForKey:[NSNumber numberWithInteger:i]] stringValue];
+        vText.text = [NSString stringWithFormat:@"%.2f",[[command.p objectForKey:[NSNumber numberWithInteger:i]] floatValue]];
         vText.keyboardType = UIKeyboardTypeNumberPad;
         vText.returnKeyType = UIReturnKeyDone;
         vText.delegate = self;
@@ -137,19 +141,21 @@
     NSInteger lTag   = index + CLABEL_BASE;
     
     UITextField *sLabel = (UITextField *)[paramView viewWithTag:lTag];
-    sLabel.text = [NSString stringWithFormat:@"%d",(int)slider.value];
+    sLabel.text = [NSString stringWithFormat:@"%.1f",slider.value];
     
     QCommandManager *cManager = [QBallCommandManager shareCommandManager];
     id<QCommand> command = [cManager obtainSelectedCommand];
-    [command.p setObject:[NSNumber numberWithInteger:(NSInteger)slider.value]  forKey:[NSNumber numberWithInteger:index]];
+    [command.p setObject:[NSNumber numberWithFloat:slider.value]  forKey:[NSNumber numberWithInteger:index]];
     
     NSString *cName = [[QBallCommandManager shareCommandManager] genButtonDisplay:cManager.selectedCommand];
     
     QUIMiddle *mUI = (QUIMiddle *)[[QUIManager shareUIManager] obtainUI:@"Middle"];
     CommandButton *cButton = (CommandButton *)[(UIView *)mUI.temp viewWithTag:[QUIStateManager shareUIStateManager].chageParamButton];
     
-    NSString *title = ((UITextField *)[paramView viewWithTag:8000 + index]).text;
-    NSString *dName = [NSString stringWithFormat:@"%@(%@)",title,cName];
+    
+    NSDictionary *pDic = [paramConfig objectForKey:NSStringFromClass([command class])];
+
+    NSString *dName = [NSString stringWithFormat:@"%@(%@)",[pDic objectForKey:@"name"],cName];
     
     
     [cButton setTitle:dName forState:UIControlStateNormal];
@@ -172,13 +178,26 @@
     
     sSlider.value = [textField.text floatValue];
     
-    textField.text = [NSString stringWithFormat:@"%d",(int)([textField.text integerValue])];
+    textField.text = [NSString stringWithFormat:@"%.1f",([textField.text floatValue])];
     
     QCommandManager *cManager = [QBallCommandManager shareCommandManager];
     id<QCommand> command = [cManager obtainSelectedCommand];
-    [command.p setObject:[NSNumber numberWithInteger:(NSInteger)([textField.text integerValue])]  forKey:[NSNumber numberWithInteger:index]];
+    [command.p setObject:[NSNumber numberWithFloat:([textField.text floatValue])]  forKey:[NSNumber numberWithInteger:index]];
     
     [textField resignFirstResponder];
+    
+    NSString *cName = [[QBallCommandManager shareCommandManager] genButtonDisplay:cManager.selectedCommand];
+    
+    QUIMiddle *mUI = (QUIMiddle *)[[QUIManager shareUIManager] obtainUI:@"Middle"];
+    CommandButton *cButton = (CommandButton *)[(UIView *)mUI.temp viewWithTag:[QUIStateManager shareUIStateManager].chageParamButton];
+    
+    NSDictionary *pDic = [paramConfig objectForKey:NSStringFromClass([command class])];
+
+    NSString *dName = [NSString stringWithFormat:@"%@(%@)",[pDic objectForKey:@"name"],cName];
+    
+    
+    [cButton setTitle:dName forState:UIControlStateNormal];
+
 
     return  YES;
 }

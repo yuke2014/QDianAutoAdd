@@ -114,7 +114,7 @@
 		<string>延迟</string>
 		<key>param</key>
 		<array>
-			<string>延迟&amp;0&amp;10000</string>
+			<string>时长&amp;0&amp;10000</string>
 		</array>
 		<key>remark</key>
 		<string></string>
@@ -142,7 +142,6 @@
 			<string>红&amp;0&amp;255</string>
 			<string>绿&amp;0&amp;255</string>
 			<string>蓝&amp;0&amp;255</string>
-			<string>延迟&amp;0&amp;10000</string>
 		</array>
 		<key>remark</key>
 		<string></string>
@@ -157,7 +156,7 @@
 		<array>
 			<string>速度&amp;0&amp;100</string>
 			<string>角度&amp;0&amp;359</string>
-			<string>延迟&amp;0&amp;10000</string>
+			<string>时长&amp;0&amp;10000</string>
 		</array>
 	</dict>
 	<key>QBallStop</key>

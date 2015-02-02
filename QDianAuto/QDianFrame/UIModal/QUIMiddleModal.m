@@ -167,6 +167,10 @@
             
         sManager.middleTouchState = 1;
         sManager.middleSelelctedButton      =  gesture.view.tag;
+        [QBallCommandManager shareCommandManager].selectedCommand = ((CommandButton *)gesture.view).cIndex;
+        
+        sManager.chageParamButton = gesture.view.tag;
+
         
         
         POPBasicAnimation *scaleAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPViewAlpha];
@@ -216,6 +220,7 @@
 - (void)programmeSelected:(id)sender
 {
     ProgrammeButton *pButton = (ProgrammeButton *)sender;
+    
     QCommandManager *ballManager =  [QBallCommandManager shareCommandManager];
     [ballManager clearAllCommand];
     NSArray *commandArray = pButton.commandArray;
@@ -238,6 +243,7 @@
     
     [QUIStateManager shareUIStateManager].stateOperator = BALLALTER;
     [ProgrammeBallManager shareProgrammeManager].selectedProgramme =  pButton.indexFile;
+    [ProgrammeBallManager shareProgrammeManager].selectedProgrammeName = pButton.pName;
     [self allChangeToProgramme];
 
     

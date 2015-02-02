@@ -143,6 +143,8 @@
     id<QUi> mUpdateUi =  [[QUIManager shareUIManager] obtainUI:@"Middle"];
     NSInteger qCount = [cManager queueCount];
     cManager.selectedCommand = qCount - 1;
+    [QUIStateManager shareUIStateManager].chageParamButton = (qCount - 1) + CBUTTON_BASE;
+
     
     QUIMessage *message = [[QUIManager shareUIManager] genMessageType:commandClass withIntValue:qCount withType:qCount - 1 withDName:[cArray objectAtIndex:0]];
     [mUpdateUi updateUI:message];
