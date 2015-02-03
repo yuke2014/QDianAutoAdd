@@ -23,9 +23,16 @@
 #define CARALTER 3
 
 
+
 @interface QUIStateManager : NSObject
 
 @property int stateOperator;
+
+@property NSInteger middleTouchState;
+@property NSInteger middleSelelctedButton;
+
+@property NSInteger chageParamButton;
+
 
 + (QUIStateManager *)shareUIStateManager;
 

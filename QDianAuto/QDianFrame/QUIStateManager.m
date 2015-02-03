@@ -27,12 +27,12 @@ static QUIStateManager *stateManager = nil;
 {
     if ([name isEqualToString:@"LeftNormal"])
      {
-         return [[QUIBallLeftStateNormal alloc] initWithFrame:CGRectMake(0, 0, 80, 680)];
+         return [[QUIBallLeftStateNormal alloc] initWithFrame:CGRectMake(0, 0, 110, 680)];
 
      }
      else
      {
-         return [[QUIBallLeftStateProgramme alloc] initWithFrame:CGRectMake(0, 0, 80, 680)];
+         return [[QUIBallLeftStateProgramme alloc] initWithFrame:CGRectMake(0, 0, 110, 680)];
      }
 }
 
@@ -40,12 +40,12 @@ static QUIStateManager *stateManager = nil;
 {
     if ([name isEqualToString:@"MiddleNormal"])
     {
-        return [[QUIBallMiddleStateNormal alloc] initWithFrame:CGRectMake(0.0, 0.0, 715, 680)];
+        return [[QUIBallMiddleStateNormal alloc] initWithFrame:CGRectMake(0.0, 0.0, 685, 680)];
 
     }
     else
     {
-        return [[QUIBallMiddleStateProgramme alloc] initWithFrame:CGRectMake(0.0, 0.0, 715, 680)];
+        return [[QUIBallMiddleStateProgramme alloc] initWithFrame:CGRectMake(0.0, 0.0, 685, 680)];
     }
     
     
@@ -67,11 +67,11 @@ static QUIStateManager *stateManager = nil;
 {
     if ([name isEqualToString:@"TopNormal"])
     {
-        return [[QUITopBarState alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 44)];
+        return [[QUITopBarState alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 70)];
     }
     else
     {
-        return [[QUITopBarStateSetting alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 44)];
+        return [[QUITopBarStateSetting alloc] initWithFrame:CGRectMake(0.0, 0.0, 1024, 70)];
     }
 }
 

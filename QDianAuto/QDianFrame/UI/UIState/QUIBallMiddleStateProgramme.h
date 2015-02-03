@@ -10,9 +10,16 @@
 #import "QUIState.h"
 #import "QUIModal.h"
 
-@interface QUIBallMiddleStateProgramme : UIView<QUIState>
+@interface QUIBallMiddleStateProgramme : UIScrollView<QUIState>
 {
     id<QUIModal> middleModal;
+    BOOL isAnimationRun;
 }
+
+@property CGRect srcRect;
+@property CGRect dstRect;
+@property NSInteger dstTag;
+
+
 
 @end

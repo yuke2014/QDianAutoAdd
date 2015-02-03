@@ -7,6 +7,7 @@
 //
 
 #import "QUITopBarState.h"
+#import "QUITopModal.h"
 
 @implementation QUITopBarState
 @synthesize stateName;
@@ -15,6 +16,8 @@
 {
     if ((self = [super initWithFrame:frame]) != nil)
     {
+        topModal = [[QUITopModal alloc] init];
+
     }
     
     return self;
@@ -41,7 +44,7 @@
     settingButton.frame     = CGRectMake(980, 11, 22, 22);
     [settingButton setImage:settingImage forState:UIControlStateNormal];
     [settingButton setImage:settingHightLighted forState:UIControlStateHighlighted];
-    //[settingButton addTarget:middleModal action:@selector(carCodeSelected:) forControlEvents:UIControlEventTouchUpInside];
+    [settingButton addTarget:topModal  action:@selector(settingDown:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:settingButton];
     
     

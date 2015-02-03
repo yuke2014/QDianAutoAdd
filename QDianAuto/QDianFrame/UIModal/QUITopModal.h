@@ -18,5 +18,7 @@
 
 - (void)playButtonDown:(id)sender;
 - (void)backToMain:(id)sender;
+- (void)settingDown:(id)sender;
+- (void)stop:(id)sender;
 
 @end

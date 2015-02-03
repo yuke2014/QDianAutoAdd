@@ -29,11 +29,17 @@
     float     flagWidth    = 40;
     float     flagHeight   = 40;
     float     controlPos   = 0;
-    float     leftMargin   = 15;
+    float     leftMargin   = 30;
     
-    UIImageView *cockpitImage = [[UIImageView alloc] initWithFrame:CGRectMake(leftMargin+5, 0, 40, 40)];
-    cockpitImage.image = [UIImage imageNamed:@"驾驶舱.png"];
-    [self addSubview:cockpitImage];
+        
+    UIImage *driveImage     = [UIImage imageNamed:@"驾驶舱.png"];
+    UIButton *driveButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    driveButton.frame     = CGRectMake(leftMargin+5, 0, 40, 40);
+    [driveButton setImage:driveImage forState:UIControlStateNormal];
+    
+    [driveButton addTarget:leftModal action:@selector(driveCab:) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:driveButton];
+
     
     UILabel *cLabel = [[UILabel alloc] initWithFrame:CGRectMake(leftMargin, 42, 80, 40)];
     cLabel.font = [UIFont systemFontOfSize:16];

@@ -11,6 +11,7 @@
 @interface ProgrammeButton : UIButton
 
 @property NSInteger indexFile;
+@property (nonatomic,strong) NSString *pName;
 @property (nonatomic,strong) NSString *commandString;
 @property (nonatomic,strong) NSArray *commandArray;
 

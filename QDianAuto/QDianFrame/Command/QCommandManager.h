@@ -21,13 +21,15 @@
 
 - (void)addCommandToQueue:(id<QCommand>)qCommand;
 - (void)removeCommandFromQueue:(id<QCommand>)qCommand;
-- (void)removeCommandWithName:(NSString *)name;
+- (void)removeCommandWithName:(NSString *)name withIndex:(NSInteger)index;
 - (id<QCommand>)obtainCommandWithIndex:(NSInteger)index;
 - (id<QCommand>)obtainSelectedCommand;
 - (NSInteger)queueCount;
 - (NSArray *)buildSaveCommand;
 - (void)clearAllCommand;
 - (NSDictionary *)obtainParamConfig;
+- (NSMutableArray *)queue;
+- (NSString *)genButtonDisplay:(NSInteger)index;
 
 
 - (void)printQueueName;

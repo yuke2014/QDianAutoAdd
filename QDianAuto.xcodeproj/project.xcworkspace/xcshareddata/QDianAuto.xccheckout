@@ -5,11 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-<<<<<<< HEAD
-	<string>58585ECF-D3F5-415D-8D07-D3EA0FDF2081</string>
-=======
-	<string>820C74D4-A5B7-42EF-81CA-C4705CD640EB</string>
->>>>>>> AddAuto
+	<string>7963ABBB-5420-49BD-9839-662173ECFA2C</string>
 	<key>IDESourceControlProjectName</key>
 	<string>QDianAuto</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -18,11 +14,11 @@
 		<string>https://github.com/yuke2014/QDianAutoAdd.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>QDianAuto.xcworkspace</string>
+	<string>QDianAuto.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>B50F9DBF5908916F40DC2A0D652D8FD66D0287B5</key>
-		<string>..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/yuke2014/QDianAutoAdd.git</string>
@@ -38,11 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>B50F9DBF5908916F40DC2A0D652D8FD66D0287B5</string>
 			<key>IDESourceControlWCCName</key>
-<<<<<<< HEAD
-			<string>QDianAutoAdd</string>
-=======
 			<string>AddAutoNoPlatform</string>
->>>>>>> AddAuto
 		</dict>
 	</array>
 </dict>

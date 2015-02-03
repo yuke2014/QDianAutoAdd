@@ -7,6 +7,8 @@
 //
 
 #import "QUICommonTableModal.h"
+#import "MusicEffectPlay.h"
+
 
 @implementation QUICommonTableModal
 @synthesize stateView;
@@ -16,10 +18,28 @@
 {
     if ((self = [super init]) != nil)
     {
+        
+        
+        
+        NSComparator finderSort = ^(id string1,id string2){
+            
+            NSDictionary *order = @{@"运动":@1,@"动作":@2,@"时间":@3,@"光":@4};
+            int a =  (int)[[order objectForKey:string1] integerValue];
+            int b = (int)[[order objectForKey:string2] integerValue];
+            if (a > b) {
+                return (NSComparisonResult)NSOrderedDescending;
+            }else if (a  < b){
+                return (NSComparisonResult)NSOrderedAscending;
+            }
+            else
+                return (NSComparisonResult)NSOrderedSame;
+        };
+
+
         NSString *pListPath = [[NSBundle mainBundle] pathForResource:@"BallAction" ofType:@"plist"];
         command    = [[NSMutableDictionary alloc] initWithContentsOfFile:pListPath];
         
-        keyCommand = [command allKeys];
+        keyCommand = [[command allKeys] sortedArrayUsingComparator:finderSort];
     }
     
     return self;
@@ -57,7 +77,8 @@
     
     NSString *keyName = [keyCommand objectAtIndex:indexPath.section];
     NSArray  *keyArray = [command objectForKey:keyName];
-    cell.textLabel.font = [UIFont systemFontOfSize:14];
+    cell.textLabel.font = [UIFont systemFontOfSize:16];
+    cell.textLabel.textAlignment = NSTextAlignmentCenter;
     
     NSString *contentWithCommand = [keyArray objectAtIndex:indexPath.row];
     NSArray *cArray = [contentWithCommand componentsSeparatedByString:@"&"];
@@ -70,9 +91,9 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 80.0, 40.0)];
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 112.0, 40.0)];
     
-    UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 80.0, 40.0)];
+    UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 112.0, 40.0)];
     backView.backgroundColor = [UIColor grayColor];
     backView.alpha = 0.5;
     [headerView addSubview:backView];
@@ -101,6 +122,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //NSLog(@"select row is : %d",indexPath.row);
+    
+    [MusicEffectPlay playMusicWithFileName:@"jump"];
+    
     [QUIStateManager shareUIStateManager].stateOperator = BALLADD;
     NSString *keyName = [keyCommand objectAtIndex:indexPath.section];
     NSArray  *keyArray = [command objectForKey:keyName];
@@ -119,6 +143,8 @@
     id<QUi> mUpdateUi =  [[QUIManager shareUIManager] obtainUI:@"Middle"];
     NSInteger qCount = [cManager queueCount];
     cManager.selectedCommand = qCount - 1;
+    [QUIStateManager shareUIStateManager].chageParamButton = (qCount - 1) + CBUTTON_BASE;
+
     
     QUIMessage *message = [[QUIManager shareUIManager] genMessageType:commandClass withIntValue:qCount withType:qCount - 1 withDName:[cArray objectAtIndex:0]];
     [mUpdateUi updateUI:message];

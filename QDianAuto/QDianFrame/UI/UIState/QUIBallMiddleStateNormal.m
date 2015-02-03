@@ -85,7 +85,7 @@
     else
     {
         fRow = 4;
-        sRow = fileNameOrder.count - 4;
+        sRow = fileNameOrder.count - 5;
     }
     
     int pIndex = 0;
@@ -105,6 +105,7 @@
         carLabel.font = [UIFont systemFontOfSize:16];
         carLabel.textColor = [UIColor whiteColor];
         carLabel.text =[ NSString stringWithFormat:@"P%d",pIndex ];
+        pButton.pName = carLabel.text;
         [self addSubview:carLabel];
         [self addSubview:pButton];
         pIndex++;
@@ -126,6 +127,8 @@
         carLabel.font = [UIFont systemFontOfSize:16];
         carLabel.textColor = [UIColor whiteColor];
         carLabel.text =[ NSString stringWithFormat:@"P%d",pIndex ];
+        pButton.pName = carLabel.text;
+
         [self addSubview:carLabel];
         [self addSubview:pButton];
         pIndex++;

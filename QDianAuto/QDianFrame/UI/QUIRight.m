@@ -15,9 +15,8 @@
     if ((self = [super initWithFrame:frame]) != nil)
     {
         rightState = [[QUIStateManager shareUIStateManager] createRightStateWithName:@"RightNormal"];
-        
+        ((UIView *)rightState).tag = 7000;
     }
-    
     
     return self;
 }
@@ -27,6 +26,8 @@
 {
     [(UIView *)rightState removeFromSuperview];
     rightState = changedState;
+    ((UIView *)rightState).tag = 7000;
+
 }
 
 - (void)reloadUI

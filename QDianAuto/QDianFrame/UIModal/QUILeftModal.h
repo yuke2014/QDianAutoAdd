@@ -12,6 +12,7 @@
 @interface QUILeftModal : NSObject<QUIModal>
 - (void)ballAction:(id)sender;
 - (void)carAction:(id)sender;
+- (void)driveCab:(id)sender;
 
 
 

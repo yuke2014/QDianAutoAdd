@@ -8,6 +8,7 @@
 
 #import "QUIMiddle.h"
 #import "UIView+FastAnimation.h"
+#import "QUIWelcomState.h"
 
 
 @implementation QUIMiddle
@@ -17,8 +18,8 @@
 {
     if ((self = [super initWithFrame:frame]) != nil)
     {
-        middleState       = [[QUIStateManager shareUIStateManager] createMiddleStateWithName:@"MiddleNormal"];
-        
+        middleState       = [[QUIWelcomState alloc] initWithFrame:CGRectMake(0.0, 0.0, 685, 680)];
+        self.temp = middleState;
     }
     
     
@@ -31,6 +32,7 @@
 {
     [((UIView *)middleState) removeFromSuperview];
     middleState = changedState;
+    self.temp = middleState;
 }
 
 - (void)reloadUI

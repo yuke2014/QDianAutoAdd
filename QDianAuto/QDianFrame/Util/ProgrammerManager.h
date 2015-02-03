@@ -17,6 +17,8 @@
 @property NSInteger fileCount;
 @property NSInteger maxFileName;
 
+@property (nonatomic,strong) NSString *selectedProgrammeName;
+
 + (ProgrammerManager *)shareProgrammeManager;
 - (void)initPDir;
 - (NSString *)getDocumentPath;

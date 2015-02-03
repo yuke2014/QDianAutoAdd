@@ -9,7 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface CommandButton : UIButton
-@property NSInteger cIndex;
+{
+    UILabel *indexLabel;
+}
+@property (nonatomic) NSInteger cIndex;
 @property (nonatomic,strong) NSString *commandName;
+@property BOOL isMove;
+
 
 @end
